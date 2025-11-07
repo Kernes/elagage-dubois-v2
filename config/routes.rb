@@ -6,11 +6,17 @@ Rails.application.routes.draw do
 
   # Pages statiques avec slugs FR
   get "qui-sommes-nous", to: "pages#about", as: :about
+  get "elagage-et-etetage-darbres", to: "pages#elagage", as: :elagage
+  get "abattage-darbres-de-toutes-especes", to: "pages#abattage", as: :abattage
+  get "dessouchage-arbre", to: "pages#dessouchage", as: :dessouchage
+  get "entretien", to: "pages#entretien", as: :entretien
   
-        # Services (3 pages)
-        get "etat-des-lieux-residentiel", to: "pages#service_residentiel", as: :service_residentiel
-        get "etat-des-lieux-tertiaire", to: "pages#service_tertiaire", as: :service_tertiaire
-        get "chiffrage-locatif", to: "pages#service_chiffrage", as: :service_chiffrage
+  # Redirections vers entretien
+  get "entretien-de-jardins", to: redirect("/entretien")
+  get "taille-de-haies", to: redirect("/entretien")
+  get "creation-et-tonte-de-pelouse", to: redirect("/entretien")
+  get "debroussaillage", to: redirect("/entretien")
+  get "traitement-darbres", to: redirect("/entretien")
   
   # Devis et contact
   get "devis", to: "quotes#new", as: :quote

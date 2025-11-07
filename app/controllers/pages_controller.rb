@@ -5,13 +5,16 @@ class PagesController < ApplicationController
   def about
   end
 
-  def service_residentiel
+  def elagage
   end
 
-  def service_tertiaire
+  def abattage
   end
 
-  def service_chiffrage
+  def dessouchage
+  end
+
+  def entretien
   end
 
   def recruitment
@@ -44,19 +47,25 @@ class PagesController < ApplicationController
         lastmod: Date.current.strftime('%Y-%m-%d')
       },
       { 
-        url: service_residentiel_path, 
+        url: elagage_path, 
         priority: 0.9, 
         changefreq: "monthly",
         lastmod: Date.current.strftime('%Y-%m-%d')
       },
       { 
-        url: service_tertiaire_path, 
+        url: abattage_path, 
         priority: 0.9, 
         changefreq: "monthly",
         lastmod: Date.current.strftime('%Y-%m-%d')
       },
       { 
-        url: service_chiffrage_path, 
+        url: dessouchage_path, 
+        priority: 0.9, 
+        changefreq: "monthly",
+        lastmod: Date.current.strftime('%Y-%m-%d')
+      },
+      { 
+        url: entretien_path, 
         priority: 0.9, 
         changefreq: "monthly",
         lastmod: Date.current.strftime('%Y-%m-%d')

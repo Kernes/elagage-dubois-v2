@@ -11,31 +11,9 @@
 
 @import "tailwind/application";
 
-/* Font Comic Sans MS globale */
-* {
-  font-family: 'Comic Sans MS', cursive, sans-serif !important;
-}
-
+/* Police moderne et professionnelle */
 body {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-}
-
-/* Classes utilitaires pour Comic Sans MS */
-.font-comic {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-}
-
-.font-comic-bold {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  font-weight: 700;
-}
-
-.font-comic-light {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  font-weight: 300;
-}
-
-.font-comic-italic {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  font-style: italic;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

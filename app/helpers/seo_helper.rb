@@ -2,8 +2,8 @@ module SeoHelper
   # Configuration SEO par défaut
   DEFAULT_SEO = {
     site_name: "Élagage Dubois",
-    site_description: "Service professionnel d'élagage et de taille d'arbres en Île-de-France. Rapide, fiable et conforme.",
-    site_keywords: "élagage, arbre, taille, élagage professionnel, entretien arbre, Île-de-France, professionnel, Élagage Dubois",
+    site_description: "Expert en élagage, abattage et dessouchage. Services professionnels pour l'entretien et la gestion de vos arbres. Devis gratuit, intervention rapide.",
+    site_keywords: "élagage, abattage, dessouchage, entretien arbres, professionnel, expert, taille arbres, Île-de-France, Élagage Dubois",
     site_url: "https://elagage-dubois-v2.scalingo.io",
     contact_phone: "+33620479966",
     contact_email: "sqy.etatdeslieux@gmail.com",
@@ -20,37 +20,44 @@ module SeoHelper
   # Configuration SEO par page
   PAGE_SEO = {
     home: {
-      title: "Élagage Dubois - États des lieux professionnels en Île-de-France | Guyancourt",
-      description: "Élagage Dubois : service professionnel d'états des lieux en Île-de-France. Entrée, sortie, inventaire. Rapide, fiable et conforme. Contactez Yoan DUBOIS au 06 20 47 99 66.",
-      keywords: "état des lieux, Île-de-France, Guyancourt, professionnel, entrée, sortie, inventaire, bailleur, agence immobilière, Élagage Dubois, Yoan DUBOIS",
+      title: "Élagage Dubois - Expert en élagage, abattage et dessouchage | Professionnel des arbres",
+      description: "Expert en élagage, abattage et dessouchage. Services professionnels pour l'entretien et la gestion de vos arbres. Devis gratuit, intervention rapide.",
+      keywords: "élagage, abattage, dessouchage, entretien arbres, professionnel, expert, taille arbres, Île-de-France, Élagage Dubois",
       priority: 1.0,
       changefreq: "weekly"
     },
     about: {
-      title: "Qui sommes-nous ? - Élagage Dubois | État des lieux professionnel",
+      title: "Qui sommes-nous ? - Élagage Dubois | Expert en élagage et abattage",
       description: "Découvrez Élagage Dubois, votre partenaire de confiance pour les états des lieux en Île-de-France. Expertise professionnelle, rapidité et conformité garanties.",
       keywords: "qui sommes-nous, Élagage Dubois, équipe, expertise, état des lieux, professionnel, Île-de-France",
       priority: 0.8,
       changefreq: "monthly"
     },
-    service_residentiel: {
-      title: "État des lieux résidentiel - Élagage Dubois | Service professionnel",
-      description: "État des lieux résidentiel professionnel en Île-de-France. Entrée, sortie, inventaire pour appartements et maisons. Devis gratuit.",
-      keywords: "état des lieux résidentiel, appartement, maison, entrée, sortie, inventaire, bailleur, locataire, Île-de-France",
+    elagage: {
+      title: "Élagage et Étêtage d'Arbres - Élagage Dubois | Expert Professionnel",
+      description: "Service d'élagage et d'étêtage d'arbres professionnel en Île-de-France. Expertise, sécurité et respect de l'environnement. Devis gratuit, intervention rapide.",
+      keywords: "élagage, étêtage, taille arbres, élagage professionnel, taille formation, réduction couronne, Île-de-France, Élagage Dubois",
       priority: 0.9,
       changefreq: "monthly"
     },
-    service_tertiaire: {
-      title: "État des lieux tertiaire - Élagage Dubois | Bureaux et commerces",
-      description: "État des lieux tertiaire professionnel en Île-de-France. Bureaux, commerces, locaux professionnels. Service rapide et fiable.",
-      keywords: "état des lieux tertiaire, bureau, commerce, local professionnel, bail commercial, Île-de-France",
+    abattage: {
+      title: "Abattage d'Arbres de Toutes Espèces - Élagage Dubois | Expert Professionnel",
+      description: "Service d'abattage d'arbres professionnel en Île-de-France. Abattage dirigé, sécurisé et respectueux de l'environnement. Devis gratuit, intervention rapide.",
+      keywords: "abattage arbres, abattage dirigé, abattage sécurisé, abattage professionnel, débitage, évacuation déchets, Île-de-France, Élagage Dubois",
       priority: 0.9,
       changefreq: "monthly"
     },
-    service_chiffrage: {
-      title: "Chiffrage locatif - Élagage Dubois | Évaluation immobilière",
-      description: "Service de chiffrage locatif professionnel en Île-de-France. Évaluation précise de vos biens immobiliers pour optimiser vos revenus.",
-      keywords: "chiffrage locatif, évaluation immobilière, loyer, marché locatif, Île-de-France, expertise",
+    dessouchage: {
+      title: "Dessouchage d'Arbres - Élagage Dubois | Expert Professionnel",
+      description: "Service de dessouchage d'arbres professionnel en Île-de-France. Dessouchage mécanique et manuel, élimination complète des souches. Devis gratuit, intervention rapide.",
+      keywords: "dessouchage, dessouchage arbre, dessouchage mécanique, dessouchage manuel, élimination souche, Île-de-France, Élagage Dubois",
+      priority: 0.9,
+      changefreq: "monthly"
+    },
+    entretien: {
+      title: "Entretien de Jardin et Espaces Verts - Élagage Dubois | Services Complets",
+      description: "Services d'entretien de jardin et espaces verts en Île-de-France. Taille de haies, tonte de pelouse, débroussaillage, traitement d'arbres. Devis gratuit, intervention rapide.",
+      keywords: "entretien jardin, taille haies, tonte pelouse, débroussaillage, traitement arbres, création pelouse, entretien espaces verts, Île-de-France, Élagage Dubois",
       priority: 0.9,
       changefreq: "monthly"
     },

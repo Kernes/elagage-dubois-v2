@@ -1,0 +1,447 @@
+<% content_for :title, "Élagage et Étêtage d'Arbres - Élagage Dubois | Expert Professionnel" %>
+<% content_for :description, "Service d'élagage et d'étêtage d'arbres professionnel en Île-de-France. Expertise, sécurité et respect de l'environnement. Devis gratuit, intervention rapide." %>
+<% content_for :keywords, "élagage, étêtage, taille arbres, élagage professionnel, taille formation, réduction couronne, Île-de-France, Élagage Dubois" %>
+<% content_for :og_title, "Élagage et Étêtage d'Arbres - Élagage Dubois | Expert Professionnel" %>
+<% content_for :og_description, "Service d'élagage et d'étêtage d'arbres professionnel en Île-de-France. Expertise, sécurité et respect de l'environnement." %>
+<% content_for :og_image, "https://elagage-dubois-v2.scalingo.io/icon.png" %>
+
+<%= render "components/header" %>
+
+<!-- Hero Section -->
+<section class="overflow-hidden relative py-24 min-h-[90vh] flex items-center bg-gray-900 lg:min-h-[90vh]">
+  <!-- Image de fond principale -->
+  <div class="absolute inset-0">
+    <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Élagage professionnel" class="object-cover w-full h-full">
+    <div class="absolute inset-0 bg-gradient-to-r from-green-900/90 via-green-800/80 to-transparent"></div>
+    <div class="absolute inset-0 bg-black/20"></div>
+  </div>
+
+  <div class="relative z-10 px-6 mx-auto max-w-7xl lg:px-8 w-full">
+    <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+      <!-- Contenu texte -->
+      <div class="text-center lg:text-left">
+        <div class="inline-flex items-center px-4 py-2 mb-6 bg-amber-400/20 rounded-full border border-amber-400/30 backdrop-blur-sm">
+          <svg class="mr-2 w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="text-sm font-semibold text-amber-400">15+ ans d'expérience</span>
+        </div>
+        
+        <h1 class="text-5xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
+          Élagage et <span class="text-amber-400">Étêtage</span><br />d'Arbres
+        </h1>
+        
+        <p class="mt-6 text-xl leading-relaxed text-white/90 sm:text-2xl">
+          Un art que nous pratiquons avec passion depuis plus de 15 ans. Chaque coupe est réfléchie pour préserver la santé, l'esthétique et votre sécurité.
+        </p>
+        
+        <div class="flex flex-col gap-4 mt-10 sm:flex-row sm:justify-center lg:justify-start">
+          <a href="/devis" class="inline-flex justify-center items-center px-8 py-4 text-lg font-semibold text-green-900 bg-amber-400 rounded-lg shadow-xl transition-all hover:bg-amber-300 hover:scale-105">
+            Demander un devis gratuit
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="tel:+33620479966" class="inline-flex justify-center items-center px-8 py-4 text-lg font-semibold text-white rounded-lg border-2 border-white/30 bg-white/10 backdrop-blur-md transition-all hover:bg-white/20 hover:border-white/50">
+            <svg class="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            06 20 47 99 66
+          </a>
+        </div>
+      </div>
+
+      <!-- Galerie d'images -->
+      <div class="hidden lg:grid gap-4 grid-cols-2">
+        <div class="overflow-hidden relative rounded-2xl shadow-2xl aspect-[4/5] group">
+          <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Élagage professionnel" class="object-cover w-full h-full transition-transform group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/60"></div>
+          <div class="absolute right-4 bottom-4 left-4">
+            <p class="font-semibold text-white">Élagage sécurisé</p>
+          </div>
+        </div>
+        
+        <div class="overflow-hidden relative rounded-2xl shadow-2xl aspect-[4/5] group mt-8">
+          <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Taille d'arbres" class="object-cover w-full h-full transition-transform group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/60"></div>
+          <div class="absolute right-4 bottom-4 left-4">
+            <p class="font-semibold text-white">Taille professionnelle</p>
+          </div>
+        </div>
+        
+        <div class="overflow-hidden relative rounded-2xl shadow-2xl aspect-[4/5] group -mt-8">
+          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Réduction de couronne" class="object-cover w-full h-full transition-transform group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/60"></div>
+          <div class="absolute right-4 bottom-4 left-4">
+            <p class="font-semibold text-white">Réduction de couronne</p>
+          </div>
+        </div>
+        
+        <div class="overflow-hidden relative rounded-2xl shadow-2xl aspect-[4/5] group">
+          <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Étêtage d'arbres" class="object-cover w-full h-full transition-transform group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/60"></div>
+          <div class="absolute right-4 bottom-4 left-4">
+            <p class="font-semibold text-white">Étêtage sécurisé</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Introduction -->
+<section class="py-24 bg-white">
+  <div class="px-6 mx-auto max-w-7xl lg:px-8">
+    <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+      <div>
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">L'Élagage, Bien Plus Qu'une Simple Taille</h2>
+        <p class="mt-6 text-lg leading-relaxed text-gray-600">
+          L'élagage, c'est un art que nous pratiquons avec passion. Chaque arbre est unique, chaque intervention est réfléchie, chaque coupe est mûrement pensée. Nous respectons la biologie de chaque arbre pour préserver sa santé, son esthétique et votre sécurité.
+        </p>
+        <p class="mt-6 text-lg leading-relaxed text-gray-600">
+          Depuis plus de 15 ans, nous mettons notre expertise au service de vos projets. Que ce soit pour une taille de formation, une réduction de couronne ou un étêtage, nous intervenons avec professionnalisme et respect de l'environnement.
+        </p>
+      </div>
+      <div class="relative">
+        <div class="overflow-hidden rounded-2xl shadow-2xl">
+          <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Élagage professionnel" class="object-cover w-full h-full">
+        </div>
+        <div class="absolute -bottom-6 -right-6 p-6 bg-white rounded-xl shadow-xl border border-green-100">
+          <div class="flex items-center gap-4">
+            <div class="flex-shrink-0">
+              <div class="flex justify-center items-center w-16 h-16 bg-green-700 rounded-full">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold text-gray-900">15+</div>
+              <div class="text-sm text-gray-600">Années d'expérience</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Types d'élagage -->
+<section class="py-24 bg-green-50">
+  <div class="px-6 mx-auto max-w-7xl lg:px-8">
+    <div class="mx-auto max-w-2xl text-center mb-16">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Nos Techniques d'Élagage</h2>
+      <p class="mt-4 text-lg text-gray-600">Des interventions adaptées à chaque situation</p>
+    </div>
+    
+    <div class="grid gap-8 lg:grid-cols-2">
+      <!-- Taille de formation -->
+      <div class="overflow-hidden relative bg-white rounded-2xl shadow-lg transition-shadow group hover:shadow-xl">
+        <div class="relative h-64 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Taille de formation" class="object-cover w-full h-full transition-transform group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/40"></div>
+        </div>
+        <div class="relative p-8">
+          <div class="flex justify-center items-center mb-6 w-16 h-16 bg-green-700 rounded-full">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+            </svg>
+          </div>
+          <h3 class="mb-4 text-2xl font-bold text-gray-900">Taille de Formation</h3>
+          <p class="mb-6 text-gray-700">
+            Pour les jeunes arbres, la taille de formation est essentielle. Elle permet de guider la croissance de l'arbre dès son plus jeune âge, en favorisant une structure solide et équilibrée. Nous intervenons avec précaution pour ne pas compromettre le développement futur de l'arbre.
+          </p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start">
+              <svg class="flex-shrink-0 mr-2 w-5 h-5 text-green-700" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Intervention sur jeunes arbres
+            </li>
+            <li class="flex items-start">
+              <svg class="flex-shrink-0 mr-2 w-5 h-5 text-green-700" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Structure équilibrée
+            </li>
+            <li class="flex items-start">
+              <svg class="flex-shrink-0 mr-2 w-5 h-5 text-green-700" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Croissance guidée
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Taille d'entretien -->
+      <div class="overflow-hidden relative bg-white rounded-2xl shadow-lg transition-shadow group hover:shadow-xl">
+        <div class="relative h-64 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Taille d'entretien" class="object-cover w-full h-full transition-transform group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/40"></div>
+        </div>
+        <div class="relative p-8">
+          <div class="flex justify-center items-center mb-6 w-16 h-16 bg-green-700 rounded-full">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="mb-4 text-2xl font-bold text-gray-900">Taille d'Entretien</h3>
+          <p class="mb-6 text-gray-700">
+            La taille d'entretien permet de maintenir la santé et la forme de vos arbres adultes. Nous intervenons régulièrement pour éliminer les branches mortes, malades ou dangereuses, tout en préservant l'esthétique naturelle de l'arbre.
+          </p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start">
+              <svg class="flex-shrink-0 mr-2 w-5 h-5 text-green-700" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Élimination des branches mortes
+            </li>
+            <li class="flex items-start">
+              <svg class="flex-shrink-0 mr-2 w-5 h-5 text-green-700" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Préservation de l'esthétique
+            </li>
+            <li class="flex items-start">
+              <svg class="flex-shrink-0 mr-2 w-5 h-5 text-green-700" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Maintien de la santé
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Réduction de couronne -->
+      <div class="overflow-hidden relative bg-white rounded-2xl shadow-lg transition-shadow group hover:shadow-xl">
+        <div class="relative h-64 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Réduction de couronne" class="object-cover w-full h-full transition-transform group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/40"></div>
+        </div>
+        <div class="relative p-8">
+          <div class="flex justify-center items-center mb-6 w-16 h-16 bg-amber-700 rounded-full">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="mb-4 text-2xl font-bold text-gray-900">Réduction de Couronne</h3>
+          <p class="mb-6 text-gray-700">
+            La réduction de couronne permet de diminuer la hauteur et l'envergure d'un arbre tout en préservant sa forme naturelle. Cette technique est idéale pour limiter l'ombre, réduire les risques de chute ou adapter l'arbre à son environnement.
+          </p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start">
+              <svg class="flex-shrink-0 mr-2 w-5 h-5 text-amber-700" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Réduction de la hauteur
+            </li>
+            <li class="flex items-start">
+              <svg class="flex-shrink-0 mr-2 w-5 h-5 text-amber-700" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Préservation de la forme
+            </li>
+            <li class="flex items-start">
+              <svg class="flex-shrink-0 mr-2 w-5 h-5 text-amber-700" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Réduction des risques
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Étêtage -->
+      <div class="overflow-hidden relative bg-white rounded-2xl shadow-lg transition-shadow group hover:shadow-xl">
+        <div class="relative h-64 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Étêtage" class="object-cover w-full h-full transition-transform group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/40"></div>
+        </div>
+        <div class="relative p-8">
+          <div class="flex justify-center items-center mb-6 w-16 h-16 bg-amber-800 rounded-full">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+          </div>
+          <h3 class="mb-4 text-2xl font-bold text-gray-900">Étêtage</h3>
+          <p class="mb-6 text-gray-700">
+            L'étêtage consiste à couper la cime de l'arbre pour réduire significativement sa hauteur. Cette intervention doit être réalisée avec précaution car elle peut affecter la santé de l'arbre. Nous pratiquons l'étêtage uniquement lorsque c'est nécessaire et avec les techniques appropriées.
+          </p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start">
+              <svg class="flex-shrink-0 mr-2 w-5 h-5 text-amber-800" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Réduction de hauteur importante
+            </li>
+            <li class="flex items-start">
+              <svg class="flex-shrink-0 mr-2 w-5 h-5 text-amber-800" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Techniques appropriées
+            </li>
+            <li class="flex items-start">
+              <svg class="flex-shrink-0 mr-2 w-5 h-5 text-amber-800" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Intervention sécurisée
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Galerie de réalisations -->
+<section class="py-24 bg-gradient-to-b from-white to-green-50">
+  <div class="px-6 mx-auto max-w-7xl lg:px-8">
+    <div class="mx-auto max-w-2xl text-center mb-16">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Nos Réalisations en Images</h2>
+      <p class="mt-4 text-lg text-gray-600">Découvrez nos interventions d'élagage en action</p>
+    </div>
+    
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="overflow-hidden relative rounded-2xl shadow-xl aspect-[4/3] group">
+        <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Élagage professionnel" class="object-cover w-full h-full transition-transform group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/60"></div>
+        <div class="absolute right-4 bottom-4 left-4">
+          <p class="font-semibold text-white">Élagage d'un chêne centenaire</p>
+        </div>
+      </div>
+      
+      <div class="overflow-hidden relative rounded-2xl shadow-xl aspect-[4/3] group">
+        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Taille professionnelle" class="object-cover w-full h-full transition-transform group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/60"></div>
+        <div class="absolute right-4 bottom-4 left-4">
+          <p class="font-semibold text-white">Taille de formation</p>
+        </div>
+      </div>
+      
+      <div class="overflow-hidden relative rounded-2xl shadow-xl aspect-[4/3] group">
+        <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Réduction de couronne" class="object-cover w-full h-full transition-transform group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/60"></div>
+        <div class="absolute right-4 bottom-4 left-4">
+          <p class="font-semibold text-white">Réduction de couronne</p>
+        </div>
+      </div>
+      
+      <div class="overflow-hidden relative rounded-2xl shadow-xl aspect-[4/3] group">
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Étêtage sécurisé" class="object-cover w-full h-full transition-transform group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/60"></div>
+        <div class="absolute right-4 bottom-4 left-4">
+          <p class="font-semibold text-white">Étêtage sécurisé</p>
+        </div>
+      </div>
+      
+      <div class="overflow-hidden relative rounded-2xl shadow-xl aspect-[4/3] group">
+        <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Taille d'entretien" class="object-cover w-full h-full transition-transform group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/60"></div>
+        <div class="absolute right-4 bottom-4 left-4">
+          <p class="font-semibold text-white">Taille d'entretien régulier</p>
+        </div>
+      </div>
+      
+      <div class="overflow-hidden relative rounded-2xl shadow-xl aspect-[4/3] group">
+        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Intervention professionnelle" class="object-cover w-full h-full transition-transform group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/60"></div>
+        <div class="absolute right-4 bottom-4 left-4">
+          <p class="font-semibold text-white">Intervention professionnelle</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pourquoi choisir notre service -->
+<section class="py-24 bg-white">
+  <div class="px-6 mx-auto max-w-7xl lg:px-8">
+    <div class="mx-auto max-w-2xl text-center mb-16">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Pourquoi Choisir Notre Service d'Élagage ?</h2>
+      <p class="mt-4 text-lg text-gray-600">Une expertise reconnue, une passion pour les arbres</p>
+    </div>
+    
+    <div class="grid gap-8 lg:grid-cols-3">
+      <div class="overflow-hidden relative bg-gradient-to-br from-green-50 to-white rounded-2xl border border-green-100 shadow-lg">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Sécurité" class="object-cover w-full h-full">
+        </div>
+        <div class="p-8">
+        <div class="flex justify-center items-center mb-6 w-16 h-16 bg-green-700 rounded-full">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+        </div>
+        <h3 class="mb-4 text-xl font-bold text-gray-900">Sécurité Avant Tout</h3>
+        <p class="text-gray-600">
+          Chaque intervention est planifiée avec soin pour garantir la sécurité de tous. Nous respectons les normes de sécurité les plus strictes et utilisons les équipements de protection individuelle adaptés.
+        </p>
+        </div>
+      </div>
+      
+      <div class="overflow-hidden relative bg-gradient-to-br from-amber-50 to-white rounded-2xl border border-amber-100 shadow-lg">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Respect de la biologie" class="object-cover w-full h-full">
+        </div>
+        <div class="p-8">
+        <div class="flex justify-center items-center mb-6 w-16 h-16 bg-amber-700 rounded-full">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+        </div>
+        <h3 class="mb-4 text-xl font-bold text-gray-900">Respect de la Biologie</h3>
+        <p class="text-gray-600">
+          Nous respectons la biologie de chaque arbre. Chaque coupe est réfléchie pour préserver la santé et l'esthétique naturelle de l'arbre, tout en répondant à vos besoins.
+        </p>
+        </div>
+      </div>
+      
+      <div class="overflow-hidden relative bg-gradient-to-br from-green-50 to-white rounded-2xl border border-green-100 shadow-lg">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Expérience" class="object-cover w-full h-full">
+        </div>
+        <div class="p-8">
+        <div class="flex justify-center items-center mb-6 w-16 h-16 bg-green-700 rounded-full">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <h3 class="mb-4 text-xl font-bold text-gray-900">15+ Ans d'Expérience</h3>
+        <p class="text-gray-600">
+          Notre passion pour les arbres nous pousse à nous former continuellement. Nous maîtrisons les dernières techniques et normes professionnelles pour vous garantir un travail de qualité.
+        </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-24 bg-gradient-to-br from-green-700 via-green-800 to-green-900">
+  <div class="px-6 mx-auto max-w-7xl lg:px-8">
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 class="text-4xl font-bold tracking-tight text-white sm:text-5xl">Besoin d'un Élagage Professionnel ?</h2>
+      <p class="mt-6 text-xl leading-relaxed text-white">
+        Contactez-nous pour un devis gratuit et personnalisé. Nous intervenons rapidement dans toute l'Île-de-France.
+      </p>
+      <div class="flex flex-col gap-4 mt-10 sm:flex-row sm:justify-center">
+        <a href="/devis" class="inline-flex justify-center items-center px-10 py-5 text-lg font-semibold text-green-900 bg-amber-400 rounded-lg shadow-xl transition-all hover:bg-amber-300 hover:scale-105">
+          Demander un devis gratuit
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a href="tel:+33620479966" class="inline-flex justify-center items-center px-10 py-5 text-lg font-semibold text-white rounded-lg border-2 border-white/30 bg-white/10 backdrop-blur-md transition-all hover:bg-white/20 hover:border-white/50">
+          <svg class="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          06 20 47 99 66
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render "components/footer" %>
+
