@@ -1,0 +1,81 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://elagage-dubois-v2.scalingo.io/sitemap.xml
+
+# Crawl-delay pour éviter la surcharge
+Crawl-delay: 1
+
+# Interdire l'accès aux fichiers sensibles
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /log/
+Disallow: /config/
+Disallow: /db/
+Disallow: /vendor/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.env
+Disallow: /Gemfile
+Disallow: /Gemfile.lock
+Disallow: /Rakefile
+Disallow: /README.md
+Disallow: /Dockerfile
+Disallow: /Procfile.dev
+Disallow: /tailwind.config.js
+Disallow: /storage/
+Disallow: /bin/
+Disallow: /lib/
+Disallow: /script/
+Disallow: /app/assets/
+Disallow: /app/controllers/concerns/
+Disallow: /app/helpers/
+Disallow: /app/jobs/
+Disallow: /app/mailers/
+Disallow: /app/models/concerns/
+Disallow: /app/views/components/
+Disallow: /app/views/layouts/
+Disallow: /app/views/pwa/
+Disallow: /app/views/quote_mailer/
+Disallow: /app/javascript/
+Disallow: /config/
+Disallow: /db/migrate/
+Disallow: /public/400.html
+Disallow: /public/404.html
+Disallow: /public/406-unsupported-browser.html
+Disallow: /public/422.html
+Disallow: /public/500.html
+
+# Autoriser les pages importantes
+Allow: /
+Allow: /qui-sommes-nous
+Allow: /etat-des-lieux-residentiel
+Allow: /etat-des-lieux-tertiaire
+Allow: /chiffrage-locatif
+Allow: /devis
+Allow: /recrutement
+Allow: /mentions-legales
+Allow: /cgu
+Allow: /politique-confidentialite
+Allow: /cookies
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /icon.png
+Allow: /icon.svg
+Allow: /public/robots.txt
+
+# Spécifique pour Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Spécifique pour Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# Spécifique pour Yandex
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2

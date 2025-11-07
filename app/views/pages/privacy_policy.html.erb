@@ -1,0 +1,118 @@
+<% content_for :title, "Politique de confidentialité - Élagage Dubois" %>
+<% content_for :description, "Politique de confidentialité Élagage Dubois - Protection des données personnelles." %>
+<% content_for :keywords, "politique confidentialité, protection données, RGPD, Élagage Dubois" %>
+<% content_for :og_title, "Politique de confidentialité - Élagage Dubois" %>
+<% content_for :og_description, "Politique de confidentialité Élagage Dubois - Protection des données personnelles." %>
+<% content_for :og_image, "https://elagage-dubois-v2.scalingo.io/icon.png" %>
+
+<!-- Breadcrumb pour la page Politique de confidentialité -->
+<% content_for :head do %>
+  <script type="application/ld+json">
+  <%= raw structured_data_breadcrumb([
+    { name: "Accueil", url: "https://elagage-dubois-v2.scalingo.io/" },
+    { name: "Politique de confidentialité", url: "https://elagage-dubois-v2.scalingo.io/politique-confidentialite" }
+  ]).to_json %>
+  </script>
+<% end %>
+
+<%= render "components/header_standard" %>
+<div class="min-h-screen bg-white py-24">
+  <div class="mx-auto max-w-4xl px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Politique de confidentialité</h1>
+      <p class="mt-6 text-lg leading-8 text-gray-600">Protection de vos données personnelles</p>
+    </div>
+
+    <div class="prose prose-lg max-w-none">
+      <h2>1. Responsable du traitement</h2>
+      <p><strong>Élagage Dubois</strong></p>
+      <p>Gérant : Yoan DUBOIS</p>
+      <p>Adresse : 4, rue Philibert Delorme, 78280 Guyancourt</p>
+      <p>Email : sqy.etatdeslieux@gmail.com</p>
+      <p>Téléphone : 06 20 47 99 66</p>
+
+      <h2>2. Données collectées</h2>
+      <p>Nous collectons les données personnelles suivantes :</p>
+      <ul>
+        <li><strong>Données d'identification :</strong> nom, prénom, adresse email, numéro de téléphone</li>
+        <li><strong>Données de contact :</strong> adresse postale, informations de facturation</li>
+        <li><strong>Données de navigation :</strong> adresse IP, cookies, pages visitées</li>
+        <li><strong>Données de communication :</strong> échanges par email, téléphone, formulaire de contact</li>
+      </ul>
+
+      <h2>3. Finalités du traitement</h2>
+      <p>Vos données sont utilisées pour :</p>
+      <ul>
+        <li>Fournir nos services d'états des lieux</li>
+        <li>Traiter vos demandes de devis</li>
+        <li>Gérer la relation client</li>
+        <li>Respecter nos obligations légales</li>
+        <li>Améliorer nos services</li>
+      </ul>
+
+      <h2>4. Base légale</h2>
+      <p>Le traitement de vos données repose sur :</p>
+      <ul>
+        <li><strong>Exécution du contrat :</strong> pour la fourniture de nos services</li>
+        <li><strong>Intérêt légitime :</strong> pour l'amélioration de nos services</li>
+        <li><strong>Obligation légale :</strong> pour la conservation des documents comptables</li>
+        <li><strong>Consentement :</strong> pour l'envoi de communications marketing</li>
+      </ul>
+
+      <h2>5. Conservation des données</h2>
+      <p>Vos données sont conservées :</p>
+      <ul>
+        <li><strong>Données clients :</strong> 3 ans après la fin de la relation contractuelle</li>
+        <li><strong>Données comptables :</strong> 10 ans conformément à la législation</li>
+        <li><strong>Données de prospection :</strong> 3 ans après le dernier contact</li>
+      </ul>
+
+      <h2>6. Partage des données</h2>
+      <p>Vos données peuvent être partagées avec :</p>
+      <ul>
+        <li>Nos partenaires techniques (hébergement, maintenance)</li>
+        <li>Les autorités compétentes sur demande légale</li>
+        <li>Nos prestataires de services (comptabilité, juridique)</li>
+      </ul>
+
+      <h2>7. Vos droits</h2>
+      <p>Conformément au RGPD, vous disposez des droits suivants :</p>
+      <ul>
+        <li><strong>Droit d'accès :</strong> obtenir une copie de vos données</li>
+        <li><strong>Droit de rectification :</strong> corriger vos données inexactes</li>
+        <li><strong>Droit d'effacement :</strong> supprimer vos données</li>
+        <li><strong>Droit à la limitation :</strong> limiter le traitement</li>
+        <li><strong>Droit à la portabilité :</strong> récupérer vos données</li>
+        <li><strong>Droit d'opposition :</strong> vous opposer au traitement</li>
+      </ul>
+
+      <h2>8. Sécurité</h2>
+      <p>Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données contre :</p>
+      <ul>
+        <li>L'accès non autorisé</li>
+        <li>La divulgation</li>
+        <li>La modification</li>
+        <li>La destruction</li>
+      </ul>
+
+      <h2>9. Cookies</h2>
+      <p>Notre site utilise des cookies conformément à notre <a href="/cookies" class="text-indigo-600 hover:text-indigo-500">Politique des cookies</a>.</p>
+
+      <h2>10. Réclamations</h2>
+      <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez :</p>
+      <ul>
+        <li>Nous contacter directement</li>
+        <li>Saisir la CNIL (www.cnil.fr)</li>
+      </ul>
+
+      <h2>11. Contact</h2>
+      <p>Pour exercer vos droits ou pour toute question :</p>
+      <ul>
+        <li>Email : sqy.etatdeslieux@gmail.com</li>
+        <li>Téléphone : 06 20 47 99 66</li>
+        <li>Courrier : Élagage Dubois, 4, rue Philibert Delorme, 78280 Guyancourt</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<%= render "components/footer" %>

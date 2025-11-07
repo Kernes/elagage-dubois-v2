@@ -1,0 +1,117 @@
+<% content_for :title, "Politique des cookies - Élagage Dubois" %>
+<% content_for :description, "Politique des cookies Élagage Dubois - Utilisation des cookies sur notre site." %>
+<% content_for :keywords, "cookies, politique cookies, Élagage Dubois" %>
+<% content_for :og_title, "Politique des cookies - Élagage Dubois" %>
+<% content_for :og_description, "Politique des cookies Élagage Dubois - Utilisation des cookies sur notre site." %>
+<% content_for :og_image, "https://elagage-dubois-v2.scalingo.io/icon.png" %>
+
+<!-- Breadcrumb pour la page Politique des cookies -->
+<% content_for :head do %>
+  <script type="application/ld+json">
+  <%= raw structured_data_breadcrumb([
+    { name: "Accueil", url: "https://elagage-dubois-v2.scalingo.io/" },
+    { name: "Politique des cookies", url: "https://elagage-dubois-v2.scalingo.io/cookies" }
+  ]).to_json %>
+  </script>
+<% end %>
+
+<%= render "components/header_standard" %>
+<div class="min-h-screen bg-white py-24">
+  <div class="mx-auto max-w-4xl px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Politique des cookies</h1>
+      <p class="mt-6 text-lg leading-8 text-gray-600">Utilisation des cookies sur notre site</p>
+    </div>
+
+    <div class="prose prose-lg max-w-none">
+      <h2>1. Qu'est-ce qu'un cookie ?</h2>
+      <p>Un cookie est un petit fichier texte déposé sur votre ordinateur, tablette ou smartphone lorsque vous visitez un site web. Il permet au site de mémoriser vos actions et préférences pendant une période donnée.</p>
+
+      <h2>2. Types de cookies utilisés</h2>
+      
+      <h3>Cookies strictement nécessaires</h3>
+      <p>Ces cookies sont indispensables au fonctionnement du site et ne nécessitent pas de consentement :</p>
+      <ul>
+        <li><strong>Cookies de session Rails :</strong> maintiennent votre session active sur le site</li>
+        <li><strong>Cookies de sécurité :</strong> protègent contre les attaques CSRF</li>
+        <li><strong>Cookies de préférences :</strong> mémorisent vos choix de navigation</li>
+        <li><strong>Cookies d'hébergement :</strong> nécessaires au bon fonctionnement sur Scalingo</li>
+      </ul>
+
+      <h3>Cookies de performance (optionnels)</h3>
+      <p>Ces cookies nous aident à améliorer le site :</p>
+      <ul>
+        <li><strong>Cookies analytiques :</strong> mesurent l'audience et l'utilisation (si activés)</li>
+        <li><strong>Cookies de test :</strong> permettent d'améliorer les fonctionnalités</li>
+      </ul>
+
+      <h2>4. Durée de conservation</h2>
+      <p>Les cookies ont différentes durées de vie :</p>
+      <ul>
+        <li><strong>Cookies de session :</strong> supprimés à la fermeture du navigateur</li>
+        <li><strong>Cookies persistants :</strong> conservés de 30 jours à 2 ans maximum</li>
+        <li><strong>Cookies de préférences :</strong> conservés jusqu'à modification</li>
+      </ul>
+
+      <h2>5. Gestion des cookies</h2>
+      
+      <h3>Paramétrage du navigateur</h3>
+      <p>Vous pouvez gérer les cookies via les paramètres de votre navigateur :</p>
+      <ul>
+        <li><strong>Chrome :</strong> Paramètres > Confidentialité et sécurité > Cookies</li>
+        <li><strong>Firefox :</strong> Options > Vie privée et sécurité > Cookies</li>
+        <li><strong>Safari :</strong> Préférences > Confidentialité > Cookies</li>
+        <li><strong>Edge :</strong> Paramètres > Cookies et autorisations de site</li>
+      </ul>
+
+      <h3>Consentement</h3>
+      <p>Lors de votre première visite, nous vous demandons votre consentement pour :</p>
+      <ul>
+        <li>Les cookies de performance</li>
+        <li>Les cookies de fonctionnalité</li>
+        <li>Les cookies tiers</li>
+      </ul>
+
+      <h2>6. Conséquences du refus</h2>
+      <p>Le refus des cookies peut entraîner :</p>
+      <ul>
+        <li>Une limitation des fonctionnalités du site</li>
+        <li>La nécessité de ressaisir vos préférences à chaque visite</li>
+        <li>L'impossibilité d'accéder à certains contenus personnalisés</li>
+      </ul>
+
+      <h2>7. Cookies strictement nécessaires</h2>
+      <p>Ces cookies ne nécessitent pas de consentement car ils sont indispensables :</p>
+      <ul>
+        <li>Maintien de la session utilisateur</li>
+        <li>Sécurité du site</li>
+        <li>Fonctionnement des formulaires</li>
+        <li>Préférences de base</li>
+      </ul>
+
+      <h2>8. Mise à jour de la politique</h2>
+      <p>Cette politique peut être mise à jour pour refléter :</p>
+      <ul>
+        <li>Les changements technologiques</li>
+        <li>Les évolutions réglementaires</li>
+        <li>Les nouveaux services proposés</li>
+      </ul>
+
+      <h2>9. Contact</h2>
+      <p>Pour toute question concernant les cookies :</p>
+      <ul>
+        <li>Email : sqy.etatdeslieux@gmail.com</li>
+        <li>Téléphone : 06 20 47 99 66</li>
+        <li>Adresse : Élagage Dubois, 4, rue Philibert Delorme, 78280 Guyancourt</li>
+      </ul>
+
+      <h2>10. Liens utiles</h2>
+      <p>Pour en savoir plus sur les cookies :</p>
+      <ul>
+        <li><a href="https://www.cnil.fr/fr/cookies-et-autres-traceurs" class="text-indigo-600 hover:text-indigo-500" target="_blank">CNIL - Cookies et traceurs</a></li>
+        <li><a href="https://www.allaboutcookies.org/" class="text-indigo-600 hover:text-indigo-500" target="_blank">All About Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<%= render "components/footer" %>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nouvelle candidature - Élagage Dubois</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f8fafc; }
+      .container { max-width: 600px; margin: 0 auto; background: white; border-radius: 8px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+      .header { text-align: center; margin-bottom: 30px; }
+      .logo { font-size: 24px; font-weight: bold; color: #4f46e5; margin-bottom: 10px; }
+      .title { font-size: 20px; color: #1f2937; margin-bottom: 20px; }
+      .info-section { background: #f3f4f6; padding: 20px; border-radius: 6px; margin: 20px 0; }
+      .info-item { margin: 10px 0; }
+      .label { font-weight: bold; color: #374151; }
+      .value { color: #6b7280; }
+      .footer { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e7eb; color: #6b7280; font-size: 14px; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo">Élagage Dubois</div>
+        <div class="title">Nouvelle candidature reçue</div>
+      </div>
+
+      <div class="info-section">
+        <h3 style="margin-top: 0; color: #1f2937;">Informations du candidat</h3>
+        
+        <div class="info-item">
+          <span class="label">Nom complet :</span>
+          <span class="value"><%= @first_name %> <%= @last_name %></span>
+        </div>
+        
+        <div class="info-item">
+          <span class="label">Email :</span>
+          <span class="value"><%= @email %></span>
+        </div>
+        
+        <div class="info-item">
+          <span class="label">Téléphone :</span>
+          <span class="value"><%= @phone %></span>
+        </div>
+      </div>
+
+      <% if @note.present? %>
+      <div class="info-section">
+        <h3 style="margin-top: 0; color: #1f2937;">Message du candidat</h3>
+        <p class="value" style="white-space: pre-wrap;"><%= @note %></p>
+      </div>
+      <% end %>
+
+      <% if @cv_file %>
+      <div class="info-section">
+        <h3 style="margin-top: 0; color: #1f2937;">CV joint</h3>
+        <p class="value">Le candidat a joint son CV en pièce jointe.</p>
+      </div>
+      <% end %>
+
+      <div class="footer">
+        <p>Cette candidature a été envoyée via le formulaire de recrutement Élagage Dubois.</p>
+        <p>Vous pouvez répondre directement à cet email pour contacter le candidat.</p>
+      </div>
+    </div>
+  </body>
+</html>

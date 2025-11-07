@@ -1,0 +1,42 @@
+<% content_for :title, "Élagage Dubois - États des lieux professionnels en Île-de-France | Guyancourt" %>
+<% content_for :description, "Élagage Dubois : service professionnel d'états des lieux en Île-de-France. Entrée, sortie, inventaire. Rapide, fiable et conforme. Contactez Yoan DUBOIS au 06 20 47 99 66." %>
+<% content_for :keywords, "état des lieux, Île-de-France, Guyancourt, professionnel, entrée, sortie, inventaire, bailleur, agence immobilière, Élagage Dubois, Yoan DUBOIS" %>
+<% content_for :og_title, "Élagage Dubois - États des lieux professionnels en Île-de-France" %>
+<% content_for :og_description, "Service professionnel d'états des lieux en Île-de-France. Entrée, sortie, inventaire. Rapide, fiable et conforme. Contactez-nous !" %>
+<% content_for :og_image, "https://elagage-dubois-v2.scalingo.io/icon.png" %>
+
+<!-- Structured Data - FAQ pour la page d'accueil -->
+<% content_for :head do %>
+  <script type="application/ld+json">
+  <%= raw structured_data_faq([
+    {
+      question: "Qu'est-ce qu'un état des lieux ?",
+      answer: "Un état des lieux est un document détaillé qui décrit l'état d'un bien immobilier au moment de l'entrée ou de la sortie d'un locataire. Il est obligatoire et protège à la fois le propriétaire et le locataire."
+    },
+    {
+      question: "Combien coûte un état des lieux ?",
+      answer: "Le prix d'un état des lieux varie selon le type de bien et la superficie. Contactez-nous pour un devis gratuit et personnalisé adapté à vos besoins."
+    },
+    {
+      question: "Dans quelles villes intervenez-vous ?",
+      answer: "Élagage Dubois intervient dans toute l'Île-de-France, avec une expertise particulière dans les Yvelines et les communes environnantes comme Guyancourt, Versailles, Saint-Quentin-en-Yvelines."
+    },
+    {
+      question: "Quel est le délai pour réaliser un état des lieux ?",
+      answer: "Nous nous engageons à réaliser votre état des lieux dans les 48h suivant votre demande, avec une disponibilité 7j/7 pour les urgences."
+    }
+  ]).to_json %>
+  </script>
+<% end %>
+
+<%= render "components/header" %>
+<%= render "components/who" %>
+<%= render "components/why" %>
+<%= render "components/why_so" %>
+<%= render "components/testimonial" %>
+<%= render "components/faq" %>
+<%= render "components/cta_final" %>
+
+<%= render "components/contact" %>
+<%= render "components/footer" %>
+

@@ -1,0 +1,33 @@
+Merci pour votre demande de devis - Élagage Dubois
+==========================================
+
+Bonjour <%= @quote.prenom %>,
+
+Nous avons bien reçu votre demande de devis pour un <%= @quote.type_etat_human %> concernant votre <%= @quote.type_bien_human %> situé(e) à <%= @quote.ville %>.
+
+RÉCAPITULATIF DE VOTRE DEMANDE :
+- Type : <%= @quote.type_etat_human %>
+- Bien : <%= @quote.type_bien_human %>
+- Surface : <%= @quote.surface %> m²
+- Pièces : <%= @quote.pieces %>
+- Localisation : <%= @quote.adresse %>, <%= @quote.ville %> <%= @quote.code_postal %>
+<% if @quote.telephone.present? %>- Votre téléphone : <%= @quote.telephone %><% end %>
+
+PROCHAINES ÉTAPES :
+Notre équipe va étudier votre demande et vous enverra votre devis personnalisé dans les 24 heures.
+
+BESOIN D'INFORMATIONS ?
+N'hésitez pas à nous contacter :
+- Téléphone : 06 20 47 99 66
+- Email : sqy.etatdeslieux@gmail.com
+- Disponibilité : 6 jours sur 7
+
+Merci de votre confiance !
+
+Cordialement,
+L'équipe Élagage Dubois
+Yoan DUBOIS - Gérant
+
+---
+Élagage Dubois - États des lieux professionnels en Île-de-France
+06 20 47 99 66 | ✉️ sqy.etatdeslieux@gmail.com

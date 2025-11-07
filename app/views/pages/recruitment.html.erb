@@ -1,0 +1,683 @@
+<% content_for :title, "Recrutement - Élagage Dubois | Rejoignez notre équipe" %>
+<% content_for :description, "Rejoignez l'équipe Élagage Dubois ! Offres d'emploi pour agents d'états des lieux en Île-de-France. Formation et évolution garanties." %>
+<% content_for :keywords, "recrutement, emploi, agent état des lieux, carrière, Élagage Dubois, Île-de-France, Guyancourt, Yvelines" %>
+<% content_for :og_title, "Recrutement - Élagage Dubois | Rejoignez notre équipe" %>
+<% content_for :og_description, "Rejoignez l'équipe Élagage Dubois ! Offres d'emploi pour agents d'états des lieux en Île-de-France. Formation et évolution garanties." %>
+<% content_for :og_image, "https://elagage-dubois-v2.scalingo.io/icon.png" %>
+
+<!-- Breadcrumb pour la page Recrutement -->
+<% content_for :head do %>
+  <script type="application/ld+json">
+  <%= raw structured_data_breadcrumb([
+    { name: "Accueil", url: "https://elagage-dubois-v2.scalingo.io/" },
+    { name: "Recrutement", url: "https://elagage-dubois-v2.scalingo.io/recrutement" }
+  ]).to_json %>
+  </script>
+<% end %>
+
+<%= render "components/header_standard" %>
+
+<!-- Hero Section -->
+<div class="isolate relative pt-14 pb-24 bg-gray-900">
+  <div aria-hidden="true" class="overflow-hidden absolute inset-x-0 -top-40 blur-3xl transform-gpu -z-20 sm:-top-80">
+    <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"></div>
+  </div>
+  <div class="px-6 mx-auto max-w-7xl lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+        Élagage Dubois se développe. <span class="bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">Rejoignez-nous !</span>
+      </h1>
+      <p class="mt-6 text-lg leading-8 text-gray-300">
+        Élagage Dubois est une société spécialisée dans la réalisation d'états des lieux. 
+        Envie d'autonomie ? Rejoignez notre réseau d'agents indépendants.
+      </p>
+      <div class="flex flex-col gap-4 justify-center items-center mt-10 sm:flex-row">
+        <a href="#formulaire" class="inline-flex items-center px-6 py-3 text-base font-semibold text-white bg-indigo-600 rounded-md shadow-lg transition-all duration-200 hover:bg-indigo-500">
+          Postuler maintenant
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+        <a href="tel:+33620479966" class="inline-flex items-center px-6 py-3 text-base font-semibold text-white bg-green-600 rounded-md shadow-lg transition-all duration-200 hover:bg-green-500">
+          <svg class="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          06 20 47 99 66
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Présentation -->
+  <div class="py-24 bg-white sm:py-32">
+    <div class="px-6 mx-auto max-w-7xl lg:px-8">
+      <div class="mx-auto max-w-4xl text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          Vous cherchez de l'autonomie professionnelle ?
+        </h2>
+        <p class="mt-6 text-lg leading-8 text-gray-600">
+          Rejoignez notre réseau d'agents indépendants spécialisés dans les états des lieux et profitez de missions régulières, d'une flexibilité horaire optimale et d'une formation professionnelle de qualité.
+        </p>
+        <p class="mt-4 text-base leading-7 text-gray-600">
+          Implantée en Île-de-France, Élagage Dubois, experte dans la réalisation d'états des lieux locatifs, recherche des agents indépendants pour rejoindre ses équipes et effectuer des états des lieux pour le compte de ses clients.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Profil recherché -->
+  <div class="py-24 bg-gray-50 sm:py-32">
+    <div class="px-6 mx-auto max-w-7xl lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          Votre profil nous intéresse si vous êtes :
+        </h2>
+      </div>
+      
+      <div class="mx-auto mt-16 max-w-6xl">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <div class="p-6 bg-white rounded-xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="flex justify-center items-center mr-4 w-10 h-10 bg-green-600 rounded-lg">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900">Indépendant ou auto-entrepreneur</h3>
+            </div>
+            <p class="text-gray-600">Vous exercez en profession libérale et souhaitez diversifier vos revenus dans le secteur immobilier.</p>
+          </div>
+          
+          <div class="p-6 bg-white rounded-xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="flex justify-center items-center mr-4 w-10 h-10 bg-blue-600 rounded-lg">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900">Mobile en Île-de-France</h3>
+            </div>
+            <p class="text-gray-600">Vous pouvez vous déplacer facilement dans toute la région parisienne pour nos missions.</p>
+          </div>
+          
+          <div class="p-6 bg-white rounded-xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="flex justify-center items-center mr-4 w-10 h-10 bg-purple-600 rounded-lg">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900">Méthodique et fiable</h3>
+            </div>
+            <p class="text-gray-600">Vous êtes organisé, ponctuel et capable de respecter les procédures avec rigueur.</p>
+          </div>
+          
+          <div class="p-6 bg-white rounded-xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="flex justify-center items-center mr-4 w-10 h-10 bg-orange-600 rounded-lg">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900">Équipé technologiquement</h3>
+            </div>
+            <p class="text-gray-600">Vous possédez une tablette ou ordinateur portable avec les logiciels nécessaires.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Témoignages -->
+  <div class="py-24 bg-white sm:py-32">
+    <div class="px-6 mx-auto max-w-7xl lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          Ce qu'en disent nos agents
+        </h2>
+      </div>
+      
+      <div class="mx-auto mt-16 max-w-6xl">
+        <div class="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
+          <div class="p-8 bg-white rounded-lg ring-1 ring-gray-200 shadow-sm">
+            <p class="mb-4 text-gray-600">
+              "En tant qu'agent affilié à Élagage Dubois à Guyancourt depuis six mois, je souhaite partager une expérience très positive. 
+              Cette collaboration m'a permis d'optimiser mes créneaux libres, générant ainsi un complément de revenus très appréciable. 
+              L'accès facile aux créneaux disponibles dans l'agenda de Élagage Dubois offre une flexibilité importante."
+            </p>
+            <div class="flex items-center">
+              <div class="flex justify-center items-center w-10 h-10 bg-gray-200 rounded-full">
+                <span class="text-sm font-semibold text-gray-600">C</span>
+              </div>
+              <div class="ml-3">
+                <p class="text-sm font-semibold text-gray-900">Cyndi</p>
+                <p class="text-sm text-gray-500">Agent Élagage Dubois à Guyancourt</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="p-8 bg-white rounded-lg ring-1 ring-gray-200 shadow-sm">
+            <p class="mb-4 text-gray-600">
+              "Je viens de terminer avec succès la formation de partenariat de Élagage Dubois, d'excellente qualité. 
+              Elle m'a permis d'acquérir une compréhension approfondie des enjeux liés à un état des lieux, 
+              me rendant opérationnel très rapidement. Cette expérience de formation ouvre des perspectives très prometteuses pour mes projets futurs."
+            </p>
+            <div class="flex items-center">
+              <div class="flex justify-center items-center w-10 h-10 bg-gray-200 rounded-full">
+                <span class="text-sm font-semibold text-gray-600">J</span>
+              </div>
+              <div class="ml-3">
+                <p class="text-sm font-semibold text-gray-900">Jonathan</p>
+                <p class="text-sm text-gray-500">Agent Élagage Dubois à Versailles</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="p-8 bg-white rounded-lg ring-1 ring-gray-200 shadow-sm">
+            <p class="mb-4 text-gray-600">
+              "En tant qu'agent en état des lieux chez Élagage Dubois, je tiens à saluer la réactivité exceptionnelle de l'encadrement. 
+              Leur efficacité face aux situations imprévues facilite grandement mon travail au quotidien."
+            </p>
+            <div class="flex items-center">
+              <div class="flex justify-center items-center w-10 h-10 bg-gray-200 rounded-full">
+                <span class="text-sm font-semibold text-gray-600">M</span>
+              </div>
+              <div class="ml-3">
+                <p class="text-sm font-semibold text-gray-900">Mohamed</p>
+                <p class="text-sm text-gray-500">Agent Élagage Dubois à Saint-Quentin-en-Yvelines</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="p-8 bg-white rounded-lg ring-1 ring-gray-200 shadow-sm">
+            <p class="mb-4 text-gray-600">
+              "En tant qu'agent chez Élagage Dubois depuis deux mois, je tiens à souligner les excellentes relations et le suivi de qualité apporté à mon parcours. 
+              La grille tarifaire est claire et le règlement mensuel des factures par virement s'effectue sans retard, facilitant ainsi le partenariat."
+            </p>
+            <div class="flex items-center">
+              <div class="flex justify-center items-center w-10 h-10 bg-gray-200 rounded-full">
+                <span class="text-sm font-semibold text-gray-600">M-C</span>
+              </div>
+              <div class="ml-3">
+                <p class="text-sm font-semibold text-gray-900">Marie-Catherine</p>
+                <p class="text-sm text-gray-500">Agent Élagage Dubois à Versailles</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="py-24 bg-gray-50 sm:py-32">
+    <div class="px-6 mx-auto max-w-7xl lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          Questions fréquentes
+        </h2>
+      </div>
+      
+      <div class="mx-auto mt-16 max-w-2xl sm:mt-20">
+        <dl class="space-y-8">
+          <div>
+            <dt class="text-lg font-semibold leading-7 text-gray-900">Est-ce à moi, en tant qu'agent, de trouver des clients ?</dt>
+            <dd class="mt-2 text-base leading-7 text-gray-600">Non, Élagage Dubois vous fournit directement les missions. Vous n'avez pas besoin de prospecter.</dd>
+          </div>
+          
+          <div>
+            <dt class="text-lg font-semibold leading-7 text-gray-900">Qui sont les clients de Élagage Dubois ?</dt>
+            <dd class="mt-2 text-base leading-7 text-gray-600">Nos clients sont principalement des bailleurs, des agences immobilières et des gestionnaires de biens en Île-de-France.</dd>
+          </div>
+          
+          <div>
+            <dt class="text-lg font-semibold leading-7 text-gray-900">Quelle est la durée d'un état des lieux ?</dt>
+            <dd class="mt-2 text-base leading-7 text-gray-600">En moyenne, un état des lieux dure entre 1h30 et 2h30 selon la taille du logement.</dd>
+          </div>
+          
+          <div>
+            <dt class="text-lg font-semibold leading-7 text-gray-900">Comment les rendez-vous me seront affectés ?</dt>
+            <dd class="mt-2 text-base leading-7 text-gray-600">Les missions vous sont proposées selon votre zone géographique et vos disponibilités via notre système de planning.</dd>
+          </div>
+          
+          <div>
+            <dt class="text-lg font-semibold leading-7 text-gray-900">Comment fonctionne le système de rémunération ?</dt>
+            <dd class="mt-2 text-base leading-7 text-gray-600">Vous êtes rémunéré à la mission selon une grille tarifaire claire et transparente.</dd>
+          </div>
+          
+          <div>
+            <dt class="text-lg font-semibold leading-7 text-gray-900">Sur quelle zone géographique vais-je intervenir ?</dt>
+            <dd class="mt-2 text-base leading-7 text-gray-600">Vous intervenez dans toute l'Île-de-France, principalement dans les Yvelines et les départements limitrophes.</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+  <!-- Formulaire de candidature -->
+  <div id="formulaire" class="py-24 bg-gray-50 sm:py-32">
+    <div class="px-6 mx-auto max-w-7xl lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          Formulaire de candidature
+        </h2>
+        <p class="mt-6 text-lg leading-8 text-gray-600">
+          Pour pouvoir postuler, il est impératif de remplir notre formulaire en ligne. Merci de compléter tous les champs ci-dessous.
+        </p>
+      </div>
+      
+      <div class="mx-auto mt-16 max-w-2xl sm:mt-20">
+        <% if flash[:notice] %>
+          <div class="p-4 mb-6 bg-green-50 rounded-md">
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <svg class="w-5 h-5 text-green-400" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="ml-3">
+                <p class="text-sm font-medium text-green-800"><%= flash[:notice] %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+
+        <% if flash[:alert] %>
+          <div class="p-4 mb-6 bg-red-50 rounded-md">
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <svg class="w-5 h-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="ml-3">
+                <p class="text-sm font-medium text-red-800"><%= flash[:alert] %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+
+        <%= form_with url: create_recruitment_path, method: :post, multipart: true, local: true, class: "space-y-6" do |form| %>
+          <!-- Nom et Prénom -->
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div>
+              <%= form.label :first_name, "Prénom <span class='text-red-500'>*</span>".html_safe, class: "block mb-2 text-sm font-semibold text-gray-900" %>
+              <%= form.text_field :first_name, required: true, class: "block px-3 py-2 w-full rounded-md border border-gray-300 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" %>
+            </div>
+            <div>
+              <%= form.label :last_name, "Nom <span class='text-red-500'>*</span>".html_safe, class: "block mb-2 text-sm font-semibold text-gray-900" %>
+              <%= form.text_field :last_name, required: true, class: "block px-3 py-2 w-full rounded-md border border-gray-300 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" %>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div>
+            <%= form.label :email, "E-mail <span class='text-red-500'>*</span>".html_safe, class: "block mb-2 text-sm font-semibold text-gray-900" %>
+            <%= form.email_field :email, required: true, class: "block px-3 py-2 w-full rounded-md border border-gray-300 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" %>
+          </div>
+
+          <!-- Téléphone -->
+          <div>
+            <%= form.label :phone, "Téléphone <span class='text-red-500'>*</span>".html_safe, class: "block mb-2 text-sm font-semibold text-gray-900" %>
+            <%= form.telephone_field :phone, required: true, class: "block px-3 py-2 w-full rounded-md border border-gray-300 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500", placeholder: "06 20 47 99 66" %>
+          </div>
+
+          <!-- CV -->
+          <div>
+            <%= form.label :cv_file, "CV (PDF, DOC, DOCX) <span class='text-red-500'>*</span>".html_safe, class: "block mb-2 text-sm font-semibold text-gray-900" %>
+            <%= form.file_field :cv_file, required: true, accept: ".pdf,.doc,.docx", class: "block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100" %>
+            <p class="mt-1 text-sm text-gray-500">Formats acceptés : PDF, DOC, DOCX (max 10MB)</p>
+          </div>
+
+          <!-- Note -->
+          <div>
+            <%= form.label :note, "Message (optionnel)", class: "block mb-2 text-sm font-semibold text-gray-900" %>
+            <%= form.text_area :note, rows: 4, class: "block px-3 py-2 w-full rounded-md border border-gray-300 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500", placeholder: "Dites-nous pourquoi vous souhaitez rejoindre Élagage Dubois, vos disponibilités, ou toute autre information pertinente..." %>
+          </div>
+
+          <!-- Bouton de soumission -->
+          <div class="pt-6">
+            <%= form.submit "Postuler maintenant", class: "w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section informative interactive -->
+  <div class="py-24 bg-white sm:py-32">
+    <div class="px-6 mx-auto max-w-7xl lg:px-8">
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+          Comment bien choisir son agent d'état des lieux ?
+        </h2>
+        <p class="mt-6 text-xl leading-8 text-gray-600">
+          Découvrez les enjeux et les critères essentiels pour faire le bon choix
+        </p>
+      </div>
+      
+      <!-- Timeline interactive -->
+      <div class="mx-auto mt-20 max-w-6xl">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          
+          <!-- Carte 1: Pourquoi c'est important -->
+          <div class="overflow-hidden relative p-8 bg-white rounded-2xl shadow-lg transition-all duration-300 group hover:shadow-2xl hover:-translate-y-2">
+            <div class="absolute inset-0 bg-gradient-to-br opacity-0 transition-opacity duration-300 from-blue-500/10 to-indigo-500/10 group-hover:opacity-100"></div>
+            <div class="relative">
+              <div class="flex items-center mb-6">
+                <div class="flex justify-center items-center w-12 h-12 text-white bg-blue-600 rounded-xl shadow-lg">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <h3 class="ml-4 text-2xl font-bold text-gray-900">Un document juridique essentiel</h3>
+              </div>
+              <p class="mb-4 leading-relaxed text-gray-600">
+                L'état des lieux constitue un inventaire détaillé de l'état d'un bien immobilier lors de l'entrée et de la sortie d'un locataire. Cette démarche consiste en un examen minutieux de chaque espace du logement afin d'identifier les traces d'usure normale ou les dommages éventuels.
+              </p>
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-2 w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <p class="ml-3 text-sm text-gray-600">Évite les conflits futurs entre propriétaire et locataire</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-2 w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <p class="ml-3 text-sm text-gray-600">Détermine les responsabilités en cas de dégradation</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-2 w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <p class="ml-3 text-sm text-gray-600">Facilite l'évaluation des réparations locatives</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-2 w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <p class="ml-3 text-sm text-gray-600">Document cosigné annexé au contrat de bail</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-2 w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <p class="ml-3 text-sm text-gray-600">Répercussions majeures sur les plans juridique et financier</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte 2: Les risques -->
+          <div class="overflow-hidden relative p-8 bg-white rounded-2xl shadow-lg transition-all duration-300 group hover:shadow-2xl hover:-translate-y-2">
+            <div class="absolute inset-0 bg-gradient-to-br opacity-0 transition-opacity duration-300 from-red-500/10 to-orange-500/10 group-hover:opacity-100"></div>
+            <div class="relative">
+              <div class="flex items-center mb-6">
+                <div class="flex justify-center items-center w-12 h-12 text-white bg-red-600 rounded-xl shadow-lg">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                  </svg>
+                </div>
+                <h3 class="ml-4 text-2xl font-bold text-gray-900">Les risques du DIY</h3>
+              </div>
+              <p class="mb-4 leading-relaxed text-gray-600">
+                Réaliser un état des lieux sans formation n'est pas un exercice simple. La procédure peut rapidement devenir chronophage et fastidieuse pour une personne non initiée. La fatigue entraîne alors inévitablement des négligences.
+              </p>
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-2 w-2 h-2 bg-red-600 rounded-full"></div>
+                  <p class="ml-3 text-sm text-gray-600">Procédure technique complexe et chronophage</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-2 w-2 h-2 bg-red-600 rounded-full"></div>
+                  <p class="ml-3 text-sm text-gray-600">Risque de négligences par fatigue</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-2 w-2 h-2 bg-red-600 rounded-full"></div>
+                  <p class="ml-3 text-sm text-gray-600">Modèles internet non conformes à la Loi ALUR</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-2 w-2 h-2 bg-red-600 rounded-full"></div>
+                  <p class="ml-3 text-sm text-gray-600">Tensions entre propriétaire et locataire</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-2 w-2 h-2 bg-red-600 rounded-full"></div>
+                  <p class="ml-3 text-sm text-gray-600">Litiges fréquents sur la restitution de caution</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte 3: L'expertise -->
+          <div class="overflow-hidden relative p-8 bg-white rounded-2xl shadow-lg transition-all duration-300 group hover:shadow-2xl hover:-translate-y-2">
+            <div class="absolute inset-0 bg-gradient-to-br opacity-0 transition-opacity duration-300 from-green-500/10 to-emerald-500/10 group-hover:opacity-100"></div>
+            <div class="relative">
+              <div class="flex items-center mb-6">
+                <div class="flex justify-center items-center w-12 h-12 text-white bg-green-600 rounded-xl shadow-lg">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                  </svg>
+                </div>
+                <h3 class="ml-4 text-2xl font-bold text-gray-900">L'expertise professionnelle</h3>
+              </div>
+              <p class="mb-4 leading-relaxed text-gray-600">
+                Les agents Élagage Dubois sont des professionnels qualifiés, titulaires d'un BTS ou DUT dans l'immobilier et formés à la gestion locative. Ces spécialistes maîtrisent toutes les procédures permettant d'éviter les contentieux.
+              </p>
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-2 w-2 h-2 bg-green-600 rounded-full"></div>
+                  <p class="ml-3 text-sm text-gray-600">Maîtrise du droit immobilier et des procédures</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-2 w-2 h-2 bg-green-600 rounded-full"></div>
+                  <p class="ml-3 text-sm text-gray-600">Connaissance des réglementations (location, sécurité, environnement)</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-2 w-2 h-2 bg-green-600 rounded-full"></div>
+                  <p class="ml-3 text-sm text-gray-600">Expertise pour éviter les contentieux</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-2 w-2 h-2 bg-green-600 rounded-full"></div>
+                  <p class="ml-3 text-sm text-gray-600">Formation spécialisée en gestion locative</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-2 w-2 h-2 bg-green-600 rounded-full"></div>
+                  <p class="ml-3 text-sm text-gray-600">Savoir-être et neutralité dans les situations délicates</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte 4: La garantie Élagage Dubois -->
+          <div class="overflow-hidden relative p-8 bg-white rounded-2xl shadow-lg transition-all duration-300 group hover:shadow-2xl hover:-translate-y-2">
+            <div class="absolute inset-0 bg-gradient-to-br opacity-0 transition-opacity duration-300 from-indigo-500/10 to-purple-500/10 group-hover:opacity-100"></div>
+            <div class="relative">
+              <div class="flex items-center mb-6">
+                <div class="flex justify-center items-center w-12 h-12 text-white bg-indigo-600 rounded-xl shadow-lg">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+                <h3 class="ml-4 text-2xl font-bold text-gray-900">L'engagement Élagage Dubois</h3>
+              </div>
+              <p class="mb-4 leading-relaxed text-gray-600">
+                Nous nous occupons de tout : contact avec les locataires, organisation des rendez-vous, vérification des clés, signature électronique et transmission dans les 24h. Nos experts prennent directement contact avec les locataires pour organiser les rendez-vous.
+              </p>
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-2 w-2 h-2 bg-indigo-600 rounded-full"></div>
+                  <p class="ml-3 text-sm text-gray-600">Tarifs transparents et tout compris</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-2 w-2 h-2 bg-indigo-600 rounded-full"></div>
+                  <p class="ml-3 text-sm text-gray-600">Charte qualité rigoureuse (200+ points de contrôle)</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-2 w-2 h-2 bg-indigo-600 rounded-full"></div>
+                  <p class="ml-3 text-sm text-gray-600">Agents ponctuels, impartiaux et rigoureux</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-2 w-2 h-2 bg-indigo-600 rounded-full"></div>
+                  <p class="ml-3 text-sm text-gray-600">Expertises incontestables et conformes</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-2 w-2 h-2 bg-indigo-600 rounded-full"></div>
+                  <p class="ml-3 text-sm text-gray-600">Clés testées, inventoriées et étiquetées</p>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-2 w-2 h-2 bg-indigo-600 rounded-full"></div>
+                  <p class="ml-3 text-sm text-gray-600">Signature électronique et transmission 24h</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section CTA -->
+        <div class="mt-16 text-center">
+          <div class="inline-flex gap-4 items-center px-8 py-6 bg-white rounded-2xl shadow-lg">
+            <div class="flex justify-center items-center w-12 h-12 text-white bg-indigo-600 rounded-xl">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+              </svg>
+            </div>
+            <div class="text-left">
+              <h4 class="text-lg font-semibold text-gray-900">Besoin d'un devis ?</h4>
+              <p class="text-sm text-gray-600">Contactez-nous pour une estimation personnalisée</p>
+            </div>
+            <a href="<%= quote_path %>" class="px-6 py-3 ml-4 text-sm font-semibold text-white bg-indigo-600 rounded-lg shadow-sm transition-colors hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+              Demander un devis
+            </a>
+          </div>
+        </div>
+
+        <!-- Section détaillée -->
+        <div class="grid grid-cols-1 gap-12 mt-20">
+          
+          <!-- Colonne gauche -->
+          <div class="space-y-8">
+            <div class="p-8 bg-white rounded-2xl shadow-lg">
+              <h3 class="flex items-center mb-6 text-2xl font-bold text-gray-900">
+                <div class="flex justify-center items-center mr-4 w-10 h-10 text-white bg-yellow-500 rounded-xl">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                  </svg>
+                </div>
+                Les conséquences de l'absence d'état des lieux
+              </h3>
+              <div class="max-w-none text-gray-600 prose prose-sm">
+                <p class="mb-4">
+                  Généralement, les deux états des lieux sont confrontés à la fin du bail pour identifier les dégradations locatives et les réparations à la charge du locataire. Ils permettent de démontrer que des détériorations anormales sont survenues pendant la durée du bail.
+                </p>
+                <p class="mb-4">
+                  <strong>Sans état des lieux d'entrée</strong>, le locataire sera présumé responsable de tous les dommages. Si le locataire prouve que le bailleur a refusé l'état des lieux d'entrée, l'occupant ne sera pas tenu de réparer les dégâts qui lui sont attribués.
+                </p>
+                <p class="mb-4">
+                  Le locataire a donc intérêt à communiquer sa demande d'état des lieux au propriétaire. Il peut également lui transmettre un pré-état de lieux. Si le bailleur ne donne pas de réponse positive, le locataire doit alors lui adresser une mise en demeure par courrier recommandé avec accusé de réception.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-8 bg-white rounded-2xl shadow-lg">
+              <h3 class="flex items-center mb-6 text-2xl font-bold text-gray-900">
+                <div class="flex justify-center items-center mr-4 w-10 h-10 text-white bg-purple-500 rounded-xl">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                  </svg>
+                </div>
+                Procédure technique détaillée
+              </h3>
+              <div class="max-w-none text-gray-600 prose prose-sm">
+                <p class="mb-4">Pour réussir un état des lieux, il faudra :</p>
+                <ul class="pl-6 space-y-2 list-disc">
+                  <li>Effectuer les relevés de compteurs (eau et énergie)</li>
+                  <li>Identifier et compter les clés</li>
+                  <li>Décrire les revêtements (sols, plafonds, etc.)</li>
+                  <li>Vérifier l'état et la vétusté des équipements pièce par pièce</li>
+                  <li>Obtenir la nouvelle adresse du locataire sortant et sa signature</li>
+                  <li>Photographier chaque élément pour preuve</li>
+                  <li>Rédiger un rapport détaillé et objectif</li>
+                </ul>
+                <p class="mt-4">
+                  Vous pouvez télécharger un modèle d'état des lieux sur internet mais rien ne garantit qu'il soit conforme à la Loi ALUR. Notez également que le locataire peut contester votre évaluation ou émettre des réserves.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Colonne droite -->
+          <div class="space-y-8">
+            <div class="p-8 bg-white rounded-2xl shadow-lg">
+              <h3 class="flex items-center mb-6 text-2xl font-bold text-gray-900">
+                <div class="flex justify-center items-center mr-4 w-10 h-10 text-white bg-green-500 rounded-xl">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                  </svg>
+                </div>
+                Formation et compétences requises
+              </h3>
+              <div class="max-w-none text-gray-600 prose prose-sm">
+                <p class="mb-4">
+                  Les agents d'états des lieux Élagage Dubois sont des professionnels qualifiés, titulaires d'un Brevet de Technicien Supérieur (BTS) ou d'un Diplôme Universitaire de Technologie (DUT) dans le domaine de l'immobilier et du commerce.
+                </p>
+                <p class="mb-4">Ces spécialistes sont formés à la gestion locative, une activité qui englobe :</p>
+                <ul class="pl-6 space-y-2 list-disc">
+                  <li>Analyse des dossiers des candidats à la location</li>
+                  <li>Conseil au propriétaire dans l'attribution du logement</li>
+                  <li>Rédaction des baux (contrats de location)</li>
+                  <li>Suivi administratif de recouvrement des loyers et charges</li>
+                  <li>Évaluation des travaux d'entretien ou de réparation</li>
+                  <li>Visites et établissement des états des lieux</li>
+                  <li>Information des occupants sur les consignes de sécurité</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div class="py-24 text-center bg-gray-50">
+    <div class="px-6 mx-auto max-w-7xl lg:px-8">
+      <div class="mx-auto max-w-4xl text-center">
+        <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+          Des questions ?
+        </h2>
+        <p class="mt-6 text-xl leading-8 text-gray-600">
+          Notre équipe est à votre disposition pour répondre à toutes vos questions sur nos offres d'emploi et vous accompagner dans votre candidature.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 gap-8 mt-16 lg:grid-cols-2">
+        <!-- Carte Téléphone -->
+        <div class="p-8 text-center bg-white rounded-2xl border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+          <div class="flex justify-center items-center mb-6">
+            <div class="flex justify-center items-center w-12 h-12 bg-green-600 rounded-xl">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+              </svg>
+            </div>
+            <h3 class="ml-4 text-xl font-bold text-gray-900">Téléphone</h3>
+          </div>
+          <p class="text-gray-700">
+            <a href="tel:+33620479966" class="text-2xl font-bold text-green-600 transition-colors hover:text-green-700">06 20 47 99 66</a><br>
+            <span class="block mt-2 text-sm text-gray-600">Disponible 6 jours sur 7</span>
+          </p>
+        </div>
+
+        <!-- Carte Email -->
+        <div class="p-8 bg-white rounded-2xl border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+          <div class="flex justify-center items-center mb-6">
+            <div class="flex justify-center items-center w-12 h-12 bg-indigo-600 rounded-xl">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h3 class="ml-4 text-xl font-bold text-gray-900">Email</h3>
+          </div>
+          <p class="text-gray-700">
+            <a href="mailto:sqy.etatdeslieux@gmail.com" class="text-lg font-semibold text-indigo-600 break-all transition-colors hover:text-indigo-700">sqy.etatdeslieux@gmail.com</a><br>
+            <span class="block mt-2 text-sm text-gray-600">Réponse sous 24h</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<%= render "components/footer" %>

@@ -1,0 +1,22 @@
+Nouvelle demande de devis - Élagage Dubois
+=====================================
+
+Informations du client :
+- Nom complet : <%= @quote.full_name %>
+- Email : <%= @quote.email %>
+<% if @quote.telephone.present? %>- Téléphone : <%= @quote.telephone %><% end %>
+
+Détails de la demande :
+- Type d'état des lieux : <%= @quote.type_etat_human %>
+- Type de bien : <%= @quote.type_bien_human %>
+- Surface : <%= @quote.surface %> m²
+- Nombre de pièces : <%= @quote.pieces %>
+- Adresse : <%= @quote.adresse %>
+- Ville : <%= @quote.ville %> <%= @quote.code_postal %>
+<% if @quote.commentaires.present? %>- Commentaires : <%= @quote.commentaires %><% end %>
+
+Date de la demande : <%= @quote.created_at.strftime("%d/%m/%Y à %H:%M") %>
+
+---
+Cette demande a été envoyée depuis le site web Élagage Dubois
+06 20 47 99 66

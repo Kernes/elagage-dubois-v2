@@ -1,0 +1,411 @@
+<% content_for :title, "Qui sommes-nous - Élagage Dubois | États des lieux professionnels dans les Yvelines" %>
+<% content_for :description, "Élagage Dubois : votre partenaire de confiance pour des états des lieux dans les Yvelines depuis 2020. Rapports numériques, conformité ALUR, disponibilité 6j/7. Contactez-nous !" %>
+<% content_for :keywords, "qui sommes-nous, Élagage Dubois, équipe, expertise, état des lieux, professionnel, Île-de-France, Yvelines, Guyancourt, depuis 2020" %>
+<% content_for :og_title, "Qui sommes-nous - Élagage Dubois | États des lieux professionnels" %>
+<% content_for :og_description, "Découvrez Élagage Dubois, votre partenaire de confiance pour les états des lieux en Île-de-France. Expertise professionnelle, rapidité et conformité garanties." %>
+<% content_for :og_image, "https://elagage-dubois-v2.scalingo.io/icon.png" %>
+
+<!-- Breadcrumb pour la page À propos -->
+<% content_for :head do %>
+  <script type="application/ld+json">
+  <%= raw structured_data_breadcrumb([
+    { name: "Accueil", url: "https://elagage-dubois-v2.scalingo.io/" },
+    { name: "Qui sommes-nous", url: "https://elagage-dubois-v2.scalingo.io/qui-sommes-nous" }
+  ]).to_json %>
+  </script>
+<% end %>
+
+<%= render "components/header_standard" %>
+
+<!-- Introduction Section comme les pages de services -->
+<div class="isolate relative px-6 pt-14 pb-24 bg-gray-900 lg:px-8">
+  <div aria-hidden="true" class="overflow-hidden absolute inset-x-0 -top-40 blur-3xl transform-gpu -z-20 sm:-top-80">
+    <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"></div>
+  </div>
+  <div class="px-6 mx-auto max-w-7xl lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+        Qui sommes-nous
+      </h1>
+      <p class="mt-6 text-lg leading-8 text-gray-300">
+        Votre partenaire de confiance pour des états des lieux dans les Yvelines précis, des rapports numériques fiables et un accompagnement sur mesure dans la gestion locative.
+      </p>
+      <div class="flex flex-col gap-4 justify-center items-center mt-10 sm:flex-row">
+        <a href="/devis" class="inline-flex items-center px-6 py-3 text-base font-semibold text-white bg-indigo-600 rounded-md shadow-lg transition-all duration-200 hover:bg-indigo-500">
+          Demander un devis
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+        <a href="tel:+33620479966" class="inline-flex items-center px-6 py-3 text-base font-semibold text-white bg-green-600 rounded-md shadow-lg transition-all duration-200 hover:bg-green-500">
+          <svg class="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          06 20 47 99 66
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Introduction Section avec design card -->
+<div class="py-24 bg-gradient-to-br from-gray-50 to-indigo-50">
+  <div class="px-6 mx-auto max-w-7xl lg:px-8">
+    <div class="mx-auto max-w-6xl">
+      <div class="overflow-hidden bg-white rounded-3xl shadow-2xl">
+        <div class="px-8 py-12 sm:px-12 sm:py-16">
+          <div class="text-center">
+            <div class="inline-flex items-center px-4 py-2 mb-8 text-sm font-medium text-indigo-800 bg-indigo-100 rounded-full">
+              <svg class="mr-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Depuis 2020 au service des Yvelines
+            </div>
+            <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+              Bienvenue chez <span class="bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Élagage Dubois</span> !
+            </h2>
+            <p class="mt-6 text-xl leading-8 text-gray-600">
+              Votre partenaire de confiance pour des états des lieux dans les Yvelines précis, des rapports numériques fiables et un accompagnement sur mesure dans la gestion locative.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 gap-8 mt-12 lg:grid-cols-2">
+            <div class="space-y-6">
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                  <div class="flex justify-center items-center w-10 h-10 bg-indigo-100 rounded-lg">
+                    <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <p class="text-lg text-gray-600">
+                    Depuis 2020, nous mettons notre expertise et notre savoir-faire au service des propriétaires bailleurs, des locataires et des professionnels de l'immobilier.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                  <div class="flex justify-center items-center w-10 h-10 bg-green-100 rounded-lg">
+                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <p class="text-lg text-gray-600">
+                    Que vous soyez propriétaire d'un bien ou gestionnaire immobilier, nous simplifions vos démarches de gestion locative.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="space-y-6">
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                  <div class="flex justify-center items-center w-10 h-10 bg-purple-100 rounded-lg">
+                    <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <p class="text-lg text-gray-600">
+                    Grâce à nos rapports numériques détaillés, vous bénéficiez d'un constat clair et immédiatement disponible.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                  <div class="flex justify-center items-center w-10 h-10 bg-orange-100 rounded-lg">
+                    <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <p class="text-lg text-gray-600">
+                    Notre disponibilité nous permet de répondre à vos urgences et de vous éviter des délais coûteux.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Mission Section avec design bloc droite/gauche -->
+<div class="py-24 bg-gray-50">
+  <div class="px-6 mx-auto max-w-7xl lg:px-8">
+    <div class="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
+      <!-- Contenu gauche -->
+<div>
+        <div class="inline-flex items-center px-4 py-2 mb-6 text-sm font-medium text-indigo-800 bg-indigo-100 rounded-full">
+          <svg class="mr-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+          </svg>
+          Notre mission
+        </div>
+        <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+          Des services d'état des lieux <span class="text-indigo-600">précis et professionnels</span>
+        </h2>
+        <p class="mt-6 text-lg leading-8 text-gray-600">
+          Notre mission est simple : vous offrir des états des lieux dans les Yvelines conformes à la loi ALUR, des prestations d'état des lieux résidentiel ou même d'état des lieux commerciaux complets, ainsi qu'un service personnalisé pour simplifier la gestion locative.
+        </p>
+        <p class="mt-4 text-lg leading-8 text-gray-600">
+          Que vous soyez un propriétaire bailleur, une agence immobilière ou un locataire, nous vous accompagnons à chaque étape pour garantir transparence, impartialité et sérénité.
+        </p>
+        <div class="mt-8">
+          <div class="flex items-center space-x-3">
+            <div class="flex-shrink-0">
+              <div class="flex justify-center items-center w-8 h-8 bg-green-100 rounded-full">
+                <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+            <p class="text-lg font-medium text-gray-900">Rapports numériques clairs et immédiatement disponibles</p>
+          </div>
+          <div class="flex items-center mt-4 space-x-3">
+            <div class="flex-shrink-0">
+              <div class="flex justify-center items-center w-8 h-8 bg-green-100 rounded-full">
+                <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+            <p class="text-lg font-medium text-gray-900">Expérience sans stress pour vous concentrer sur l'essentiel</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contenu droite avec card -->
+      <div class="mt-12 lg:mt-0">
+        <div class="relative">
+          <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl transform rotate-3"></div>
+          <div class="relative p-8 bg-white rounded-2xl shadow-2xl">
+            <div class="text-center">
+              <div class="flex justify-center items-center mx-auto mb-6 w-16 h-16 bg-indigo-100 rounded-full">
+                <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 class="mb-4 text-2xl font-bold text-gray-900">Notre engagement</h3>
+              <p class="text-lg text-gray-600">
+                Notre équipe s'engage à répondre à vos besoins avec professionnalisme et réactivité, tout en vous fournissant des rapports numériques clairs et immédiatement disponibles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Expertise Section avec cards colorées -->
+<div class="py-24 bg-white">
+  <div class="px-6 mx-auto max-w-7xl lg:px-8">
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+        Des experts en état des lieux à votre service dans les <span class="text-blue-600">Yvelines</span>
+      </h2>
+      <p class="mt-6 text-xl leading-8 text-gray-600">
+        Notre équipe est composée de professionnels formés et certifiés, spécialisés dans la réalisation d'états des lieux uniquement. Chaque agent maîtrise les réglementations en vigueur et intervient en toute impartialité pour garantir des constats précis, objectifs et factuels.
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 gap-8 mt-16 lg:grid-cols-2">
+      <!-- Card Disponibilité -->
+      <div class="overflow-hidden relative p-8 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl shadow-xl transition-all duration-300 group hover:shadow-2xl hover:-translate-y-1">
+        <div class="absolute top-0 right-0 w-32 h-32 rounded-full translate-x-16 -translate-y-16 bg-white/10"></div>
+        <div class="relative">
+          <div class="flex items-center mb-6">
+            <div class="flex justify-center items-center w-12 h-12 rounded-xl backdrop-blur-sm bg-white/20">
+              <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="ml-4 text-2xl font-bold text-black">Disponibilité et réactivité</h3>
+          </div>
+          <p class="mb-4 text-lg leading-relaxed text-black/90">
+            Nous sommes disponibles 6 jours sur 7, du matin au soir, pour répondre à vos urgences et vous éviter des délais coûteux.
+          </p>
+          <div class="space-y-2">
+            <div class="flex items-center text-black/80">
+              <svg class="mr-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span>Réponse sous 24h</span>
+            </div>
+            <div class="flex items-center text-black/80">
+              <svg class="mr-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span>Intervention d'urgence</span>
+            </div>
+            <div class="flex items-center text-black/80">
+              <svg class="mr-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span>Flexibilité des horaires</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card Conseil -->
+      <div class="overflow-hidden relative p-8 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl shadow-xl transition-all duration-300 group hover:shadow-2xl hover:-translate-y-1">
+        <div class="absolute top-0 right-0 w-32 h-32 rounded-full translate-x-16 -translate-y-16 bg-white/10"></div>
+        <div class="relative">
+          <div class="flex items-center mb-6">
+            <div class="flex justify-center items-center w-12 h-12 rounded-xl backdrop-blur-sm bg-white/20">
+              <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 class="ml-4 text-2xl font-bold text-black">Conseil et accompagnement</h3>
+          </div>
+          <p class="mb-4 text-lg leading-relaxed text-black/90">
+            Un interlocuteur unique vous suit de A à Z, assurant une communication fluide et un gain de temps précieux.
+          </p>
+          <div class="space-y-2">
+            <div class="flex items-center text-black/80">
+              <svg class="mr-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span>Suivi personnalisé</span>
+            </div>
+            <div class="flex items-center text-black/80">
+              <svg class="mr-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span>Conseils juridiques</span>
+            </div>
+            <div class="flex items-center text-black/80">
+              <svg class="mr-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span>Formation aux bonnes pratiques</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Solutions modernes Section avec cards flottantes -->
+<div class="py-24 bg-gray-50">
+  <div class="px-6 mx-auto max-w-7xl lg:px-8">
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+        Un état des lieux avec Élagage Dubois <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">choisissez la modernité</span>
+      </h2>
+      <p class="mt-6 text-xl leading-8 text-gray-600">
+        Nous proposons des solutions modernes et adaptées à vos besoins :
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 gap-8 mt-16 lg:grid-cols-3">
+      <!-- Card 1 - États des lieux numériques -->
+      <div class="relative group">
+        <div class="absolute -inset-1 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl opacity-25 blur transition duration-1000 group-hover:opacity-75 group-hover:duration-200"></div>
+        <div class="relative p-8 h-full bg-white rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+          <h3 class="mb-4 text-2xl font-bold text-center text-gray-900">États des lieux numériques</h3>
+          <p class="leading-relaxed text-center text-gray-600">
+            Conformes à la loi ALUR, nos états des lieux incluent des photos haute définition et des commentaires détaillés. Le rapport est disponible en format PDF dès la signature, pour une gestion locative simplifiée et sans papier.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Card 2 - Relevés des compteurs -->
+      <div class="relative group">
+        <div class="absolute -inset-1 bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl opacity-25 blur transition duration-1000 group-hover:opacity-75 group-hover:duration-200"></div>
+        <div class="relative p-8 h-full bg-white rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+          <h3 class="mb-4 text-2xl font-bold text-center text-gray-900">Relevés des compteurs et vérifications des clés</h3>
+          <p class="leading-relaxed text-center text-gray-600">
+            Chaque état des lieux comprend un relevé précis des compteurs (eau, électricité, gaz, calorifique et fuel) et une vérification complète des clés, accompagnés de photos HD pour une transparence totale.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Card 3 - Tarifs compétitifs -->
+      <div class="relative group">
+        <div class="absolute -inset-1 bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl opacity-25 blur transition duration-1000 group-hover:opacity-75 group-hover:duration-200"></div>
+        <div class="relative p-8 h-full bg-white rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+          <h3 class="mb-4 text-2xl font-bold text-center text-gray-900">Tarifs compétitifs tout inclus</h3>
+          <p class="leading-relaxed text-center text-gray-600">
+            Nos tarifs incluent la prise de rendez-vous, le déplacement, la réalisation de l'état des lieux et la gestion des clés. Aucun frais caché, juste une prestation complète et transparente.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Valeurs Section simplifiée -->
+<div class="py-24 bg-white">
+  <div class="px-6 mx-auto max-w-7xl lg:px-8">
+    <div class="mx-auto max-w-4xl text-center">
+      <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+        Nos valeurs : <span class="text-indigo-600">confiance, impartialité et professionnalisme</span>
+      </h2>
+      <p class="mt-6 text-xl leading-8 text-gray-600">
+        Chez Élagage Dubois, nous croyons en des valeurs fortes qui guident chacune de nos actions :
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 gap-8 mt-16 lg:grid-cols-3">
+      <!-- Valeur 1 - Confiance -->
+      <div class="text-center">
+        <h3 class="mb-4 text-2xl font-bold text-gray-900">Confiance</h3>
+        <p class="text-lg leading-relaxed text-gray-600">
+          Grâce à un interlocuteur unique, nous instaurons une relation de confiance avec nos clients.
+        </p>
+      </div>
+      
+      <!-- Valeur 2 - Impartialité -->
+      <div class="text-center">
+        <h3 class="mb-4 text-2xl font-bold text-gray-900">Impartialité</h3>
+        <p class="text-lg leading-relaxed text-gray-600">
+          Nos agents interviennent en toute neutralité, garantissant des constats objectifs et incontestables.
+        </p>
+      </div>
+      
+      <!-- Valeur 3 - Professionnalisme -->
+      <div class="text-center">
+        <h3 class="mb-4 text-2xl font-bold text-gray-900">Professionnalisme</h3>
+        <p class="text-lg leading-relaxed text-gray-600">
+          Formés aux règles d'hygiène, de propreté et aux réglementations en vigueur, nos experts vous assurent un service de qualité.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Engagement Section simplifiée -->
+<div class="py-24 bg-gray-50">
+  <div class="px-6 mx-auto max-w-7xl lg:px-8">
+    <div class="mx-auto max-w-4xl text-center">
+        <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+          Notre engagement
+        </h2>
+        <p class="mt-6 text-xl leading-8 text-gray-600">
+          Nous nous engageons à vous offrir un service rapide, fiable et professionnel, pour vous permettre de gérer vos biens en toute sérénité. Que ce soit pour un état des lieux d'entrée, de sortie ou un diagnostic immobilier, nous sommes là pour vous simplifier la vie.
+        </p>
+    </div>
+  </div>
+</div>
+
+<%= render "components/cta_final" %>
+
+<!-- Section Contactez-nous -->
+<%= render "components/contact" %>
+
+<%= render "components/footer" %>

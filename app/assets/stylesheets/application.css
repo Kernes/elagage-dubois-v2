@@ -1,0 +1,41 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+
+@import "tailwind/application";
+
+/* Font Comic Sans MS globale */
+* {
+  font-family: 'Comic Sans MS', cursive, sans-serif !important;
+}
+
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Classes utilitaires pour Comic Sans MS */
+.font-comic {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.font-comic-bold {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-weight: 700;
+}
+
+.font-comic-light {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-weight: 300;
+}
+
+.font-comic-italic {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-style: italic;
+}

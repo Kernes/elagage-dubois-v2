@@ -1,0 +1,27 @@
+Nouvelle candidature - Élagage Dubois
+
+Bonjour,
+
+Une nouvelle candidature a été reçue via le formulaire de recrutement Élagage Dubois.
+
+INFORMATIONS DU CANDIDAT :
+- Nom complet : <%= @first_name %> <%= @last_name %>
+- Email : <%= @email %>
+- Téléphone : <%= @phone %>
+
+<% if @note.present? %>
+MESSAGE DU CANDIDAT :
+<%= @note %>
+
+<% end %>
+
+<% if @cv_file %>
+CV JOINT :
+Le candidat a joint son CV en pièce jointe.
+<% end %>
+
+Vous pouvez répondre directement à cet email pour contacter le candidat.
+
+---
+Élagage Dubois - États des lieux professionnels
+Email envoyé automatiquement depuis le site web
