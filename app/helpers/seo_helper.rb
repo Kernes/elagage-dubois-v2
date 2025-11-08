@@ -5,7 +5,7 @@ module SeoHelper
     site_description: "Expert en élagage, abattage et dessouchage. Services professionnels pour l'entretien et la gestion de vos arbres. Devis gratuit, intervention rapide.",
     site_keywords: "élagage, abattage, dessouchage, entretien arbres, professionnel, expert, taille arbres, Île-de-France, Élagage Dubois",
     site_url: "https://elagage-dubois-v2.scalingo.io",
-    contact_phone: "+33620479966",
+    contact_phone: "+33783892384",
     contact_email: "sqy.etatdeslieux@gmail.com",
     business_address: {
       street: "4, rue Philibert Delorme",
