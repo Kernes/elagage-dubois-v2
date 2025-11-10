@@ -1,41 +1,36 @@
 <% content_for :title, "Conditions générales d'utilisation - Élagage Dubois" %>
-<% content_for :description, "Conditions générales d'utilisation des services Élagage Dubois - États des lieux professionnel." %>
+<% content_for :description, "Conditions générales d'utilisation des services Élagage Dubois - Élagage, abattage et dessouchage professionnel." %>
 <% content_for :keywords, "CGU, conditions générales, utilisation, Élagage Dubois" %>
 <% content_for :og_title, "Conditions générales d'utilisation - Élagage Dubois" %>
-<% content_for :og_description, "Conditions générales d'utilisation des services Élagage Dubois - États des lieux professionnel." %>
+<% content_for :og_description, "Conditions générales d'utilisation des services Élagage Dubois - Élagage, abattage et dessouchage professionnel." %>
 <% content_for :og_image, "https://elagage-dubois-v2.scalingo.io/icon.png" %>
 
-<!-- Breadcrumb pour la page CGU -->
-<% content_for :head do %>
-  <script type="application/ld+json">
-  <%= raw structured_data_breadcrumb([
-    { name: "Accueil", url: "https://elagage-dubois-v2.scalingo.io/" },
-    { name: "CGU", url: "https://elagage-dubois-v2.scalingo.io/cgu" }
-  ]).to_json %>
-  </script>
-<% end %>
+<%= render "components/header" %>
 
-<%= render "components/header_standard" %>
-<div class="min-h-screen bg-white py-24">
+<div class="min-h-screen bg-white py-24 pt-32">
   <div class="mx-auto max-w-4xl px-6 lg:px-8">
     <div class="text-center mb-16">
       <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Conditions générales d'utilisation</h1>
-      <p class="mt-6 text-lg leading-8 text-gray-600">CGU du site Élagage Dubois</p>
+      <p class="mt-6 text-lg leading-8 text-gray-600">CGU du site Dubois Services</p>
     </div>
 
     <div class="prose prose-lg max-w-none">
       <h2>1. Objet</h2>
-      <p>Les présentes conditions générales d'utilisation (CGU) régissent l'utilisation du site web de Élagage Dubois, société spécialisée dans les états des lieux professionnels.</p>
+      <p>Les présentes conditions générales d'utilisation (CGU) régissent l'utilisation du site web de Dubois Services, entreprise spécialisée dans l'élagage, l'abattage et le dessouchage d'arbres.</p>
 
       <h2>2. Acceptation des conditions</h2>
       <p>L'utilisation du site implique l'acceptation pleine et entière des présentes CGU. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser ce site.</p>
 
       <h2>3. Services proposés</h2>
-      <p>Élagage Dubois propose les services suivants :</p>
+      <p>Dubois Services propose les services suivants :</p>
       <ul>
-        <li>État des lieux d'entrée</li>
-        <li>État des lieux de sortie</li>
-        <li>Inventaire des lieux</li>
+        <li>Élagage et étêtage d'arbres</li>
+        <li>Abattage d'arbres de toutes espèces</li>
+        <li>Dessouchage d'arbres</li>
+        <li>Entretien de jardin et espaces verts</li>
+        <li>Taille de haies</li>
+        <li>Création et tonte de pelouse</li>
+        <li>Débroussaillage</li>
       </ul>
 
       <h2>4. Utilisation du site</h2>
@@ -48,13 +43,13 @@
       </ul>
 
       <h2>5. Disponibilité du service</h2>
-      <p>Élagage Dubois s'efforce d'assurer une disponibilité du site 24h/24 et 7j/7, mais ne peut garantir une disponibilité continue. Des interruptions peuvent survenir pour maintenance ou mise à jour.</p>
+      <p>Dubois Services s'efforce d'assurer une disponibilité du site 24h/24 et 7j/7, mais ne peut garantir une disponibilité continue. Des interruptions peuvent survenir pour maintenance ou mise à jour.</p>
 
       <h2>6. Propriété intellectuelle</h2>
-      <p>Tous les éléments du site (textes, images, logos, etc.) sont protégés par le droit d'auteur et appartiennent à Élagage Dubois. Toute reproduction est interdite sans autorisation préalable.</p>
+      <p>Tous les éléments du site (textes, images, logos, etc.) sont protégés par le droit d'auteur et appartiennent à Dubois Services. Toute reproduction est interdite sans autorisation préalable.</p>
 
       <h2>7. Responsabilité</h2>
-      <p>Élagage Dubois ne peut être tenu responsable :</p>
+      <p>Dubois Services ne peut être tenu responsable :</p>
       <ul>
         <li>Des dommages indirects résultant de l'utilisation du site</li>
         <li>Des interruptions temporaires du service</li>
@@ -62,10 +57,10 @@
       </ul>
 
       <h2>8. Données personnelles</h2>
-      <p>Le traitement des données personnelles est régi par notre <a href="/politique-confidentialite" class="text-indigo-600 hover:text-indigo-500">Politique de confidentialité</a>.</p>
+      <p>Le traitement des données personnelles est régi par notre <a href="/politique-confidentialite" class="text-green-700 hover:text-green-800">Politique de confidentialité</a>.</p>
 
       <h2>9. Modification des CGU</h2>
-      <p>Élagage Dubois se réserve le droit de modifier les présentes CGU à tout moment. Les modifications entrent en vigueur dès leur publication sur le site.</p>
+      <p>Dubois Services se réserve le droit de modifier les présentes CGU à tout moment. Les modifications entrent en vigueur dès leur publication sur le site.</p>
 
       <h2>10. Droit applicable et juridiction</h2>
       <p>Les présentes CGU sont soumises au droit français. En cas de litige, les tribunaux français seront seuls compétents.</p>
@@ -73,11 +68,12 @@
       <h2>11. Contact</h2>
       <p>Pour toute question concernant ces CGU :</p>
       <ul>
-        <li>Téléphone : 07 83 89 23 84</li>
-        <li>Email : sqy.etatdeslieux@gmail.com</li>
-        <li>Adresse : Élagage Dubois, 4, rue Philibert Delorme, 78280 Guyancourt</li>
+        <li>Téléphone : <a href="tel:0783892384" class="text-green-700 hover:text-green-800">07 83 89 23 84</a></li>
+        <li>Email : <a href="mailto:jpdubois.services@gmail.com" class="text-green-700 hover:text-green-800">jpdubois.services@gmail.com</a></li>
+        <li>Adresse : Dubois Services, 30 Rte de Pontoise, 95540 Méry-sur-Oise, France</li>
       </ul>
     </div>
   </div>
 </div>
+
 <%= render "components/footer" %>

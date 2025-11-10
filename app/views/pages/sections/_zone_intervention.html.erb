@@ -1,8 +1,5 @@
 <!-- Zone d'Intervention -->
 <section class="overflow-hidden relative py-24 bg-white">
-  <div class="absolute inset-0 opacity-5">
-    <div class="absolute inset-0" style="background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'); background-size: cover; background-position: center;"></div>
-  </div>
   <div class="relative px-6 mx-auto max-w-7xl lg:px-8">
     <div class="mx-auto mb-12 max-w-2xl text-center">
       <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">Zone d'Intervention</h2>
@@ -44,7 +41,11 @@
     
     <!-- Carte interactive -->
     <div class="mt-16">
-      <div id="map" class="w-full h-96 rounded-2xl border-2 border-gray-200 shadow-xl"></div>
+      <div id="map" 
+           class="w-full h-96 rounded-2xl border-2 border-gray-200 shadow-xl"
+           data-rating="<%= company_average_rating %>"
+           data-reviews="<%= company_number_of_reviews %>"
+           data-reviews-url="<%= company_reviews_url %>"></div>
     </div>
     
     <div class="mt-12 text-center">

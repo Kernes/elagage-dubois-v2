@@ -5,18 +5,9 @@
 <% content_for :og_description, "Politique de confidentialité Élagage Dubois - Protection des données personnelles." %>
 <% content_for :og_image, "https://elagage-dubois-v2.scalingo.io/icon.png" %>
 
-<!-- Breadcrumb pour la page Politique de confidentialité -->
-<% content_for :head do %>
-  <script type="application/ld+json">
-  <%= raw structured_data_breadcrumb([
-    { name: "Accueil", url: "https://elagage-dubois-v2.scalingo.io/" },
-    { name: "Politique de confidentialité", url: "https://elagage-dubois-v2.scalingo.io/politique-confidentialite" }
-  ]).to_json %>
-  </script>
-<% end %>
+<%= render "components/header" %>
 
-<%= render "components/header_standard" %>
-<div class="min-h-screen bg-white py-24">
+<div class="min-h-screen bg-white py-24 pt-32">
   <div class="mx-auto max-w-4xl px-6 lg:px-8">
     <div class="text-center mb-16">
       <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Politique de confidentialité</h1>
@@ -25,11 +16,10 @@
 
     <div class="prose prose-lg max-w-none">
       <h2>1. Responsable du traitement</h2>
-      <p><strong>Élagage Dubois</strong></p>
-      <p>Gérant : Yoan DUBOIS</p>
-      <p>Adresse : 4, rue Philibert Delorme, 78280 Guyancourt</p>
-      <p>Email : sqy.etatdeslieux@gmail.com</p>
-      <p>Téléphone : 07 83 89 23 84</p>
+      <p><strong>Dubois Services | Élagueur | Entreprise d'Élagage</strong></p>
+      <p>Adresse : 30 Rte de Pontoise, 95540 Méry-sur-Oise, France</p>
+      <p>Email : <a href="mailto:jpdubois.services@gmail.com" class="text-green-700 hover:text-green-800">jpdubois.services@gmail.com</a></p>
+      <p>Téléphone : <a href="tel:0783892384" class="text-green-700 hover:text-green-800">07 83 89 23 84</a></p>
 
       <h2>2. Données collectées</h2>
       <p>Nous collectons les données personnelles suivantes :</p>
@@ -43,7 +33,7 @@
       <h2>3. Finalités du traitement</h2>
       <p>Vos données sont utilisées pour :</p>
       <ul>
-        <li>Fournir nos services d'états des lieux</li>
+        <li>Fournir nos services d'élagage, d'abattage et de dessouchage</li>
         <li>Traiter vos demandes de devis</li>
         <li>Gérer la relation client</li>
         <li>Respecter nos obligations légales</li>
@@ -96,7 +86,7 @@
       </ul>
 
       <h2>9. Cookies</h2>
-      <p>Notre site utilise des cookies conformément à notre <a href="/cookies" class="text-indigo-600 hover:text-indigo-500">Politique des cookies</a>.</p>
+      <p>Notre site utilise des cookies conformément à notre <a href="/cookies" class="text-green-700 hover:text-green-800">Politique des cookies</a>.</p>
 
       <h2>10. Réclamations</h2>
       <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez :</p>
@@ -108,11 +98,12 @@
       <h2>11. Contact</h2>
       <p>Pour exercer vos droits ou pour toute question :</p>
       <ul>
-        <li>Email : sqy.etatdeslieux@gmail.com</li>
-        <li>Téléphone : 07 83 89 23 84</li>
-        <li>Courrier : Élagage Dubois, 4, rue Philibert Delorme, 78280 Guyancourt</li>
+        <li>Email : <a href="mailto:jpdubois.services@gmail.com" class="text-green-700 hover:text-green-800">jpdubois.services@gmail.com</a></li>
+        <li>Téléphone : <a href="tel:0783892384" class="text-green-700 hover:text-green-800">07 83 89 23 84</a></li>
+        <li>Courrier : Dubois Services, 30 Rte de Pontoise, 95540 Méry-sur-Oise, France</li>
       </ul>
     </div>
   </div>
 </div>
+
 <%= render "components/footer" %>

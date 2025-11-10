@@ -29,8 +29,7 @@
       "https://www.google.com/maps/dir/?api=1&destination=" +
       encodeURIComponent("DUBOIS SERVICES 30 Rte de Pontoise, 95540 Méry-sur-Oise"),
     // Lien vers les avis Google (cliquable dans la popup)
-    reviewsUrl: "https://www.google.com/search?sca_esv=e5fbcc06bbcda539&rlz=1C5CHFA_enFR980FR980&sxsrf=AE3TifO8eyR33jGCPcbQMVkX4ouFgkGH7w:1762806506016&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E1F1MzApZtvA_0bqFLM5wOvxn3ttgxDbt27C6N5Z5Vpd13tsC_arYDbZA5l0FA66y6a_EAmoMgyJq4r9dQjpPG-QUbKA&q=DUBOIS+SERVICES+Avis&sa=X&ved=2ahUKEwjK_OT8teiQAxVIBfsDHSeTOz8Q0bkNegQIIRAE&cshid=1762806509868835&biw=3200&bih=1647&dpr=0.8",
-    ratingText: "5,0 · <a href=\"#\" data-reviews target=\"_blank\" rel=\"noopener\" style=\"color:#2563eb;text-decoration:underline;\">53 avis</a>"
+    reviewsUrl: "https://www.google.com/search?sca_esv=e5fbcc06bbcda539&rlz=1C5CHFA_enFR980FR980&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E1F1MzApZtvA_0bqFLM5wOvxn3ttgxDbt27C6N5Z5Vpd13tsC_arYDbZA5l0FA66y6a_EAmoMgyJq4r9dQjpPG-QUbKA&q=DUBOIS+SERVICES+Avis&sa=X&ved=2ahUKEwj35Y_VxOiQAxVkY6QEHWWkCJ0Q0bkNegQIQhAE&biw=1186&bih=1048&dpr=0.8"
   };
 
   let mapInstance = null;
@@ -90,18 +89,23 @@
     marker.bindPopup(popupHtml);
     marker.openPopup();
 
-    // brancher le lien "53 avis" vers l'URL fournie
-    marker.on("popupopen", () => {
-      const a = document.querySelector('a[data-reviews]');
-      if (a) a.href = BUSINESS.reviewsUrl;
-    });
-
     return marker;
   }
 
   async function createMap() {
     const mapEl = document.getElementById("map");
     if (!mapEl || typeof L === "undefined") return;
+
+    // Récupérer les valeurs depuis les data attributes
+    const rating = mapEl.dataset.rating ? parseFloat(mapEl.dataset.rating) : 5;
+    const reviews = mapEl.dataset.reviews ? parseInt(mapEl.dataset.reviews) : 53;
+    const reviewsUrl = mapEl.dataset.reviewsUrl || BUSINESS.reviewsUrl;
+    
+    // Mettre à jour BUSINESS avec les valeurs dynamiques
+    BUSINESS.rating = rating;
+    BUSINESS.reviews = reviews;
+    BUSINESS.reviewsUrl = reviewsUrl;
+    BUSINESS.ratingText = rating.toFixed(1).replace('.', ',') + " · <a href=\"" + reviewsUrl + "\" target=\"_blank\" rel=\"noopener\" style=\"color:#2563eb;text-decoration:underline;\">" + reviews + " avis</a>";
 
     if (mapInstance) {
       mapInstance.remove();

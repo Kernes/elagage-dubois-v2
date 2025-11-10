@@ -5,8 +5,8 @@
 %>
 <% size ||= "lg" %>
 <% variant ||= "primary" %>
-<% phone ||= "07 83 89 23 84" %>
-<% phone_link ||= "tel:+33783892384" %>
+<% phone ||= company_phone %>
+<% phone_link ||= "tel:#{company_phone_formatted}" %>
 
 <% if variant == "primary" %>
   <a href="<%= phone_link %>" class="inline-flex justify-center items-center px-<%= size == "lg" ? "10" : "8" %> py-<%= size == "lg" ? "5" : "4" %> text-<%= size == "lg" ? "lg" : "base" %> font-semibold text-white rounded-lg border-2 border-white/30 bg-white/10 backdrop-blur-md transition-all hover:bg-white/20 hover:border-white/50">
