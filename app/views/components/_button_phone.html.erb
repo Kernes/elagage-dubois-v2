@@ -1,0 +1,26 @@
+<%# 
+  Composant bouton téléphone
+  Usage: <%= render "components/button_phone" %>
+  Options: size (lg, base), variant (primary, secondary)
+%>
+<% size ||= "lg" %>
+<% variant ||= "primary" %>
+<% phone ||= "07 83 89 23 84" %>
+<% phone_link ||= "tel:+33783892384" %>
+
+<% if variant == "primary" %>
+  <a href="<%= phone_link %>" class="inline-flex justify-center items-center px-<%= size == "lg" ? "10" : "8" %> py-<%= size == "lg" ? "5" : "4" %> text-<%= size == "lg" ? "lg" : "base" %> font-semibold text-white rounded-lg border-2 border-white/30 bg-white/10 backdrop-blur-md transition-all hover:bg-white/20 hover:border-white/50">
+    <svg class="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+    </svg>
+    <%= phone %>
+  </a>
+<% else %>
+  <a href="<%= phone_link %>" class="inline-flex justify-center items-center px-<%= size == "lg" ? "10" : "8" %> py-<%= size == "lg" ? "5" : "4" %> text-<%= size == "lg" ? "lg" : "base" %> font-semibold text-white bg-green-700 rounded-lg transition-colors hover:bg-green-800">
+    <svg class="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+    </svg>
+    <%= phone %>
+  </a>
+<% end %>
+

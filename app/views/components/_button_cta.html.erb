@@ -1,0 +1,26 @@
+<%# 
+  Composant bouton CTA principal (devis gratuit)
+  Usage: <%= render "components/button_cta", variant: "primary" %>
+  Variants: "primary" (amber), "secondary" (white/transparent)
+%>
+<% variant ||= "primary" %>
+<% text ||= "Demander un devis gratuit" %>
+<% href ||= "/devis" %>
+<% size ||= "lg" %>
+
+<% if variant == "primary" %>
+  <a href="<%= href %>" class="inline-flex justify-center items-center px-<%= size == "lg" ? "10" : "8" %> py-<%= size == "lg" ? "5" : "4" %> text-<%= size == "lg" ? "lg" : "base" %> font-semibold text-green-900 bg-amber-400 rounded-lg shadow-xl transition-all hover:bg-amber-300 hover:scale-105">
+    <%= text %>
+    <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
+  </a>
+<% else %>
+  <a href="<%= href %>" class="inline-flex justify-center items-center px-<%= size == "lg" ? "10" : "8" %> py-<%= size == "lg" ? "5" : "4" %> text-<%= size == "lg" ? "lg" : "base" %> font-semibold text-white rounded-lg border-2 border-white/30 bg-white/10 backdrop-blur-md transition-all hover:bg-white/20 hover:border-white/50">
+    <%= text %>
+    <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
+  </a>
+<% end %>
+

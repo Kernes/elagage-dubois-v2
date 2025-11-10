@@ -1,0 +1,32 @@
+<%# 
+  Composant carte de statistique
+  Usage: 
+  <%= render "components/stat_card", 
+      value: "15+", 
+      label: "Années d'expérience",
+      icon: "svg_path",
+      icon_bg: "green-600",
+      value_color: "green-700" %>
+%>
+<% value ||= "" %>
+<% label ||= "" %>
+<% icon ||= "" %>
+<% icon_bg ||= "green-600" %>
+<% value_color ||= "green-700" %>
+
+<div class="relative p-8 rounded-2xl border-2 shadow-xl backdrop-blur-sm transition-all group bg-white/95 hover:shadow-2xl hover:scale-105 border-white/20">
+  <div class="flex flex-col items-center text-center">
+    <% if icon.present? %>
+      <div class="flex justify-center items-center mb-4 w-16 h-16 bg-<%= icon_bg %> rounded-full">
+        <%= raw icon %>
+      </div>
+    <% end %>
+    <% if value.present? %>
+      <div class="mb-2 text-5xl font-bold text-<%= value_color %>"><%= value %></div>
+    <% end %>
+    <% if label.present? %>
+      <div class="text-sm font-semibold text-gray-700"><%= label %></div>
+    <% end %>
+  </div>
+</div>
+

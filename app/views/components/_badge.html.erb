@@ -1,0 +1,25 @@
+<%# 
+  Composant badge/étiquette
+  Usage: 
+  <%= render "components/badge", 
+      text: "15+ ans d'expérience",
+      icon: "svg_path",
+      bg_color: "amber-400/20",
+      border_color: "amber-400/30",
+      text_color: "amber-400" %>
+%>
+<% text ||= "" %>
+<% icon ||= "" %>
+<% bg_color ||= "amber-400/20" %>
+<% border_color ||= "amber-400/30" %>
+<% text_color ||= "amber-400" %>
+
+<div class="inline-flex items-center px-4 py-2 rounded-full border backdrop-blur-sm bg-<%= bg_color %> border-<%= border_color %>">
+  <% if icon.present? %>
+    <span class="mr-2 w-5 h-5 text-<%= text_color %>">
+      <%= raw icon %>
+    </span>
+  <% end %>
+  <span class="text-sm font-semibold text-<%= text_color %>"><%= text %></span>
+</div>
+

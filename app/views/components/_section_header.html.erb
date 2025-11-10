@@ -1,0 +1,18 @@
+<%# 
+  Composant en-tête de section (titre + description)
+  Usage: <%= render "components/section_header", title: "Mon titre", description: "Ma description" %>
+%>
+<% title ||= "" %>
+<% description ||= "" %>
+<% title_size ||= "4xl" %>
+<% align ||= "center" %>
+
+<div class="mx-auto max-w-2xl text-<%= align %>">
+  <% if title.present? %>
+    <h2 class="text-<%= title_size %> font-bold tracking-tight text-gray-900 sm:text-<%= title_size == "4xl" ? "5xl" : title_size == "3xl" ? "4xl" : "3xl" %>"><%= title %></h2>
+  <% end %>
+  <% if description.present? %>
+    <p class="mt-4 text-lg text-gray-600"><%= description %></p>
+  <% end %>
+</div>
+
