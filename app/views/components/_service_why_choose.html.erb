@@ -1,0 +1,54 @@
+<%# 
+  Composant pour la section "Pourquoi choisir" d'une page de service
+  
+  Paramètres:
+  - why_choose_data: Hash avec { title, subtitle, reasons: [{ title, description, image_url, image_alt, icon_color, bg_color, border_color }] }
+%>
+<% why_choose_data ||= {} %>
+<% return if why_choose_data.empty? || why_choose_data[:reasons].blank? %>
+
+<!-- Pourquoi choisir notre service -->
+<section class="py-24 bg-white">
+  <div class="px-6 mx-auto max-w-7xl lg:px-8">
+    <div class="mx-auto mb-16 max-w-2xl text-center">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"><%= why_choose_data[:title] %></h2>
+      <p class="mt-4 text-lg text-gray-600"><%= why_choose_data[:subtitle] %></p>
+    </div>
+    
+    <div class="grid gap-8 lg:grid-cols-3">
+      <% why_choose_data[:reasons].each do |reason| %>
+        <% icon_color_class = case reason[:icon_color]
+             when "green-700" then "bg-green-700"
+             when "amber-700" then "bg-amber-700"
+             when "amber-800" then "bg-amber-800"
+             else "bg-green-700"
+           end %>
+        <% bg_color_class = case reason[:bg_color]
+             when "green-50" then "from-green-50"
+             when "amber-50" then "from-amber-50"
+             else "from-green-50"
+           end %>
+        <% border_color_class = case reason[:border_color]
+             when "green-100" then "border-green-100"
+             when "amber-100" then "border-amber-100"
+             else "border-green-100"
+           end %>
+        <div class="overflow-hidden relative bg-gradient-to-br <%= bg_color_class %> to-white rounded-2xl border <%= border_color_class %> shadow-lg">
+          <div class="overflow-hidden relative h-48">
+            <img src="<%= reason[:image_url] %>" alt="<%= reason[:image_alt] %>" class="object-cover w-full h-full">
+          </div>
+          <div class="p-8">
+            <div class="flex justify-center items-center mb-6 w-16 h-16 <%= icon_color_class %> rounded-full">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="mb-4 text-xl font-bold text-gray-900"><%= reason[:title] %></h3>
+            <p class="text-gray-600"><%= reason[:description] %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+

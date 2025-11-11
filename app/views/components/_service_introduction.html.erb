@@ -1,0 +1,51 @@
+<%# 
+  Composant pour la section introduction d'une page de service
+  
+  Paramètres:
+  - introduction: Hash avec { title, paragraphs (array), image_url, image_alt, badge: { value, label, icon_color } }
+%>
+<% introduction ||= {} %>
+<% return if introduction.empty? %>
+
+<!-- Introduction -->
+<section class="py-24 bg-white">
+  <div class="px-6 mx-auto max-w-7xl lg:px-8">
+    <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+      <div>
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"><%= introduction[:title] %></h2>
+        <% introduction[:paragraphs]&.each do |paragraph| %>
+          <p class="mt-6 text-lg leading-relaxed text-gray-600"><%= paragraph %></p>
+        <% end %>
+      </div>
+      <div class="relative">
+        <div class="overflow-hidden rounded-2xl shadow-2xl">
+          <img src="<%= introduction[:image_url] %>" alt="<%= introduction[:image_alt] %>" class="object-cover w-full h-full">
+        </div>
+        <% if introduction[:badge] %>
+          <% icon_color_class = case introduction[:badge][:icon_color]
+               when "green-700" then "bg-green-700"
+               when "amber-700" then "bg-amber-700"
+               when "amber-800" then "bg-amber-800"
+               else "bg-green-700"
+             end %>
+          <div class="absolute -right-6 -bottom-6 p-6 bg-white rounded-xl border border-green-100 shadow-xl">
+            <div class="flex gap-4 items-center">
+              <div class="flex-shrink-0">
+                <div class="flex justify-center items-center w-16 h-16 <%= icon_color_class %> rounded-full">
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <div class="text-2xl font-bold text-gray-900"><%= introduction[:badge][:value] %></div>
+                <div class="text-sm text-gray-600"><%= introduction[:badge][:label] %></div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+

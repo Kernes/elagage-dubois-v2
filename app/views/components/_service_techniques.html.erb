@@ -1,0 +1,63 @@
+<%# 
+  Composant pour la section techniques/services d'une page de service
+  
+  Paramètres:
+  - techniques_data: Hash avec { title, subtitle, techniques: [{ title, description, image_url, image_alt, icon_color, features (array) }] }
+%>
+<% techniques_data ||= {} %>
+<% return if techniques_data.empty? || techniques_data[:techniques].blank? %>
+
+<!-- Techniques -->
+<section class="py-24 bg-green-50">
+  <div class="px-6 mx-auto max-w-7xl lg:px-8">
+    <div class="mx-auto mb-16 max-w-2xl text-center">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"><%= techniques_data[:title] %></h2>
+      <p class="mt-4 text-lg text-gray-600"><%= techniques_data[:subtitle] %></p>
+    </div>
+    
+    <div class="grid gap-8 lg:grid-cols-2">
+      <% techniques_data[:techniques].each do |technique| %>
+        <% icon_color_class = case technique[:icon_color]
+             when "green-700" then "bg-green-700"
+             when "amber-700" then "bg-amber-700"
+             when "amber-800" then "bg-amber-800"
+             else "bg-green-700"
+           end %>
+        <% text_color_class = case technique[:icon_color]
+             when "green-700" then "text-green-700"
+             when "amber-700" then "text-amber-700"
+             when "amber-800" then "text-amber-800"
+             else "text-green-700"
+           end %>
+        <div class="overflow-hidden relative bg-white rounded-2xl shadow-lg transition-shadow group hover:shadow-xl">
+          <div class="overflow-hidden relative h-64">
+            <img src="<%= technique[:image_url] %>" alt="<%= technique[:image_alt] %>" class="object-cover w-full h-full transition-transform group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/40"></div>
+          </div>
+          <div class="relative p-8">
+            <div class="flex justify-center items-center mb-6 w-16 h-16 <%= icon_color_class %> rounded-full">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+              </svg>
+            </div>
+            <h3 class="mb-4 text-2xl font-bold text-gray-900"><%= technique[:title] %></h3>
+            <p class="mb-6 text-gray-700"><%= technique[:description] %></p>
+            <% if technique[:features] %>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <% technique[:features].each do |feature| %>
+                  <li class="flex items-start">
+                    <svg class="flex-shrink-0 mr-2 w-5 h-5 <%= text_color_class %>" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                    <%= feature %>
+                  </li>
+                <% end %>
+              </ul>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
