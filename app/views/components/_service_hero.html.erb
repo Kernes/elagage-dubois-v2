@@ -1,0 +1,82 @@
+<% 
+  # Paramètres par défaut
+  title ||= ""
+  highlight_word ||= ""
+  description ||= ""
+  badge_text ||= "#{company_years_experience}+ ans d'expérience"
+  image_url ||= "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+  image_alt ||= "Service professionnel"
+  primary_color ||= "amber" # amber ou green
+  
+  # Déterminer les classes selon la couleur
+  bg_color = primary_color == "green" ? "bg-green-900" : "bg-amber-900"
+  gradient_from = primary_color == "green" ? "from-green-900/95" : "from-amber-900/95"
+  gradient_via = primary_color == "green" ? "via-green-800/90" : "via-amber-800/90"
+  gradient_to = primary_color == "green" ? "to-green-900/95" : "to-amber-900/95"
+  badge_bg = primary_color == "green" ? "bg-green-400/20" : "bg-amber-400/20"
+  badge_border = primary_color == "green" ? "border-green-300/30" : "border-amber-300/30"
+  badge_text_color = primary_color == "green" ? "text-green-300" : "text-amber-300"
+  highlight_class = primary_color == "green" ? "text-green-400" : "text-amber-400"
+  button_bg = primary_color == "green" ? "bg-green-400" : "bg-amber-400"
+  button_text = primary_color == "green" ? "text-green-900" : "text-amber-900"
+  button_hover = primary_color == "green" ? "hover:bg-green-300" : "hover:bg-amber-300"
+  stat_color = primary_color == "green" ? "text-green-400" : "text-amber-400"
+%>
+
+<!-- Hero Section - Style Centré avec Overlay -->
+<section class="overflow-hidden relative py-32 min-h-[85vh] flex items-center <%= bg_color %>">
+  <!-- Image de fond -->
+  <div class="absolute inset-0">
+    <img src="<%= image_url %>" alt="<%= image_alt %>" class="object-cover w-full h-full">
+    <div class="absolute inset-0 bg-gradient-to-b <%= gradient_from %> <%= gradient_via %> <%= gradient_to %>"></div>
+  </div>
+
+  <div class="relative z-10 px-6 mx-auto w-full max-w-4xl text-center lg:px-8">
+    <div class="inline-flex items-center px-4 py-2 mb-8 rounded-full <%= badge_bg %> border <%= badge_border %> backdrop-blur-sm">
+      <svg class="mr-2 w-5 h-5 <%= badge_text_color %>" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <span class="text-sm font-semibold <%= badge_text_color %>"><%= badge_text %></span>
+    </div>
+    
+    <h1 class="text-5xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
+      <%= title.gsub(highlight_word, "<span class=\"#{highlight_class}\">#{highlight_word}</span>").html_safe %>
+    </h1>
+    
+    <p class="mt-8 text-xl leading-relaxed text-white/90 sm:text-2xl max-w-3xl mx-auto">
+      <%= description %>
+    </p>
+    
+    <div class="flex flex-col gap-4 mt-12 sm:flex-row sm:justify-center">
+      <a href="/devis" class="inline-flex justify-center items-center px-8 py-4 text-lg font-semibold <%= button_text %> <%= button_bg %> rounded-lg shadow-xl transition-all <%= button_hover %> hover:scale-105">
+        Demander un devis gratuit
+        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+      <a href="tel:<%= company_phone_formatted %>" class="inline-flex justify-center items-center px-8 py-4 text-lg font-semibold text-white rounded-lg border-2 border-white/30 bg-white/10 backdrop-blur-md transition-all hover:bg-white/20 hover:border-white/50">
+        <svg class="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+        <%= company_phone %>
+      </a>
+    </div>
+    
+    <!-- Statistiques en bas -->
+    <div class="grid grid-cols-3 gap-8 mt-16 max-w-2xl mx-auto">
+      <div class="text-center">
+        <div class="text-4xl font-bold <%= stat_color %>"><%= company_years_experience %>+</div>
+        <div class="mt-2 text-sm font-medium text-white/80">Années d'expérience</div>
+      </div>
+      <div class="text-center">
+        <div class="text-4xl font-bold <%= stat_color %>">100%</div>
+        <div class="mt-2 text-sm font-medium text-white/80">Sécurisé</div>
+      </div>
+      <div class="text-center">
+        <div class="text-4xl font-bold <%= stat_color %>"><%= company_average_rating %>/5</div>
+        <div class="mt-2 text-sm font-medium text-white/80">Note moyenne</div>
+      </div>
+    </div>
+  </div>
+</section>
+
