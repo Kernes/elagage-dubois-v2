@@ -5,7 +5,7 @@
     <style>
       body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
       .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-      .header { background-color: #4f46e5; color: white; padding: 20px; text-align: center; }
+      .header { background-color: #16a34a; color: white; padding: 20px; text-align: center; }
       .content { padding: 20px; background-color: #f9fafb; }
       .field { margin-bottom: 15px; }
       .label { font-weight: bold; color: #374151; }
@@ -17,7 +17,7 @@
     <div class="container">
       <div class="header">
         <h1>Nouvelle demande de devis</h1>
-        <p>Élagage Dubois - États des lieux professionnels</p>
+        <p>Dubois Services</p>
       </div>
       
       <div class="content">
@@ -33,51 +33,22 @@
           <div class="value"><%= @quote.email %></div>
         </div>
         
-        <% if @quote.telephone.present? %>
         <div class="field">
           <div class="label">Téléphone :</div>
           <div class="value"><%= @quote.telephone %></div>
         </div>
-        <% end %>
         
         <h2>Détails de la demande</h2>
         
         <div class="field">
-          <div class="label">Type d'état des lieux :</div>
-          <div class="value"><%= @quote.type_etat_human %></div>
+          <div class="label">Service souhaité :</div>
+          <div class="value"><%= @quote.service_souhaite_human %></div>
         </div>
         
         <div class="field">
-          <div class="label">Type de bien :</div>
-          <div class="value"><%= @quote.type_bien_human %></div>
-        </div>
-        
-        <div class="field">
-          <div class="label">Surface :</div>
-          <div class="value"><%= @quote.surface %> m²</div>
-        </div>
-        
-        <div class="field">
-          <div class="label">Nombre de pièces :</div>
-          <div class="value"><%= @quote.pieces %></div>
-        </div>
-        
-        <div class="field">
-          <div class="label">Adresse :</div>
-          <div class="value"><%= @quote.adresse %></div>
-        </div>
-        
-        <div class="field">
-          <div class="label">Ville :</div>
-          <div class="value"><%= @quote.ville %> <%= @quote.code_postal %></div>
-        </div>
-        
-        <% if @quote.commentaires.present? %>
-        <div class="field">
-          <div class="label">Commentaires :</div>
+          <div class="label">Détail de la demande :</div>
           <div class="value"><%= simple_format(@quote.commentaires) %></div>
         </div>
-        <% end %>
         
         <div class="field">
           <div class="label">Date de la demande :</div>
@@ -86,8 +57,8 @@
       </div>
       
       <div class="footer">
-        <p>Cette demande a été envoyée depuis le site web Élagage Dubois</p>
-        <p>07 83 89 23 84</p>
+        <p>Cette demande a été envoyée depuis le site web Dubois Services</p>
+        <p>07 83 89 23 84 | jpdubois.services@gmail.com</p>
       </div>
     </div>
   </body>

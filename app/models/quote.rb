@@ -8,13 +8,7 @@ class Quote
   attribute :nom, :string
   attribute :email, :string
   attribute :telephone, :string
-  attribute :type_etat, :string
-  attribute :type_bien, :string
-  attribute :surface, :decimal
-  attribute :pieces, :integer
-  attribute :adresse, :string
-  attribute :ville, :string
-  attribute :code_postal, :string
+  attribute :service_souhaite, :string
   attribute :commentaires, :string
   attribute :rgpd_accepted, :boolean
   
@@ -22,13 +16,9 @@ class Quote
   validates :prenom, presence: true
   validates :nom, presence: true
   validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP }
-  validates :type_etat, presence: true, inclusion: { in: %w[entree sortie] }
-  validates :type_bien, presence: true
-  validates :surface, presence: true, numericality: { greater_than: 0 }
-  validates :pieces, presence: true, numericality: { greater_than: 0, less_than_or_equal_to: 10 }
-  validates :adresse, presence: true
-  validates :ville, presence: true
-  validates :code_postal, presence: true, format: { with: /\A\d{5}\z/ }
+  validates :telephone, presence: true
+  validates :service_souhaite, presence: true
+  validates :commentaires, presence: true
   validates :rgpd_accepted, acceptance: { message: "doit être accepté" }
 
   # Méthodes personnalisées
@@ -36,27 +26,26 @@ class Quote
     "#{prenom} #{nom}"
   end
 
-  def type_etat_human
-    case type_etat
-    when 'entree'
-      'État des lieux d\'entrée'
-    when 'sortie'
-      'État des lieux de sortie'
-    end
-  end
-
-  def type_bien_human
-    case type_bien
-    when 'maison'
-      'Maison individuelle'
-    when 'appartement'
-      'Appartement'
-    when 'studio'
-      'Studio'
-    when 'loft'
-      'Loft'
+  def service_souhaite_human
+    case service_souhaite
+    when 'elagage'
+      'Élagage'
+    when 'abattage'
+      'Abattage'
+    when 'dessouchage'
+      'Dessouchage'
+    when 'entretien'
+      'Entretien de jardin'
+    when 'taille_haies'
+      'Taille de haies'
+    when 'tonte_pelouse'
+      'Création et tonte de pelouse'
+    when 'debroussaillage'
+      'Débroussaillage'
+    when 'autre'
+      'Autre'
     else
-      type_bien.humanize
+      service_souhaite.humanize
     end
   end
   

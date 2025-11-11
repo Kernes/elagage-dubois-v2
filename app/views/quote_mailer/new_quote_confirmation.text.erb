@@ -1,17 +1,15 @@
-Merci pour votre demande de devis - Élagage Dubois
+Merci pour votre demande de devis - Dubois Services
 ==========================================
 
 Bonjour <%= @quote.prenom %>,
 
-Nous avons bien reçu votre demande de devis pour un <%= @quote.type_etat_human %> concernant votre <%= @quote.type_bien_human %> situé(e) à <%= @quote.ville %>.
+Nous avons bien reçu votre demande de devis pour un <%= @quote.service_souhaite_human %>.
 
 RÉCAPITULATIF DE VOTRE DEMANDE :
-- Type : <%= @quote.type_etat_human %>
-- Bien : <%= @quote.type_bien_human %>
-- Surface : <%= @quote.surface %> m²
-- Pièces : <%= @quote.pieces %>
-- Localisation : <%= @quote.adresse %>, <%= @quote.ville %> <%= @quote.code_postal %>
-<% if @quote.telephone.present? %>- Votre téléphone : <%= @quote.telephone %><% end %>
+- Service : <%= @quote.service_souhaite_human %>
+- Votre téléphone : <%= @quote.telephone %>
+- Détail de votre demande :
+<%= @quote.commentaires %>
 
 PROCHAINES ÉTAPES :
 Notre équipe va étudier votre demande et vous enverra votre devis personnalisé dans les 24 heures.
@@ -19,15 +17,14 @@ Notre équipe va étudier votre demande et vous enverra votre devis personnalis�
 BESOIN D'INFORMATIONS ?
 N'hésitez pas à nous contacter :
 - Téléphone : 07 83 89 23 84
-- Email : sqy.etatdeslieux@gmail.com
-- Disponibilité : 6 jours sur 7
+- Email : jpdubois.services@gmail.com
+- Disponibilité : Du lundi au samedi
 
 Merci de votre confiance !
 
 Cordialement,
-L'équipe Élagage Dubois
-Yoan DUBOIS - Gérant
+L'équipe Dubois Services
 
 ---
-Élagage Dubois - États des lieux professionnels en Île-de-France
-07 83 89 23 84 | ✉️ sqy.etatdeslieux@gmail.com
+Dubois Services - Expert en élagage, abattage et dessouchage
+07 83 89 23 84 | ✉️ jpdubois.services@gmail.com
