@@ -221,65 +221,9 @@
   </div>
 </section>
 
-<!-- Galerie de réalisations -->
-<section class="py-24 bg-gradient-to-b from-white to-green-50">
-  <div class="px-6 mx-auto max-w-7xl lg:px-8">
-    <div class="mx-auto mb-16 max-w-2xl text-center">
-      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Nos Réalisations en Images</h2>
-      <p class="mt-4 text-lg text-gray-600">Découvrez nos interventions d'abattage en action</p>
-    </div>
-    
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      <div class="overflow-hidden relative rounded-2xl shadow-xl aspect-[4/3] group">
-        <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Abattage dirigé" class="object-cover w-full h-full transition-transform group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/60"></div>
-        <div class="absolute right-4 bottom-4 left-4">
-          <p class="font-semibold text-white">Abattage dirigé sécurisé</p>
-        </div>
-      </div>
-      
-      <div class="overflow-hidden relative rounded-2xl shadow-xl aspect-[4/3] group">
-        <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Abattage par démontage" class="object-cover w-full h-full transition-transform group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/60"></div>
-        <div class="absolute right-4 bottom-4 left-4">
-          <p class="font-semibold text-white">Abattage par démontage</p>
-        </div>
-      </div>
-      
-      <div class="overflow-hidden relative rounded-2xl shadow-xl aspect-[4/3] group">
-        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Débitage" class="object-cover w-full h-full transition-transform group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/60"></div>
-        <div class="absolute right-4 bottom-4 left-4">
-          <p class="font-semibold text-white">Débitage professionnel</p>
-        </div>
-      </div>
-      
-      <div class="overflow-hidden relative rounded-2xl shadow-xl aspect-[4/3] group">
-        <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Évacuation" class="object-cover w-full h-full transition-transform group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/60"></div>
-        <div class="absolute right-4 bottom-4 left-4">
-          <p class="font-semibold text-white">Évacuation complète</p>
-        </div>
-      </div>
-      
-      <div class="overflow-hidden relative rounded-2xl shadow-xl aspect-[4/3] group">
-        <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Intervention professionnelle" class="object-cover w-full h-full transition-transform group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/60"></div>
-        <div class="absolute right-4 bottom-4 left-4">
-          <p class="font-semibold text-white">Intervention professionnelle</p>
-        </div>
-      </div>
-      
-      <div class="overflow-hidden relative rounded-2xl shadow-xl aspect-[4/3] group">
-        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Nettoyage chantier" class="object-cover w-full h-full transition-transform group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/60"></div>
-        <div class="absolute right-4 bottom-4 left-4">
-          <p class="font-semibold text-white">Nettoyage complet</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<%= render "components/gallery_realizations", 
+    realizations: gallery_realizations(:abattage),
+    description: gallery_description(:abattage) %>
 
 <!-- Pourquoi choisir notre service -->
 <section class="py-24 bg-white">
