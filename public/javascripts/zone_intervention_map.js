@@ -33,6 +33,7 @@
   };
 
   let mapInstance = null;
+  let isInitializing = false;
 
   async function fetchFirstAvailable(urls) {
     for (const url of urls) {
@@ -95,6 +96,10 @@
   async function createMap() {
     const mapEl = document.getElementById("map");
     if (!mapEl || typeof L === "undefined") return;
+    
+    // Éviter les initialisations multiples simultanées
+    if (isInitializing) return;
+    isInitializing = true;
 
     // Récupérer les valeurs depuis les data attributes
     const rating = mapEl.dataset.rating ? parseFloat(mapEl.dataset.rating) : 5;
@@ -107,12 +112,28 @@
     BUSINESS.reviewsUrl = reviewsUrl;
     BUSINESS.ratingText = rating.toFixed(1).replace('.', ',') + " · <a href=\"" + reviewsUrl + "\" target=\"_blank\" rel=\"noopener\" style=\"color:#2563eb;text-decoration:underline;\">" + reviews + " avis</a>";
 
+    // Supprimer l'instance existante si elle existe
     if (mapInstance) {
-      mapInstance.remove();
+      try {
+        mapInstance.remove();
+      } catch (e) {
+        // Ignorer les erreurs si la carte est déjà supprimée
+      }
       mapInstance = null;
     }
+    
+    // Vérifier si le conteneur a déjà été initialisé par Leaflet
+    if (mapEl._leaflet_id) {
+      delete mapEl._leaflet_id;
+    }
 
-    mapInstance = L.map("map", { scrollWheelZoom: false });
+    try {
+      mapInstance = L.map("map", { scrollWheelZoom: false });
+    } catch (e) {
+      console.error("[Carte départements] Erreur lors de la création de la carte:", e);
+      isInitializing = false;
+      return;
+    }
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
       attribution: "&copy; OpenStreetMap"
@@ -162,15 +183,67 @@
       return div;
     };
     legend.addTo(mapInstance);
+    
+    isInitializing = false;
   }
 
-  function init() { createMap().catch(err => console.error("[Carte départements]", err)); }
+  function init() {
+    // Vérifier si le conteneur existe sur la page
+    const mapEl = document.getElementById("map");
+    if (!mapEl) {
+      // Pas de carte sur cette page, nettoyer l'instance si elle existe
+      if (mapInstance) {
+        try {
+          mapInstance.remove();
+        } catch (e) {
+          // Ignorer les erreurs
+        }
+        mapInstance = null;
+      }
+      isInitializing = false;
+      return;
+    }
+    
+    // Si la carte est déjà initialisée et que le conteneur existe toujours, ne pas réinitialiser
+    if (mapInstance && mapEl._leaflet_id) {
+      return;
+    }
+    
+    createMap().catch(err => {
+      console.error("[Carte départements]", err);
+      isInitializing = false;
+    });
+  }
+
+  // Fonction pour nettoyer complètement la carte
+  function cleanup() {
+    if (mapInstance) {
+      try {
+        mapInstance.remove();
+      } catch (e) {
+        // Ignorer les erreurs
+      }
+      mapInstance = null;
+    }
+    isInitializing = false;
+    
+    // Nettoyer aussi le conteneur
+    const mapEl = document.getElementById("map");
+    if (mapEl && mapEl._leaflet_id) {
+      delete mapEl._leaflet_id;
+    }
+  }
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init);
   } else {
     init();
   }
+  
+  // Nettoyer avant de charger une nouvelle page
+  document.addEventListener("turbo:before-cache", cleanup);
+  
+  // Initialiser après le chargement
   document.addEventListener("turbo:load", init);
   document.addEventListener("turbo:frame-load", init);
 })();
