@@ -12,14 +12,14 @@ module PagesHelper
           ]
         },
         {
-          category: "Taille de formation",
+          category: "Élagage sécurisé",
           images: [
             { url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Taille professionnelle" },
             { url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Taille de formation" }
           ]
         },
         {
-          category: "Réduction de couronne",
+          category: "Taille sanitaire",
           images: [
             { url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Réduction de couronne" },
             { url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Réduction de couronne" }
@@ -62,13 +62,13 @@ module PagesHelper
           ]
         },
         {
-          category: "Débitage professionnel",
+          category: "Démontage contrôlé",
           images: [
-            { url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Débitage" }
+            { url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Démontage contrôlé" }
           ]
         },
         {
-          category: "Évacuation complète",
+          category: "Démontage avec rétention",
           images: [
             { url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Évacuation" }
           ]
@@ -96,9 +96,9 @@ module PagesHelper
           ]
         },
         {
-          category: "Dessouchage manuel",
+          category: "Rognage ou grignotage",
           images: [
-            { url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Dessouchage manuel" }
+            { url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Rognage ou grignotage" }
           ]
         },
         {
@@ -120,9 +120,9 @@ module PagesHelper
           ]
         },
         {
-          category: "Évacuation complète",
+          category: "Démontage avec rétention",
           images: [
-            { url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Évacuation" }
+            { url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Démontage avec rétention" }
           ]
         }
       ]
@@ -194,7 +194,7 @@ module PagesHelper
         title: "L'Élagage, Bien Plus Qu'une Simple Taille",
         paragraphs: [
           "L'élagage, c'est un art que nous pratiquons avec passion. Chaque arbre est unique, chaque intervention est réfléchie, chaque coupe est mûrement pensée. Nous respectons la biologie de chaque arbre pour préserver sa santé, son esthétique et votre sécurité.",
-          "Depuis plus de 10 ans, nous mettons notre expertise au service de vos projets. Que ce soit pour une taille de formation, une réduction de couronne ou un étêtage, nous intervenons avec professionnalisme et respect de l'environnement."
+          "Depuis plus de 10 ans, nous mettons notre expertise au service de vos projets. Que ce soit pour un élagage sécurisé, une taille sanitaire ou une taille raisonnée, nous intervenons avec professionnalisme et respect de l'environnement."
         ],
         image_url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
         image_alt: "Élagage professionnel",
@@ -263,39 +263,39 @@ module PagesHelper
         subtitle: "Des interventions adaptées à chaque situation",
         techniques: [
           {
-            title: "Taille de Formation",
-            description: "Pour les jeunes arbres, la taille de formation est essentielle. Elle permet de guider la croissance de l'arbre dès son plus jeune âge, en favorisant une structure solide et équilibrée. Nous intervenons avec précaution pour ne pas compromettre le développement futur de l'arbre.",
+            title: "Élagage Sécurisé",
+            description: "L'élagage sécurisé est notre priorité. Nous intervenons avec toutes les précautions nécessaires pour garantir la sécurité des personnes et des biens, tout en préservant la santé de l'arbre.",
             image_url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-            image_alt: "Taille de formation",
+            image_alt: "Élagage sécurisé",
             icon_color: "green-700",
             features: [
-              "Intervention sur jeunes arbres",
-              "Structure équilibrée",
-              "Croissance guidée"
+              "Sécurité maximale",
+              "Protection des biens",
+              "Techniques professionnelles"
             ]
           },
           {
-            title: "Taille d'Entretien",
-            description: "La taille d'entretien permet de maintenir la santé et la forme de vos arbres adultes. Nous intervenons régulièrement pour éliminer les branches mortes, malades ou dangereuses, tout en préservant l'esthétique naturelle de l'arbre.",
+            title: "Taille Sanitaire",
+            description: "La taille sanitaire permet d'éliminer les branches mortes, malades ou dangereuses pour préserver la santé de l'arbre. Cette intervention est essentielle pour maintenir vos arbres en bon état.",
             image_url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-            image_alt: "Taille d'entretien",
+            image_alt: "Taille sanitaire",
             icon_color: "green-700",
             features: [
               "Élimination des branches mortes",
-              "Préservation de l'esthétique",
-              "Maintien de la santé"
+              "Préservation de la santé",
+              "Prévention des maladies"
             ]
           },
           {
-            title: "Réduction de Couronne",
-            description: "La réduction de couronne permet de diminuer la hauteur et l'envergure d'un arbre tout en préservant sa forme naturelle. Cette technique est idéale pour limiter l'ombre, réduire les risques de chute ou adapter l'arbre à son environnement.",
+            title: "Taille Raisonnée",
+            description: "La taille raisonnée respecte la biologie et la forme naturelle de l'arbre. Nous intervenons avec précaution pour préserver l'esthétique et la santé de vos arbres tout en répondant à vos besoins.",
             image_url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-            image_alt: "Réduction de couronne",
+            image_alt: "Taille raisonnée",
             icon_color: "amber-700",
             features: [
-              "Réduction de la hauteur",
-              "Préservation de la forme",
-              "Réduction des risques"
+              "Respect de la biologie",
+              "Préservation de l'esthétique",
+              "Intervention adaptée"
             ]
           },
           {
@@ -342,15 +342,27 @@ module PagesHelper
             ]
           },
           {
-            title: "Débitage et Évacuation",
-            description: "Après l'abattage, nous procédons au débitage de l'arbre en sections transportables. Nous évacuons ensuite tous les déchets, laissant votre terrain propre et prêt pour vos projets.",
+            title: "Démontage Contrôlé",
+            description: "Le démontage contrôlé permet d'abattre un arbre en toute sécurité, même dans des espaces restreints. Nous procédons morceau par morceau pour garantir la sécurité de tous.",
             image_url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-            image_alt: "Débitage",
+            image_alt: "Démontage contrôlé",
             icon_color: "green-700",
             features: [
-              "Débitage professionnel",
-              "Évacuation complète",
-              "Terrain propre"
+              "Technique sécurisée",
+              "Espaces restreints",
+              "Contrôle total"
+            ]
+          },
+          {
+            title: "Démontage avec Rétention",
+            description: "Le démontage avec rétention est utilisé lorsque l'arbre doit être abattu avec un contrôle maximal. Nous utilisons des techniques de rétention pour guider chaque section de l'arbre.",
+            image_url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            image_alt: "Démontage avec rétention",
+            icon_color: "green-700",
+            features: [
+              "Rétention des sections",
+              "Contrôle maximal",
+              "Sécurité optimale"
             ]
           }
         ]
@@ -373,10 +385,10 @@ module PagesHelper
             ]
           },
           {
-            title: "Dessouchage Manuel",
-            description: "Pour les souches plus petites ou dans les espaces restreints, nous procédons manuellement. Cette technique permet un travail précis et respectueux de votre terrain.",
+            title: "Rognage ou Grignotage",
+            description: "Pour les souches plus petites ou dans les espaces restreints, nous procédons par rognage ou grignotage. Cette technique permet un travail précis et respectueux de votre terrain.",
             image_url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-            image_alt: "Dessouchage manuel",
+            image_alt: "Rognage ou grignotage",
             icon_color: "green-700",
             features: [
               "Travail précis",
@@ -531,10 +543,10 @@ module PagesHelper
             border_color: "amber-100"
           },
           {
-            title: "Évacuation Complète",
-            description: "Après l'abattage, nous procédons au débitage et à l'évacuation complète de tous les déchets. Votre terrain est laissé propre et prêt pour vos projets.",
+            title: "Démontage avec Rétention",
+            description: "Le démontage avec rétention permet d'abattre un arbre avec un contrôle maximal. Nous utilisons des techniques de rétention pour guider chaque section de l'arbre en toute sécurité.",
             image_url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-            image_alt: "Évacuation",
+            image_alt: "Démontage avec rétention",
             icon_color: "green-700",
             bg_color: "green-50",
             border_color: "green-100"
@@ -557,7 +569,7 @@ module PagesHelper
           },
           {
             title: "Techniques Adaptées",
-            description: "Dessouchage mécanique pour les grandes souches, dessouchage manuel pour les plus petites, nous adaptons notre méthode à chaque situation pour garantir un travail de qualité.",
+            description: "Dessouchage mécanique pour les grandes souches, rognage ou grignotage pour les plus petites, nous adaptons notre méthode à chaque situation pour garantir un travail de qualité.",
             image_url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
             image_alt: "Techniques",
             icon_color: "amber-700",

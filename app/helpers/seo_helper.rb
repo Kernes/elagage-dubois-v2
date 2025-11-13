@@ -43,14 +43,14 @@ module SeoHelper
     abattage: {
       title: "Abattage d'Arbres de Toutes Espèces - Élagage Dubois | Expert Professionnel",
       description: "Service d'abattage d'arbres professionnel en Île-de-France. Abattage dirigé, sécurisé et respectueux de l'environnement. Devis gratuit, intervention rapide.",
-      keywords: "abattage arbres, abattage dirigé, abattage sécurisé, abattage professionnel, débitage, évacuation déchets, Île-de-France, Élagage Dubois",
+      keywords: "abattage arbres, abattage dirigé, abattage sécurisé, abattage professionnel, démontage contrôlé, démontage avec rétention, Île-de-France, Élagage Dubois",
       priority: 0.9,
       changefreq: "monthly"
     },
     dessouchage: {
       title: "Dessouchage d'Arbres - Élagage Dubois | Expert Professionnel",
-      description: "Service de dessouchage d'arbres professionnel en Île-de-France. Dessouchage mécanique et manuel, élimination complète des souches. Devis gratuit, intervention rapide.",
-      keywords: "dessouchage, dessouchage arbre, dessouchage mécanique, dessouchage manuel, élimination souche, Île-de-France, Élagage Dubois",
+      description: "Service de dessouchage d'arbres professionnel en Île-de-France. Dessouchage mécanique, rognage ou grignotage, élimination complète des souches. Devis gratuit, intervention rapide.",
+      keywords: "dessouchage, dessouchage arbre, dessouchage mécanique, rognage, grignotage, élimination souche, Île-de-France, Élagage Dubois",
       priority: 0.9,
       changefreq: "monthly"
     },
