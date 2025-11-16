@@ -8,11 +8,11 @@
 <%= render "components/header" %>
 
 <!-- Section principale avec formulaire -->
-<div class="isolate relative bg-gradient-to-b from-green-50/30 to-white pt-32">
+<div class="isolate relative pt-20 bg-gradient-to-b to-white from-green-50/30 lg:pt-32">
   <!-- En-tête simple et élégant -->
-  <div class="px-6 mx-auto max-w-7xl pt-12 pb-8 lg:px-8">
+  <div class="px-6 pt-6 pb-8 mx-auto max-w-7xl lg:px-8 lg:pt-12">
     <div class="mx-auto max-w-3xl text-center">
-      <div class="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-green-100 border border-green-200">
+      <div class="inline-flex gap-2 items-center px-4 py-2 mb-6 bg-green-100 rounded-full border border-green-200">
         <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
@@ -24,9 +24,9 @@
       </p>
     </div>
   </div>
-  <div class="grid grid-cols-1 mx-auto max-w-7xl lg:grid-cols-2">
+  <div class="flex flex-col mx-auto max-w-7xl lg:grid lg:grid-cols-2">
     <!-- Colonne de gauche : Informations -->
-    <div class="relative px-6 pt-12 pb-20 sm:pt-20 lg:static lg:px-8 lg:py-24">
+    <div class="relative order-1 px-6 pt-12 pb-20 sm:pt-20 lg:order-1 lg:static lg:px-8 lg:py-24">
       <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
         <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Pourquoi nous faire confiance ?</h2>
         <p class="mt-6 text-lg leading-8 text-gray-600">
@@ -35,7 +35,7 @@
         
         <!-- Avantages -->
         <div class="mt-8 space-y-4">
-          <div class="flex items-start gap-4">
+          <div class="flex gap-4 items-start">
             <div class="flex-shrink-0">
               <div class="flex justify-center items-center w-10 h-10 bg-green-100 rounded-lg">
                 <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -49,7 +49,7 @@
             </div>
           </div>
           
-          <div class="flex items-start gap-4">
+          <div class="flex gap-4 items-start">
             <div class="flex-shrink-0">
               <div class="flex justify-center items-center w-10 h-10 bg-green-100 rounded-lg">
                 <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -63,7 +63,7 @@
             </div>
           </div>
           
-          <div class="flex items-start gap-4">
+          <div class="flex gap-4 items-start">
             <div class="flex-shrink-0">
               <div class="flex justify-center items-center w-10 h-10 bg-green-100 rounded-lg">
                 <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -77,7 +77,7 @@
             </div>
           </div>
           
-          <div class="flex items-start gap-4">
+          <div class="flex gap-4 items-start">
             <div class="flex-shrink-0">
               <div class="flex justify-center items-center w-10 h-10 bg-green-100 rounded-lg">
                 <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
@@ -94,7 +94,7 @@
         
         <div class="p-6 mt-8 bg-green-50 rounded-lg border border-green-200">
           <h3 class="mb-3 text-lg font-semibold text-gray-900">Zone d'intervention</h3>
-          <p class="text-sm leading-relaxed text-gray-700 mb-4">
+          <p class="mb-4 text-sm leading-relaxed text-gray-700">
             Nous intervenons dans le <strong>Val d'Oise</strong>, l'<strong>Oise</strong> et les <strong>Yvelines</strong> (partie nord). Si vous êtes dans cette zone, n'hésitez pas à nous contacter !
           </p>
           <div class="flex flex-wrap gap-2">
@@ -137,10 +137,10 @@
     </div>
     
     <!-- Colonne de droite : Formulaire -->
-    <%= form_with model: @quote, url: create_quote_path, local: true, class: "px-6 pt-12 pb-24 sm:pb-32 lg:px-8 lg:py-24 bg-gray-50" do |form| %>
+    <%= form_with model: @quote, url: create_quote_path, local: true, class: "order-2 px-6 pt-12 pb-24 sm:pb-32 lg:order-2 lg:px-8 lg:py-24 bg-gray-50" do |form| %>
       <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
         <div class="p-6 mb-8 bg-white rounded-lg border border-gray-200 shadow-sm">
-          <h2 class="text-2xl font-bold text-gray-900 mb-2">Formulaire de devis</h2>
+          <h2 class="mb-2 text-2xl font-bold text-gray-900">Formulaire de devis</h2>
           <p class="text-sm text-gray-600">Remplissez ce formulaire et recevez votre devis gratuit sous 24h</p>
         </div>
         
@@ -175,7 +175,7 @@
           </div>
         <% end %>
 
-        <div class="p-6 bg-white rounded-lg border border-gray-200 shadow-sm space-y-6">
+        <div class="p-6 space-y-6 bg-white rounded-lg border border-gray-200 shadow-sm">
           
           <!-- Nom et Prénom -->
           <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -236,7 +236,7 @@
                   ], @quote.service_souhaite.presence || ""), 
                   { required: true, prompt: false, selected: (@quote.service_souhaite.presence || "") },
                   { class: "block px-4 py-3 w-full text-base rounded-lg border-2 #{'border-red-300 bg-red-50' if @quote.errors[:service_souhaite].any?} border-gray-300 bg-white shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 hover:border-gray-400 appearance-none cursor-pointer font-medium text-gray-900" } %>
-              <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+              <div class="flex absolute inset-y-0 right-0 items-center pr-3 pointer-events-none">
                 <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
@@ -281,7 +281,7 @@
         </div>
         
         <!-- Garanties en bas du formulaire -->
-        <div class="mt-8 grid grid-cols-3 gap-4 text-center">
+        <div class="grid grid-cols-3 gap-4 mt-8 text-center">
           <div class="p-4 bg-white rounded-lg border border-gray-200">
             <div class="text-2xl font-bold text-green-600">24h</div>
             <div class="mt-1 text-xs text-gray-600">Réponse rapide</div>
