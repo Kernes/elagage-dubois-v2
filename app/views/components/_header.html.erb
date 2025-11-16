@@ -25,10 +25,10 @@
       </button>
     </div>
     <div class="hidden lg:flex lg:gap-x-8 lg:items-center">
-      <a href="<%= elagage_path %>" class="text-sm font-semibold text-gray-900 transition-colors hover:text-green-700">Élagage</a>
-      <a href="<%= abattage_path %>" class="text-sm font-semibold text-gray-900 transition-colors hover:text-green-700">Abattage</a>
-      <a href="<%= dessouchage_path %>" class="text-sm font-semibold text-gray-900 transition-colors hover:text-green-700">Dessouchage</a>
-      <a href="<%= entretien_path %>" class="text-sm font-semibold text-gray-900 transition-colors hover:text-green-700">Entretien</a>
+      <a href="<%= elagage_path %>" class="text-sm font-semibold transition-colors <%= current_page?(elagage_path) ? 'text-green-700' : 'text-gray-900 hover:text-green-700' %>">Élagage</a>
+      <a href="<%= abattage_path %>" class="text-sm font-semibold transition-colors <%= current_page?(abattage_path) ? 'text-green-700' : 'text-gray-900 hover:text-green-700' %>">Abattage</a>
+      <a href="<%= dessouchage_path %>" class="text-sm font-semibold transition-colors <%= current_page?(dessouchage_path) ? 'text-green-700' : 'text-gray-900 hover:text-green-700' %>">Dessouchage</a>
+      <a href="<%= entretien_path %>" class="text-sm font-semibold transition-colors <%= current_page?(entretien_path) ? 'text-green-700' : 'text-gray-900 hover:text-green-700' %>">Entretien</a>
       <a href="/#faq" class="text-sm font-semibold text-gray-900 transition-colors hover:text-green-700">FAQ</a>
       <a href="tel:<%= company_phone_formatted %>" class="px-4 py-2 text-sm font-semibold text-white bg-green-700 rounded-md transition-colors hover:bg-green-800"><%= company_phone %></a>
       <a href="/devis" class="px-4 py-2 text-sm font-semibold text-white bg-amber-700 rounded-md transition-colors hover:bg-amber-800">Devis gratuit</a>
@@ -48,10 +48,10 @@
       </button>
     </div>
     <div class="overflow-y-auto flex-1 p-4 space-y-4">
-      <a href="<%= elagage_path %>" class="block py-2 font-semibold text-gray-900 hover:text-green-700">Élagage</a>
-      <a href="<%= abattage_path %>" class="block py-2 font-semibold text-gray-900 hover:text-green-700">Abattage</a>
-      <a href="<%= dessouchage_path %>" class="block py-2 font-semibold text-gray-900 hover:text-green-700">Dessouchage</a>
-      <a href="<%= entretien_path %>" class="block py-2 font-semibold text-gray-900 hover:text-green-700">Entretien</a>
+      <a href="<%= elagage_path %>" class="block py-2 font-semibold transition-colors <%= current_page?(elagage_path) ? 'text-green-700' : 'text-gray-900 hover:text-green-700' %>">Élagage</a>
+      <a href="<%= abattage_path %>" class="block py-2 font-semibold transition-colors <%= current_page?(abattage_path) ? 'text-green-700' : 'text-gray-900 hover:text-green-700' %>">Abattage</a>
+      <a href="<%= dessouchage_path %>" class="block py-2 font-semibold transition-colors <%= current_page?(dessouchage_path) ? 'text-green-700' : 'text-gray-900 hover:text-green-700' %>">Dessouchage</a>
+      <a href="<%= entretien_path %>" class="block py-2 font-semibold transition-colors <%= current_page?(entretien_path) ? 'text-green-700' : 'text-gray-900 hover:text-green-700' %>">Entretien</a>
       <div class="pt-2 space-y-2 border-t">
         <p class="mb-2 text-xs font-semibold tracking-wider text-gray-500 uppercase">Navigation</p>
         <a href="/#services" class="block py-2 text-gray-700 hover:text-green-700">Nos Services</a>
