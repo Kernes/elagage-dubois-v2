@@ -127,8 +127,21 @@
       delete mapEl._leaflet_id;
     }
 
+    // Détecter si on est sur mobile
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+                     (window.innerWidth <= 768);
+
     try {
-      mapInstance = L.map("map", { scrollWheelZoom: false });
+      // Sur mobile, désactiver le dragging avec 1 doigt pour éviter les conflits avec le scroll
+      // Le zoom avec 2 doigts reste actif
+      mapInstance = L.map("map", {
+        scrollWheelZoom: false,
+        dragging: !isMobile, // Désactiver le drag avec 1 doigt sur mobile
+        touchZoom: true, // Permettre le zoom avec 2 doigts
+        doubleClickZoom: true,
+        boxZoom: false,
+        keyboard: false
+      });
     } catch (e) {
       console.error("[Carte départements] Erreur lors de la création de la carte:", e);
       isInitializing = false;
