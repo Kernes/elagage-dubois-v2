@@ -19,7 +19,17 @@
       </div>
       <div class="relative">
         <div class="overflow-hidden rounded-2xl shadow-2xl">
-          <img src="<%= introduction[:image_url] %>" alt="<%= introduction[:image_alt] %>" class="object-cover w-full h-full">
+          <% if introduction[:image_url]&.include?('unsplash.com') %>
+            <% srcset_data = unsplash_srcset(introduction[:image_url], { mobile: 400, tablet: 800, desktop: 1200 }) %>
+            <img src="<%= srcset_data[:src] %>" 
+                 srcset="<%= srcset_data[:srcset] %>"
+                 sizes="<%= srcset_data[:sizes] %>"
+                 alt="<%= introduction[:image_alt] %>" 
+                 class="object-cover w-full h-full"
+                 loading="lazy">
+          <% else %>
+            <img src="<%= introduction[:image_url] %>" alt="<%= introduction[:image_alt] %>" class="object-cover w-full h-full" loading="lazy">
+          <% end %>
         </div>
         <% if introduction[:badge] %>
           <% icon_color_class = case introduction[:badge][:icon_color]

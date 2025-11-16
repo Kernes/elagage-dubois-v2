@@ -31,7 +31,17 @@
            end %>
         <div class="overflow-hidden relative bg-white rounded-2xl shadow-lg transition-shadow group hover:shadow-xl">
           <div class="overflow-hidden relative h-64">
-            <img src="<%= technique[:image_url] %>" alt="<%= technique[:image_alt] %>" class="object-cover w-full h-full transition-transform group-hover:scale-110">
+            <% if technique[:image_url]&.include?('unsplash.com') %>
+              <% srcset_data = unsplash_srcset(technique[:image_url], { mobile: 400, tablet: 600, desktop: 800 }) %>
+              <img src="<%= srcset_data[:src] %>" 
+                   srcset="<%= srcset_data[:srcset] %>"
+                   sizes="<%= srcset_data[:sizes] %>"
+                   alt="<%= technique[:image_alt] %>" 
+                   class="object-cover w-full h-full transition-transform group-hover:scale-110"
+                   loading="lazy">
+            <% else %>
+              <img src="<%= technique[:image_url] %>" alt="<%= technique[:image_alt] %>" class="object-cover w-full h-full transition-transform group-hover:scale-110" loading="lazy">
+            <% end %>
             <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/40"></div>
           </div>
           <div class="relative p-8">

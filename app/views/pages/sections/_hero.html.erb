@@ -2,7 +2,12 @@
 <section class="overflow-hidden relative pt-32 pb-24 min-h-[90vh] flex items-center bg-gray-900 lg:py-24 lg:min-h-[90vh]">
   <!-- Image de fond principale -->
   <div class="absolute inset-0">
-    <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Élagage professionnel" class="object-cover w-full h-full">
+    <% hero_srcset = unsplash_srcset("https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&q=80", { mobile: 800, tablet: 1200, desktop: 2000 }) %>
+    <img src="<%= hero_srcset[:src] %>" 
+         srcset="<%= hero_srcset[:srcset] %>"
+         sizes="100vw"
+         alt="Élagage professionnel" 
+         class="object-cover w-full h-full">
     <div class="absolute inset-0 bg-gradient-to-r to-transparent from-green-900/90 via-green-800/80"></div>
     <div class="absolute inset-0 bg-black/20"></div>
   </div>
@@ -65,7 +70,13 @@
         <div class="relative transform rotate-[-5deg] transition-transform hover:rotate-0 hover:scale-105 hover:z-10" style="transform-origin: center;">
           <div class="bg-white p-1 shadow-[0_10px_30px_rgba(0,0,0,0.3)]">
             <div class="overflow-hidden relative aspect-[4/5]">
-              <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Élagage professionnel" class="object-cover w-full h-full">
+              <% hero_img1 = unsplash_srcset("https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&q=80", { mobile: 300, tablet: 400, desktop: 500 }) %>
+              <img src="<%= hero_img1[:src] %>" 
+                   srcset="<%= hero_img1[:srcset] %>"
+                   sizes="<%= hero_img1[:sizes] %>"
+                   alt="Élagage professionnel" 
+                   class="object-cover w-full h-full"
+                   loading="lazy">
               <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/60"></div>
               <div class="absolute right-4 bottom-4 left-4">
                 <p class="text-lg font-bold text-white">Élagage</p>
@@ -79,7 +90,13 @@
         <div class="relative transform rotate-[8deg] mt-8 transition-transform hover:rotate-0 hover:scale-105 hover:z-10" style="transform-origin: center;">
           <div class="bg-white p-1 shadow-[0_10px_30px_rgba(0,0,0,0.3)]">
             <div class="overflow-hidden relative aspect-[4/5]">
-              <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Abattage sécurisé" class="object-cover w-full h-full">
+              <% hero_img2 = unsplash_srcset("https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&q=80", { mobile: 300, tablet: 400, desktop: 500 }) %>
+              <img src="<%= hero_img2[:src] %>" 
+                   srcset="<%= hero_img2[:srcset] %>"
+                   sizes="<%= hero_img2[:sizes] %>"
+                   alt="Abattage sécurisé" 
+                   class="object-cover w-full h-full"
+                   loading="lazy">
               <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/60"></div>
               <div class="absolute right-4 bottom-4 left-4">
                 <p class="text-lg font-bold text-white">Abattage</p>
@@ -93,7 +110,13 @@
         <div class="relative transform rotate-[6deg] -mt-8 transition-transform hover:rotate-0 hover:scale-105 hover:z-10" style="transform-origin: center;">
           <div class="bg-white p-1 shadow-[0_10px_30px_rgba(0,0,0,0.3)]">
             <div class="overflow-hidden relative aspect-[4/5]">
-              <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dessouchage" class="object-cover w-full h-full">
+              <% hero_img3 = unsplash_srcset("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&q=80", { mobile: 300, tablet: 400, desktop: 500 }) %>
+              <img src="<%= hero_img3[:src] %>" 
+                   srcset="<%= hero_img3[:srcset] %>"
+                   sizes="<%= hero_img3[:sizes] %>"
+                   alt="Dessouchage" 
+                   class="object-cover w-full h-full"
+                   loading="lazy">
               <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/60"></div>
               <div class="absolute right-4 bottom-4 left-4">
                 <p class="text-lg font-bold text-white">Dessouchage</p>
@@ -107,7 +130,13 @@
         <div class="relative transform rotate-[-7deg] transition-transform hover:rotate-0 hover:scale-105 hover:z-10" style="transform-origin: center;">
           <div class="bg-white p-1 shadow-[0_10px_30px_rgba(0,0,0,0.3)]">
             <div class="overflow-hidden relative aspect-[4/5]">
-              <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Entretien paysager" class="object-cover w-full h-full">
+              <% hero_img4 = unsplash_srcset("https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&q=80", { mobile: 300, tablet: 400, desktop: 500 }) %>
+              <img src="<%= hero_img4[:src] %>" 
+                   srcset="<%= hero_img4[:srcset] %>"
+                   sizes="<%= hero_img4[:sizes] %>"
+                   alt="Entretien paysager" 
+                   class="object-cover w-full h-full"
+                   loading="lazy">
               <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/60"></div>
               <div class="absolute right-4 bottom-4 left-4">
                 <p class="text-lg font-bold text-white">Entretien</p>

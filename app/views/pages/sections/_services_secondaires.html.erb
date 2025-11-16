@@ -17,7 +17,13 @@
       <!-- Taille de haies -->
       <a href="<%= entretien_path %>" class="block overflow-hidden relative p-6 bg-white rounded-xl border-2 border-green-200 shadow-lg transition-all hover:shadow-xl lg:hover:scale-105 hover:border-green-400 group">
         <div class="overflow-hidden relative mb-4 w-full h-40 rounded-lg shadow-md">
-          <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Taille de haies" class="object-cover w-full h-full transition-transform lg:group-hover:scale-110">
+          <% srcset_haies = unsplash_srcset("https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&q=80", { mobile: 300, tablet: 400, desktop: 500 }) %>
+          <img src="<%= srcset_haies[:src] %>" 
+               srcset="<%= srcset_haies[:srcset] %>"
+               sizes="<%= srcset_haies[:sizes] %>"
+               alt="Taille de haies" 
+               class="object-cover w-full h-full transition-transform lg:group-hover:scale-110"
+               loading="lazy">
           <div class="absolute inset-0 bg-gradient-to-t to-transparent from-green-900/40"></div>
         </div>
         <h3 class="mb-2 text-lg font-bold text-gray-900 transition-colors group-hover:text-green-700">Taille de haies</h3>
@@ -27,7 +33,13 @@
       <!-- Création et tonte de pelouse -->
       <a href="<%= entretien_path %>" class="block overflow-hidden relative p-6 bg-white rounded-xl border-2 border-green-200 shadow-lg transition-all hover:shadow-xl lg:hover:scale-105 hover:border-green-400 group">
         <div class="overflow-hidden relative mb-4 w-full h-40 rounded-lg shadow-md">
-          <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Création et tonte de pelouse" class="object-cover w-full h-full transition-transform lg:group-hover:scale-110">
+          <% srcset_pelouse = unsplash_srcset("https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&q=80", { mobile: 300, tablet: 400, desktop: 500 }) %>
+          <img src="<%= srcset_pelouse[:src] %>" 
+               srcset="<%= srcset_pelouse[:srcset] %>"
+               sizes="<%= srcset_pelouse[:sizes] %>"
+               alt="Création et tonte de pelouse" 
+               class="object-cover w-full h-full transition-transform lg:group-hover:scale-110"
+               loading="lazy">
           <div class="absolute inset-0 bg-gradient-to-t to-transparent from-green-900/40"></div>
         </div>
         <h3 class="mb-2 text-lg font-bold text-gray-900 transition-colors group-hover:text-green-700">Création et tonte de pelouse</h3>
@@ -37,7 +49,13 @@
       <!-- Entretien divers -->
       <a href="<%= entretien_path %>" class="block overflow-hidden relative p-6 bg-white rounded-xl border-2 border-green-200 shadow-lg transition-all hover:shadow-xl lg:hover:scale-105 hover:border-green-400 group">
         <div class="overflow-hidden relative mb-4 w-full h-40 rounded-lg shadow-md">
-          <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Entretien divers" class="object-cover w-full h-full transition-transform lg:group-hover:scale-110">
+          <% srcset_divers = unsplash_srcset("https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-4.0.3&auto=format&fit=crop&q=80", { mobile: 300, tablet: 400, desktop: 500 }) %>
+          <img src="<%= srcset_divers[:src] %>" 
+               srcset="<%= srcset_divers[:srcset] %>"
+               sizes="<%= srcset_divers[:sizes] %>"
+               alt="Entretien divers" 
+               class="object-cover w-full h-full transition-transform lg:group-hover:scale-110"
+               loading="lazy">
           <div class="absolute inset-0 bg-gradient-to-t to-transparent from-green-900/40"></div>
         </div>
         <h3 class="mb-2 text-lg font-bold text-gray-900 transition-colors group-hover:text-green-700">Mais encore...</h3>

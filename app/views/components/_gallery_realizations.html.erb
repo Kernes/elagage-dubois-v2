@@ -23,9 +23,29 @@
           <div class="overflow-hidden relative rounded-2xl shadow-xl aspect-[4/3] group cursor-pointer gallery-item <%= 'hidden' unless index == 0 %>" 
                data-category="<%= realization[:category] %>" 
                data-image-index="<%= index %>">
-            <img src="<%= image[:url] %>" 
-                 alt="<%= image[:alt] %>" 
-                 class="object-cover w-full h-full transition-transform group-hover:scale-110">
+            <% if image[:url]&.include?('unsplash.com') %>
+              <% srcset_data = unsplash_srcset(image[:url], { mobile: 400, tablet: 800, desktop: 1920 }) %>
+              <% 
+                # Générer l'URL haute résolution pour la modal
+                base_url = image[:url].split('?').first
+                params = image[:url].include?('?') ? image[:url].split('?').last.split('&').reject { |p| p.start_with?('w=') } : []
+                params_str = params.any? ? "&#{params.join('&')}" : ""
+                high_res_url = "#{base_url}?w=1920#{params_str}"
+              %>
+              <img src="<%= srcset_data[:src] %>" 
+                   srcset="<%= srcset_data[:srcset] %>"
+                   sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1920px"
+                   alt="<%= image[:alt] %>" 
+                   class="object-cover w-full h-full transition-transform group-hover:scale-110"
+                   loading="lazy"
+                   data-full-url="<%= high_res_url %>">
+            <% else %>
+              <img src="<%= image[:url] %>" 
+                   alt="<%= image[:alt] %>" 
+                   class="object-cover w-full h-full transition-transform group-hover:scale-110"
+                   loading="lazy"
+                   data-full-url="<%= image[:url] %>">
+            <% end %>
             <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/60"></div>
             <div class="absolute right-4 bottom-4 left-4">
               <p class="font-semibold text-white"><%= realization[:category] %></p>

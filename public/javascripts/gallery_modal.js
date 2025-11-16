@@ -19,8 +19,20 @@
     const items = Array.from(document.querySelectorAll(`.gallery-item[data-category="${category}"]`));
     return items.map(item => {
       const img = item.querySelector('img');
+      // Utiliser data-full-url si disponible (haute résolution pour la modal), sinon utiliser src
+      const fullUrl = img.getAttribute('data-full-url') || img.src;
+      // Pour les images Unsplash, s'assurer d'avoir une version haute résolution
+      let highResUrl = fullUrl;
+      if (fullUrl.includes('unsplash.com') && !fullUrl.includes('w=1920')) {
+        // Remplacer ou ajouter le paramètre w=1920 pour une haute résolution
+        if (fullUrl.includes('w=')) {
+          highResUrl = fullUrl.replace(/w=\d+/, 'w=1920');
+        } else {
+          highResUrl = fullUrl + (fullUrl.includes('?') ? '&' : '?') + 'w=1920';
+        }
+      }
       return {
-        src: img.src,
+        src: highResUrl,
         alt: img.alt,
         category: category
       };
