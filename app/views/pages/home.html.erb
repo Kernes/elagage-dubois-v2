@@ -5,6 +5,38 @@
 <% content_for :og_description, "Expert en élagage, abattage et dessouchage. Services professionnels pour l'entretien et la gestion de vos arbres." %>
 <% content_for :og_image, "https://elagage-dubois-v2.scalingo.io/icon.png" %>
 
+<!-- FAQ Structured Data -->
+<% content_for :head do %>
+  <script type="application/ld+json">
+  <%= raw structured_data_faq([
+    {
+      question: "Quels sont vos tarifs pour l'élagage ?",
+      answer: "Nos tarifs varient selon la taille et le nombre d'arbres, l'accessibilité et la complexité. Nous proposons toujours un devis gratuit et détaillé après une visite sur site."
+    },
+    {
+      question: "Combien de temps faut-il pour obtenir un devis ?",
+      answer: "Nous répondons sous 24 heures après votre demande. Pour un devis précis, nous organisons une visite sur site sous 48 à 72 heures."
+    },
+    {
+      question: "Dans quelles zones intervenez-vous ?",
+      answer: "Nous intervenons dans le Val d'Oise, l'Oise et les Yvelines (partie nord). Si vous êtes dans cette zone, n'hésitez pas à nous contacter !"
+    },
+    {
+      question: "Êtes-vous assurés ?",
+      answer: "Oui, nous sommes entièrement assurés avec une assurance élagage et abattage grande hauteur. Votre tranquillité d'esprit est garantie."
+    },
+    {
+      question: "Proposez-vous des services d'urgence ?",
+      answer: "Oui, nous proposons des interventions d'urgence. Contactez-nous directement par téléphone pour une intervention rapide."
+    },
+    {
+      question: "Quels services proposez-vous ?",
+      answer: "Nous proposons l'élagage (élagage sécurisé, taille sanitaire, taille raisonnée), l'abattage (démontage contrôlé, démontage avec rétention), le dessouchage (rognage ou grignotage) et l'entretien de jardin (taille de haies, tonte de pelouse, débroussaillage)."
+    }
+  ]).to_json %>
+  </script>
+<% end %>
+
 <%= render "components/header" %>
 
 <%= render "pages/sections/hero" %>

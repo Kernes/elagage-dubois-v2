@@ -50,9 +50,10 @@ Disallow: /public/500.html
 # Autoriser les pages importantes
 Allow: /
 Allow: /qui-sommes-nous
-Allow: /etat-des-lieux-residentiel
-Allow: /etat-des-lieux-tertiaire
-Allow: /chiffrage-locatif
+Allow: /elagage-et-etetage-darbres
+Allow: /abattage-darbres-de-toutes-especes
+Allow: /dessouchage-arbre
+Allow: /entretien
 Allow: /devis
 Allow: /recrutement
 Allow: /mentions-legales
@@ -63,7 +64,6 @@ Allow: /sitemap.xml
 Allow: /robots.txt
 Allow: /icon.png
 Allow: /icon.svg
-Allow: /public/robots.txt
 
 # Spécifique pour Google
 User-agent: Googlebot

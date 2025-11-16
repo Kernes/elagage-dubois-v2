@@ -6,7 +6,7 @@ module SeoHelper
     site_keywords: "élagage, abattage, dessouchage, entretien arbres, professionnel, expert, taille arbres, Île-de-France, Élagage Dubois",
     site_url: "https://elagage-dubois-v2.scalingo.io",
     contact_phone: "+33783892384",
-    contact_email: "sqy.etatdeslieux@gmail.com",
+    contact_email: "jpdubois.services@gmail.com",
     business_address: {
       street: "4, rue Philibert Delorme",
       city: "Guyancourt",
@@ -28,8 +28,8 @@ module SeoHelper
     },
     about: {
       title: "Qui sommes-nous ? - Élagage Dubois | Expert en élagage et abattage",
-      description: "Découvrez Élagage Dubois, votre partenaire de confiance pour les états des lieux en Île-de-France. Expertise professionnelle, rapidité et conformité garanties.",
-      keywords: "qui sommes-nous, Élagage Dubois, équipe, expertise, état des lieux, professionnel, Île-de-France",
+      description: "Découvrez Élagage Dubois, votre partenaire de confiance pour l'élagage, l'abattage et le dessouchage en Île-de-France. Expertise professionnelle, sécurité et respect de l'environnement garantis.",
+      keywords: "qui sommes-nous, Élagage Dubois, équipe, expertise, élagage, professionnel, Île-de-France",
       priority: 0.8,
       changefreq: "monthly"
     },
@@ -62,16 +62,16 @@ module SeoHelper
       changefreq: "monthly"
     },
     quote: {
-      title: "Devis gratuit - Élagage Dubois | État des lieux professionnel",
-      description: "Demandez votre devis gratuit pour un état des lieux professionnel en Île-de-France. Réponse rapide sous 24h. Contactez-nous !",
-      keywords: "devis gratuit, état des lieux, devis, contact, Élagage Dubois, Île-de-France",
+      title: "Devis gratuit - Élagage Dubois | Expert en élagage, abattage et dessouchage",
+      description: "Demandez votre devis gratuit pour vos travaux d'élagage, d'abattage ou de dessouchage. Réponse rapide sous 24h. Contactez-nous !",
+      keywords: "devis gratuit, élagage, abattage, dessouchage, devis, contact, Élagage Dubois, Île-de-France",
       priority: 0.8,
       changefreq: "monthly"
     },
     recruitment: {
       title: "Recrutement - Élagage Dubois | Rejoignez notre équipe",
-      description: "Rejoignez l'équipe Élagage Dubois ! Offres d'emploi pour agents d'états des lieux en Île-de-France. Formation et évolution garanties.",
-      keywords: "recrutement, emploi, agent état des lieux, carrière, Élagage Dubois, Île-de-France",
+      description: "Rejoignez l'équipe Élagage Dubois ! Offres d'emploi pour élagueurs professionnels en Île-de-France. Formation et évolution garanties.",
+      keywords: "recrutement, emploi, élagueur, carrière, Élagage Dubois, Île-de-France",
       priority: 0.6,
       changefreq: "monthly"
     },
@@ -221,38 +221,38 @@ module SeoHelper
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Services d'états des lieux",
+        "name": "Services d'élagage et d'entretien d'arbres",
         "itemListElement": [
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "État des lieux d'entrée",
-              "description": "État des lieux d'entrée professionnel pour locaux résidentiels et tertiaires"
+              "name": "Élagage",
+              "description": "Service d'élagage professionnel : élagage sécurisé, taille sanitaire, taille raisonnée"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "État des lieux de sortie",
-              "description": "État des lieux de sortie professionnel pour locaux résidentiels et tertiaires"
+              "name": "Abattage",
+              "description": "Service d'abattage d'arbres professionnel : démontage contrôlé, démontage avec rétention"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Inventaire des lieux",
-              "description": "Inventaire détaillé des biens et équipements"
+              "name": "Dessouchage",
+              "description": "Service de dessouchage professionnel : rognage ou grignotage, élimination complète des souches"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Chiffrage locatif",
-              "description": "Évaluation et chiffrage locatif de vos biens immobiliers"
+              "name": "Entretien de jardin",
+              "description": "Services d'entretien de jardin et espaces verts : taille de haies, tonte de pelouse, débroussaillage"
             }
           }
         ]
@@ -297,7 +297,10 @@ module SeoHelper
       "description": DEFAULT_SEO[:site_description],
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "#{DEFAULT_SEO[:site_url]}/devis?q={search_term_string}",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "#{DEFAULT_SEO[:site_url]}/devis?q={search_term_string}"
+        },
         "query-input": "required name=search_term_string"
       }
     }
@@ -332,6 +335,41 @@ module SeoHelper
           }
         }
       end
+    }
+  end
+
+  def structured_data_service(service_name, description, service_type = "TreeService")
+    {
+      "@context": "https://schema.org",
+      "@type": service_type,
+      "name": service_name,
+      "description": description,
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": DEFAULT_SEO[:site_name],
+        "telephone": DEFAULT_SEO[:contact_phone],
+        "email": DEFAULT_SEO[:contact_email],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": DEFAULT_SEO[:business_address][:street],
+          "addressLocality": DEFAULT_SEO[:business_address][:city],
+          "postalCode": DEFAULT_SEO[:business_address][:postal_code],
+          "addressCountry": DEFAULT_SEO[:business_address][:country]
+        },
+        "areaServed": {
+          "@type": "State",
+          "name": "Île-de-France"
+        }
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Île-de-France"
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "#{DEFAULT_SEO[:site_url]}/devis",
+        "servicePhone": DEFAULT_SEO[:contact_phone]
+      }
     }
   end
 
