@@ -90,8 +90,27 @@
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
 
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com" async></script>
+    <!-- Style inline pour éviter le FOUC (Flash of Unstyled Content) -->
+    <style>
+      /* Masquer le contenu jusqu'à ce que Tailwind soit chargé */
+      html:not(.tailwind-loaded) body {
+        opacity: 0;
+        transition: opacity 0.1s ease-in;
+      }
+      html.tailwind-loaded body {
+        opacity: 1;
+      }
+    </style>
+
+    <!-- Tailwind CSS CDN - Chargement synchrone pour éviter le FOUC -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Marquer le document comme chargé une fois Tailwind prêt
+      // Utiliser requestAnimationFrame pour s'assurer que le DOM est prêt
+      requestAnimationFrame(function() {
+        document.documentElement.classList.add('tailwind-loaded');
+      });
+    </script>
     
     <!-- Tailwind Plus Elements for el-popover functionality -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module" async></script>

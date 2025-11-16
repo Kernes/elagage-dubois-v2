@@ -1,14 +1,13 @@
 (function() {
-  const slider = document.getElementById('reviews-slider');
-  const prevBtn = document.getElementById('reviews-prev');
-  const nextBtn = document.getElementById('reviews-next');
-  const dotsContainer = document.getElementById('reviews-dots');
-  
-  if (!slider || !prevBtn || !nextBtn || !dotsContainer) return;
-  
-  const reviews = slider.querySelectorAll('.flex-shrink-0.group');
-  const totalReviews = reviews.length;
+  let slider, prevBtn, nextBtn, dotsContainer;
+  let reviews, totalReviews;
   let currentIndex = 0;
+  let resizeTimeout;
+  let touchStartX = 0;
+  let touchEndX = 0;
+  
+  // Fonctions nommées pour pouvoir retirer les event listeners
+  let handleNextClick, handlePrevClick, handleResize, handleTouchStart, handleTouchEnd;
   
   // Déterminer le nombre d'avis visibles selon la taille d'écran
   function getVisibleCount() {
@@ -19,6 +18,7 @@
   
   // Calculer le nombre de slides (positions possibles)
   function getTotalSlides() {
+    if (!reviews || reviews.length === 0) return 0;
     const visible = getVisibleCount();
     // Nombre de slides = nombre total d'avis - nombre d'avis visibles + 1
     // Exemple: 6 avis, 3 visibles = 6 - 3 + 1 = 4 slides
@@ -28,6 +28,7 @@
   
   // Créer les points indicateurs (un point par slide possible)
   function createDots() {
+    if (!dotsContainer) return;
     dotsContainer.innerHTML = '';
     const totalSlides = getTotalSlides();
     for (let i = 0; i < totalSlides; i++) {
@@ -41,6 +42,8 @@
   
   // Mettre à jour la position du slider
   function updateSlider() {
+    if (!slider || !reviews || reviews.length === 0) return;
+    
     const visible = getVisibleCount();
     const totalSlides = getTotalSlides();
     
@@ -64,7 +67,7 @@
     slider.style.transform = `translateX(${finalTranslateX}%)`;
     
     // Mettre à jour les points
-    const dots = dotsContainer.querySelectorAll('button');
+    const dots = dotsContainer ? dotsContainer.querySelectorAll('button') : [];
     dots.forEach((dot, index) => {
       if (index === currentIndex) {
         dot.classList.remove('bg-gray-300');
@@ -105,34 +108,6 @@
     updateSlider();
   }
   
-  // Gestionnaires d'événements
-  nextBtn.addEventListener('click', nextSlide);
-  prevBtn.addEventListener('click', prevSlide);
-  
-  // Réinitialiser lors du redimensionnement
-  let resizeTimeout;
-  window.addEventListener('resize', () => {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(() => {
-      currentIndex = 0;
-      createDots();
-      updateSlider();
-    }, 250);
-  });
-  
-  // Support du swipe sur mobile
-  let touchStartX = 0;
-  let touchEndX = 0;
-  
-  slider.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-  });
-  
-  slider.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
-  });
-  
   function handleSwipe() {
     const swipeThreshold = 50;
     const diff = touchStartX - touchEndX;
@@ -146,15 +121,86 @@
     }
   }
   
-  // Initialisation
-  createDots();
-  updateSlider();
-  
-  // Réinitialiser lors de la navigation Turbo
-  document.addEventListener('turbo:load', () => {
+  // Fonction d'initialisation
+  function initReviewsSlider() {
+    // Récupérer les éléments DOM à chaque initialisation
+    slider = document.getElementById('reviews-slider');
+    prevBtn = document.getElementById('reviews-prev');
+    nextBtn = document.getElementById('reviews-next');
+    dotsContainer = document.getElementById('reviews-dots');
+    
+    // Si les éléments n'existent pas, ne pas initialiser
+    if (!slider || !prevBtn || !nextBtn || !dotsContainer) {
+      return;
+    }
+    
+    // Récupérer les avis
+    reviews = slider.querySelectorAll('.flex-shrink-0.group');
+    totalReviews = reviews.length;
+    
+    if (totalReviews === 0) {
+      return;
+    }
+    
+    // Réinitialiser l'index
     currentIndex = 0;
+    
+    // Retirer les anciens event listeners s'ils existent
+    if (handleNextClick && nextBtn) {
+      nextBtn.removeEventListener('click', handleNextClick);
+    }
+    if (handlePrevClick && prevBtn) {
+      prevBtn.removeEventListener('click', handlePrevClick);
+    }
+    if (handleResize) {
+      window.removeEventListener('resize', handleResize);
+    }
+    if (handleTouchStart && slider) {
+      slider.removeEventListener('touchstart', handleTouchStart);
+    }
+    if (handleTouchEnd && slider) {
+      slider.removeEventListener('touchend', handleTouchEnd);
+    }
+    
+    // Créer les nouvelles fonctions de gestionnaire
+    handleNextClick = nextSlide;
+    handlePrevClick = prevSlide;
+    handleResize = function() {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        currentIndex = 0;
+        createDots();
+        updateSlider();
+      }, 250);
+    };
+    handleTouchStart = function(e) {
+      touchStartX = e.changedTouches[0].screenX;
+    };
+    handleTouchEnd = function(e) {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    };
+    
+    // Ajouter les nouveaux event listeners
+    nextBtn.addEventListener('click', handleNextClick);
+    prevBtn.addEventListener('click', handlePrevClick);
+    window.addEventListener('resize', handleResize);
+    slider.addEventListener('touchstart', handleTouchStart);
+    slider.addEventListener('touchend', handleTouchEnd);
+    
+    // Initialisation
     createDots();
     updateSlider();
-  });
+  }
+  
+  // Initialiser au chargement de la page
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initReviewsSlider);
+  } else {
+    initReviewsSlider();
+  }
+  
+  // Réinitialiser lors de la navigation Turbo
+  document.addEventListener('turbo:load', initReviewsSlider);
+  document.addEventListener('turbo:frame-load', initReviewsSlider);
 })();
-
