@@ -154,12 +154,6 @@ module PagesHelper
           ]
         },
         {
-          category: "Élagage fruitier",
-          images: [
-            { url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Élagage fruitier" }
-          ]
-        },
-        {
           category: "Entretien jardin complet",
           images: [
             { url: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Entretien jardin" }
@@ -463,18 +457,6 @@ module PagesHelper
               "Protection des arbres"
             ]
           },
-          {
-            title: "Élagage Fruitier",
-            description: "L'élagage des arbres fruitiers nécessite une expertise particulière. Nous intervenons pour optimiser la production de fruits tout en préservant la santé de l'arbre.",
-            image_url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-            image_alt: "Élagage fruitier",
-            icon_color: "amber-700",
-            features: [
-              "Taille spécialisée",
-              "Optimisation de la production",
-              "Fruits de qualité"
-            ]
-          }
         ]
       }
     else
