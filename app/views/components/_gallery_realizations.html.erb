@@ -63,9 +63,9 @@
     <!-- Conteneur de l'image -->
     <div id="image-container" class="flex relative justify-center items-center w-full max-w-7xl h-full">
       <!-- Wrapper autour de l'image pour positionner les boutons -->
-      <div id="image-wrapper" class="flex relative justify-center items-center" style="width: 90vw; max-width: 90vw; height: 90vh; max-height: 90vh;">
-        <div id="image-inner-wrapper" class="inline-block relative">
-          <img id="modal-image" src="" alt="" class="object-contain" style="max-width: 90vw; max-height: 90vh; width: auto; height: auto; display: block;">
+      <div id="image-wrapper" class="flex relative justify-center items-center modal-image-wrapper">
+        <div id="image-inner-wrapper" class="relative modal-image-inner">
+          <img id="modal-image" src="" alt="" class="object-cover modal-image" style="width: 100%; height: 100%; display: block;">
           
           <!-- Bouton de fermeture (sur l'image, en haut à droite) -->
           <button id="modal-close" class="absolute top-2 right-2 z-30 p-2.5 text-white rounded-full shadow-xl transition-all bg-black/80 hover:bg-black hover:scale-110" aria-label="Fermer la modal">
@@ -98,6 +98,40 @@
     </div>
   </div>
 </div>
+
+<style>
+  /* Styles pour desktop */
+  .modal-image-wrapper {
+    width: 90vw;
+    max-width: 1400px;
+    height: 85vh;
+    max-height: 900px;
+  }
+  
+  .modal-image-inner {
+    width: 100%;
+    height: 100%;
+    max-width: 1400px;
+    max-height: 900px;
+  }
+  
+  /* Styles pour mobile */
+  @media (max-width: 768px) {
+    .modal-image-wrapper {
+      width: 90vw;
+      max-width: 90vw;
+      height: 70vh;
+      max-height: 600px;
+    }
+    
+    .modal-image-inner {
+      width: 100%;
+      height: 100%;
+      max-width: 90vw;
+      max-height: 600px;
+    }
+  }
+</style>
 
 <script src="/javascripts/gallery_modal.js"></script>
 
