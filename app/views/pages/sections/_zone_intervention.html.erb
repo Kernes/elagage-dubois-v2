@@ -93,11 +93,12 @@
             leafletAjax.defer = true;
             leafletAjax.onload = function() {
               // Une fois tout chargé, charger le script de la carte
-              if (!document.querySelector('script[src*="zone_intervention_map"]')) {
-                const mapScript = document.createElement('script');
-                mapScript.src = '/javascripts/zone_intervention_map.js';
-                mapScript.defer = true;
-                document.body.appendChild(mapScript);
+              if (!window.zoneInterventionMapLoaded) {
+                import("zone_intervention_map").then(() => {
+                  window.zoneInterventionMapLoaded = true;
+                }).catch(err => {
+                  console.error("Erreur lors du chargement de zone_intervention_map:", err);
+                });
               }
             };
             document.body.appendChild(leafletAjax);
