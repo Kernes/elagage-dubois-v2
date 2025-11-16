@@ -8,8 +8,8 @@
     
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       <div class="relative p-8 bg-gradient-to-br from-green-50 to-green-100 rounded-2xl border-2 border-green-200 shadow-lg transition-all group hover:shadow-xl hover:scale-105">
-        <h3 class="flex items-center gap-3 mb-3 text-xl font-bold text-gray-900">
-          <div class="flex justify-center items-center flex-shrink-0 w-10 h-10 bg-green-700 rounded-full">
+        <h3 class="flex gap-3 items-center mb-3 text-xl font-bold text-gray-900">
+          <div class="flex flex-shrink-0 justify-center items-center w-10 h-10 bg-green-700 rounded-full">
             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -20,8 +20,8 @@
         <p class="text-sm leading-relaxed text-gray-700">Cergy, Argenteuil, Pontoise, Mery-sur-Oise, Auvers-sur-Oise, L'Isle-Adam, Persan, Beaumont-sur-Oise, Houilles, Sartrouville, St-Germain-en-Laye, Andrésy, Ermont, Eaubonne, Taverny</p>
       </div>
       <div class="relative p-8 bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl border-2 border-amber-200 shadow-lg transition-all group hover:shadow-xl hover:scale-105">
-        <h3 class="flex items-center gap-3 mb-3 text-xl font-bold text-gray-900">
-          <div class="flex justify-center items-center flex-shrink-0 w-10 h-10 bg-amber-700 rounded-full">
+        <h3 class="flex gap-3 items-center mb-3 text-xl font-bold text-gray-900">
+          <div class="flex flex-shrink-0 justify-center items-center w-10 h-10 bg-amber-700 rounded-full">
             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -32,8 +32,8 @@
         <p class="text-sm leading-relaxed text-gray-700">Beauvais, Compiègne, Creil, Nogent-sur-Oise, Senlis, Chantilly, Clermont</p>
       </div>
       <div class="relative p-8 bg-gradient-to-br from-green-50 to-green-100 rounded-2xl border-2 border-green-200 shadow-lg transition-all group hover:shadow-xl hover:scale-105">
-        <h3 class="flex items-center gap-3 mb-3 text-xl font-bold text-gray-900">
-          <div class="flex justify-center items-center flex-shrink-0 w-10 h-10 bg-green-700 rounded-full">
+        <h3 class="flex gap-3 items-center mb-3 text-xl font-bold text-gray-900">
+          <div class="flex flex-shrink-0 justify-center items-center w-10 h-10 bg-green-700 rounded-full">
             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -65,4 +65,56 @@
   </div>
 </section>
 
-<script src="/javascripts/zone_intervention_map.js"></script>
+<!-- Chargement différé de Leaflet (seulement si la carte est présente) -->
+<script>
+  function loadLeafletLazy() {
+    // Charger Leaflet seulement si l'élément map existe
+    if (document.getElementById('map') && typeof L === 'undefined') {
+      // Charger le CSS de Leaflet de manière asynchrone
+      if (!document.querySelector('link[href*="leaflet.css"]')) {
+        const leafletCSS = document.createElement('link');
+        leafletCSS.rel = 'stylesheet';
+        leafletCSS.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+        leafletCSS.media = 'print';
+        leafletCSS.onload = function() { this.media = 'all'; };
+        document.head.appendChild(leafletCSS);
+      }
+      
+      // Charger les scripts Leaflet de manière différée
+      if (!document.querySelector('script[src*="leaflet.js"]')) {
+        const leafletJS = document.createElement('script');
+        leafletJS.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+        leafletJS.defer = true;
+        leafletJS.onload = function() {
+          // Une fois Leaflet chargé, charger leaflet-ajax
+          if (!document.querySelector('script[src*="leaflet-ajax"]')) {
+            const leafletAjax = document.createElement('script');
+            leafletAjax.src = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js';
+            leafletAjax.defer = true;
+            leafletAjax.onload = function() {
+              // Une fois tout chargé, charger le script de la carte
+              if (!document.querySelector('script[src*="zone_intervention_map"]')) {
+                const mapScript = document.createElement('script');
+                mapScript.src = '/javascripts/zone_intervention_map.js';
+                mapScript.defer = true;
+                document.body.appendChild(mapScript);
+              }
+            };
+            document.body.appendChild(leafletAjax);
+          }
+        };
+        document.body.appendChild(leafletJS);
+      }
+    }
+  }
+  
+  // Exécuter au chargement du DOM
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadLeafletLazy);
+  } else {
+    loadLeafletLazy();
+  }
+  
+  // Réexécuter pour Turbo
+  document.addEventListener('turbo:load', loadLeafletLazy);
+</script>

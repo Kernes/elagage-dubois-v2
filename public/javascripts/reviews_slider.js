@@ -32,12 +32,8 @@
     const totalSlides = getTotalSlides();
     for (let i = 0; i < totalSlides; i++) {
       const dot = document.createElement('button');
-      dot.className = `w-11 h-11 rounded-full transition-colors flex justify-center items-center ${i === 0 ? 'bg-green-700' : 'bg-gray-300'}`;
+      dot.className = `w-2 h-2 rounded-full transition-colors ${i === 0 ? 'bg-green-700' : 'bg-gray-300'}`;
       dot.setAttribute('aria-label', `Aller à l'avis ${i + 1}`);
-      // Ajouter un point visuel à l'intérieur pour garder l'apparence
-      const dotInner = document.createElement('span');
-      dotInner.className = `w-2 h-2 rounded-full ${i === 0 ? 'bg-white' : 'bg-gray-600'}`;
-      dot.appendChild(dotInner);
       dot.addEventListener('click', () => goToSlide(i));
       dotsContainer.appendChild(dot);
     }
