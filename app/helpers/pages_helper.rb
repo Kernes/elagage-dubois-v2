@@ -48,10 +48,12 @@ module PagesHelper
     when :abattage
       [
         {
-          category: "Abattage dirigé sécurisé",
+          category: "Abattage d'un arbre géant",
           images: [
-            { url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Abattage dirigé" },
-            { url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Abattage dirigé" }
+            { url: "https://cdn.kelcy.fr/website-images/abattage-1.webp", alt: "Abattage d'un arbre géant" },
+            { url: "https://cdn.kelcy.fr/website-images/abattage-2.webp", alt: "Abattage d'un arbre géant" },
+            { url: "https://cdn.kelcy.fr/website-images/abattage-3.webp", alt: "Abattage d'un arbre géant" },
+            { url: "https://cdn.kelcy.fr/website-images/abattage-4.webp", alt: "Abattage d'un arbre géant" }
           ]
         },
         {

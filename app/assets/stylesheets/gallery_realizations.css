@@ -6,6 +6,9 @@
   max-width: 1400px;
   height: 85vh;
   max-height: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-image-inner {
@@ -13,6 +16,9 @@
   height: 100%;
   max-width: 1400px;
   max-height: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Styles pour mobile */
