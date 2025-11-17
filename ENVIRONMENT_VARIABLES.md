@@ -2,8 +2,8 @@
 
 ## Configuration des emails
 
-- `MAILER_FROM_EMAIL` : Email d'expéditeur (défaut: sqy.etatdeslieux@gmail.com)
-- `ADMIN_EMAIL` : Email qui reçoit les demandes de devis (défaut: sqy.etatdeslieux@gmail.com)
+- `MAILER_FROM_EMAIL` : Email d'expéditeur (défaut: jpdubois.services@gmail.com)
+- `ADMIN_EMAIL` : Email qui reçoit les demandes de devis (défaut: jpdubois.services@gmail.com)
 
 ## Configuration SMTP (optionnel)
 
@@ -29,7 +29,7 @@ Pour configurer ces variables sur Scalingo :
 scalingo env-set ADMIN_EMAIL="votre-email@example.com"
 
 # Email d'expéditeur
-scalingo env-set MAILER_FROM_EMAIL="sqy.etatdeslieux@gmail.com"
+scalingo env-set MAILER_FROM_EMAIL="jpdubois.services@gmail.com"
 
 # Configuration SMTP (si nécessaire)
 scalingo env-set SMTP_ADDRESS="smtp.gmail.com"
