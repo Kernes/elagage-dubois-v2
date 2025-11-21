@@ -1,0 +1,18 @@
+/* Styles pour les avis clients */
+
+/* Limiter le texte à 7 lignes avec line-clamp */
+.review-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.5;
+}
+
+/* Classe pour afficher le texte complet */
+.review-text.expanded {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+

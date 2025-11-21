@@ -191,6 +191,49 @@
     // Initialisation
     createDots();
     updateSlider();
+    initReviewToggles();
+  }
+  
+  // Fonction pour initialiser les toggles "voir plus/voir moins"
+  function initReviewToggles() {
+    const reviewTexts = document.querySelectorAll('.review-text');
+    const toggleButtons = document.querySelectorAll('.review-toggle');
+    
+    reviewTexts.forEach((textEl, index) => {
+      const toggleBtn = toggleButtons[index];
+      if (!toggleBtn) return;
+      
+      // Vérifier si le texte dépasse 7 lignes
+      const needsToggle = textEl.scrollHeight > textEl.clientHeight;
+      
+      // Si le texte ne dépasse pas 7 lignes, cacher le bouton
+      if (!needsToggle) {
+        toggleBtn.style.display = 'none';
+        return;
+      }
+      
+      // Afficher le bouton
+      toggleBtn.style.display = 'block';
+      
+      // Retirer les anciens event listeners en clonant le bouton
+      const newToggleBtn = toggleBtn.cloneNode(true);
+      toggleBtn.parentNode.replaceChild(newToggleBtn, toggleBtn);
+      
+      // Ajouter le nouvel event listener
+      newToggleBtn.addEventListener('click', function() {
+        const isExpanded = textEl.classList.contains('expanded');
+        
+        if (isExpanded) {
+          textEl.classList.remove('expanded');
+          newToggleBtn.textContent = 'Voir plus';
+          newToggleBtn.setAttribute('aria-label', 'Voir plus');
+        } else {
+          textEl.classList.add('expanded');
+          newToggleBtn.textContent = 'Voir moins';
+          newToggleBtn.setAttribute('aria-label', 'Voir moins');
+        }
+      });
+    });
   }
   
   // Initialiser au chargement de la page

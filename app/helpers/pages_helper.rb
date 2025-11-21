@@ -640,4 +640,59 @@ module PagesHelper
       }
     end
   end
+
+  # Retourne la liste des avis clients pour le slider
+  def client_reviews
+    [
+      {
+        rating: 5,
+        text: "MR Dubois vient de terminer un chantier important, il a coupé une dizaine de Thuyas dont certains de grande hauteur devenaient problématiques pour la sécurité de ma maison et de celles des voisins.
+              J'ai consulté plusieurs entreprises, c'était le mieux placé. Le travail à été réalisé par une équipe de professionnels dans les délais annoncés au départ et conformément au cahier des charges défini ensemble. Le chantier a été très bien nettoyé.
+              Personne sympathique et de confiance, je ferai à nouveau appel à ses services.",
+        author_name: "Philippe G.",
+        author_initials: "PG"
+      },
+      {
+        rating: 5,
+        text: "Sapin abattu et évacué comme souhaité, avec une urgence sur un autre chantier, travail réalisé et terminé dès le lendemain. Je recommande cette entreprise les yeux fermés.",
+        author_name: "Sandrine G.",
+        author_initials: "SG"
+      },
+      {
+        rating: 5,
+        text: "Elagages respectueux de bouleaux anciens. Travail soigné et délais d'intervention respectés. Artisan à recommander.",
+        author_name: "Marie-Laurence P.",
+        author_initials: "MLP"
+      },
+      {
+        rating: 5,
+        text: "Appel à Monsieur Dubois pour l’élagage d’un noyer. Travail soigné et conseils professionnels. Parfait.",
+        author_name: "Didier S.",
+        author_initials: "DS"
+      },
+      {
+        rating: 5,
+        text: "Prestation très professionnelle pour élagage d’un tilleul, abattage d un cyprès et coupe d’une forêt de miyawaki avec dessouchage. Chantier rondement mené, en toute sécurité et propreté. Je recommande vivement.",
+        author_name: "Florent M.",
+        author_initials: "FM"
+      },
+      {
+        rating: 5,
+        text: "Élagage ce jour ! Très bon professionnel ! Merci M Dubois pour votre rapidité et pour la qualité de votre travail .",
+        author_name: "Anne-Marie C.",
+        author_initials: "AMC"
+      }
+    ]
+  end
+
+  # Génère les étoiles pour un rating donné
+  def render_stars(rating)
+    (1..5).map do |i|
+      if i <= rating
+        '<svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>'
+      else
+        '<svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>'
+      end
+    end.join.html_safe
+  end
 end
