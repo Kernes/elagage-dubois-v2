@@ -239,6 +239,7 @@ module PagesHelper
         ],
         image_url: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
         image_alt: "Entretien jardin",
+        show_service_logo: true,
         badge: {
           value: "5+",
           label: "Services d'entretien",

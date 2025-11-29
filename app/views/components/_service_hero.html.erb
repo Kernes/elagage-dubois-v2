@@ -27,7 +27,16 @@
 <section class="overflow-hidden relative py-32 min-h-[85vh] flex items-center <%= bg_color %>">
   <!-- Image de fond -->
   <div class="absolute inset-0">
-    <img src="<%= image_url %>" alt="<%= image_alt %>" class="object-cover w-full h-full">
+    <% if image_url.is_a?(Hash) && image_url[:srcset].present? %>
+      <img src="<%= image_url[:src] %>" 
+           srcset="<%= image_url[:srcset] %>"
+           sizes="100vw"
+           alt="<%= image_alt %>" 
+           class="object-cover w-full h-full"
+           loading="eager">
+    <% else %>
+      <img src="<%= image_url %>" alt="<%= image_alt %>" class="object-cover w-full h-full" loading="eager">
+    <% end %>
     <div class="absolute inset-0 bg-gradient-to-b <%= gradient_from %> <%= gradient_via %> <%= gradient_to %>"></div>
   </div>
 

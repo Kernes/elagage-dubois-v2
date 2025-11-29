@@ -2,12 +2,14 @@
 <section class="overflow-hidden relative pt-32 pb-24 min-h-[90vh] flex items-center bg-gray-900 lg:py-24 lg:min-h-[90vh]">
   <!-- Image de fond principale -->
   <div class="absolute inset-0">
-    <% hero_srcset = unsplash_srcset("https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&q=80", { mobile: 800, tablet: 1200, desktop: 2000 }) %>
-    <img src="<%= hero_srcset[:src] %>" 
-         srcset="<%= hero_srcset[:srcset] %>"
+    <img src="/images/homepage/banner/trees-hero-mobile.jpg" 
+         srcset="/images/homepage/banner/trees-hero-mobile.jpg 800w,
+                 /images/homepage/banner/trees-hero-tablet.jpg 1200w,
+                 /images/homepage/banner/trees-hero-desktop.jpg 1920w"
          sizes="100vw"
          alt="Élagage professionnel" 
-         class="object-cover w-full h-full">
+         class="object-cover w-full h-full"
+         loading="eager">
     <div class="absolute inset-0 bg-gradient-to-r to-transparent from-green-900/90 via-green-800/80"></div>
     <div class="absolute inset-0 bg-black/20"></div>
   </div>
