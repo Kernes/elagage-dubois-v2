@@ -7,6 +7,7 @@
   image_url ||= "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
   image_alt ||= "Service professionnel"
   primary_color ||= "amber" # amber ou green
+  image_position ||= "center" # center, right, left, etc.
   
   # Déterminer les classes selon la couleur
   bg_color = primary_color == "green" ? "bg-green-900" : "bg-amber-900"
@@ -27,15 +28,23 @@
 <section class="overflow-hidden relative py-32 min-h-[85vh] flex items-center <%= bg_color %>">
   <!-- Image de fond -->
   <div class="absolute inset-0">
+    <% 
+      # Déterminer la classe de position pour mobile
+      mobile_position_class = case image_position
+        when "right" then "object-[60%] md:object-center"
+        when "left" then "object-[40%] md:object-center"
+        else "object-center"
+      end
+    %>
     <% if image_url.is_a?(Hash) && image_url[:srcset].present? %>
       <img src="<%= image_url[:src] %>" 
            srcset="<%= image_url[:srcset] %>"
            sizes="100vw"
            alt="<%= image_alt %>" 
-           class="object-cover w-full h-full"
+           class="object-cover w-full h-full <%= mobile_position_class %>"
            loading="eager">
     <% else %>
-      <img src="<%= image_url %>" alt="<%= image_alt %>" class="object-cover w-full h-full" loading="eager">
+      <img src="<%= image_url %>" alt="<%= image_alt %>" class="object-cover w-full h-full <%= mobile_position_class %>" loading="eager">
     <% end %>
     <div class="absolute inset-0 bg-gradient-to-b <%= gradient_from %> <%= gradient_via %> <%= gradient_to %>"></div>
   </div>
