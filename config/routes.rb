@@ -11,29 +11,26 @@ Rails.application.routes.draw do
   get "dessouchage-arbre", to: "pages#dessouchage", as: :dessouchage
   get "entretien", to: "pages#entretien", as: :entretien
   
-  # Redirections vers entretien
-  get "entretien-de-jardins", to: redirect("/entretien")
-  get "taille-de-haies", to: redirect("/entretien")
-  get "creation-et-tonte-de-pelouse", to: redirect("/entretien")
-  get "debroussaillage", to: redirect("/entretien")
-  get "traitement-darbres", to: redirect("/entretien")
+  # Redirections 301 (permanentes) vers entretien
+  get "entretien-de-jardins", to: redirect("/entretien", status: :moved_permanently)
+  get "taille-de-haies", to: redirect("/entretien", status: :moved_permanently)
+  get "creation-et-tonte-de-pelouse", to: redirect("/entretien", status: :moved_permanently)
+  get "debroussaillage", to: redirect("/entretien", status: :moved_permanently)
+  get "traitement-darbres", to: redirect("/entretien", status: :moved_permanently)
   
   # Devis et contact
   get "devis", to: "quotes#new", as: :quote
   post "devis", to: "quotes#create", as: :create_quote
   
-         # Recrutement
-         get "recrutement", to: "pages#recruitment", as: :recruitment
-         post "recrutement", to: "recruitments#create", as: :create_recruitment
 
-         # Pages légales
-         get "mentions-legales", to: "pages#legal_notices", as: :legal_notices
-         get "cgu", to: "pages#terms_of_service", as: :terms_of_service
-         get "politique-confidentialite", to: "pages#privacy_policy", as: :privacy_policy
-         get "cookies", to: "pages#cookie_policy", as: :cookie_policy
+  # Pages légales
+  get "mentions-legales", to: "pages#legal_notices", as: :legal_notices
+  get "cgu", to: "pages#terms_of_service", as: :terms_of_service
+  get "politique-confidentialite", to: "pages#privacy_policy", as: :privacy_policy
+  get "cookies", to: "pages#cookie_policy", as: :cookie_policy
 
-         # Sitemap
-         get "sitemap.xml", to: "pages#sitemap", as: :sitemap, defaults: { format: :xml }
+  # Sitemap
+  get "sitemap.xml", to: "pages#sitemap", as: :sitemap, defaults: { format: :xml }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
