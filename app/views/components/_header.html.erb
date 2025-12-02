@@ -3,7 +3,11 @@
     <div class="flex items-center h-full lg:flex-1">
       <a href="/" class="flex items-center h-full">
         <span class="sr-only">Dubois Services</span>
-        <img src="/images/cropped-Logo-Dubois-Service.png" alt="" class="object-contain h-full aspect-square" />
+        <picture class="flex items-center h-full">
+          <source srcset="/images/cropped-Logo-Dubois-Service.avif" type="image/avif">
+          <source srcset="/images/cropped-Logo-Dubois-Service.webp" type="image/webp">
+          <img src="/images/cropped-Logo-Dubois-Service.png" alt="" class="object-contain h-full w-auto max-h-full" />
+        </picture>
       </a>
     </div>
     <div class="flex gap-2 items-center py-4 lg:hidden">
@@ -40,7 +44,11 @@
 <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 z-[9999] bg-white">
   <div class="flex flex-col h-full">
     <div class="flex justify-between items-center p-4 border-b">
-      <img src="/images/cropped-Logo-Dubois-Service.png" alt="" class="w-auto h-12" />
+      <picture>
+        <source srcset="/images/cropped-Logo-Dubois-Service.avif" type="image/avif">
+        <source srcset="/images/cropped-Logo-Dubois-Service.webp" type="image/webp">
+        <img src="/images/cropped-Logo-Dubois-Service.png" alt="" class="w-auto h-12" />
+      </picture>
       <button type="button" id="mobile-menu-close" class="p-2 text-gray-700" aria-label="Fermer le menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-6 h-6" aria-hidden="true">
           <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />

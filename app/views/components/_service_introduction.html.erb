@@ -18,7 +18,11 @@
         <% end %>
         <% if introduction[:show_service_logo] %>
           <div class="flex gap-3 items-center mt-8 px-4 py-3 bg-amber-50 rounded-lg border border-amber-200 w-fit">
-            <img src="/images/logo_service_a_la_personne.png" alt="Service à la personne" class="h-10 w-auto" />
+            <picture>
+              <source srcset="/images/logo_service_a_la_personne.avif" type="image/avif">
+              <source srcset="/images/logo_service_a_la_personne.webp" type="image/webp">
+              <img src="/images/logo_service_a_la_personne.webp" alt="Service à la personne" class="h-10 w-auto" />
+            </picture>
             <div>
               <p class="text-sm font-semibold text-amber-900">Éligible aux crédits d'impôt de 50%</p>
               <p class="text-xs text-amber-700">Chèque CESU accepté</p>
