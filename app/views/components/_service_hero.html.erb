@@ -37,12 +37,23 @@
       end
     %>
     <% if image_url.is_a?(Hash) && image_url[:srcset].present? %>
-      <img src="<%= image_url[:src] %>" 
-           srcset="<%= image_url[:srcset] %>"
-           sizes="100vw"
-           alt="<%= image_alt %>" 
-           class="object-cover w-full h-full <%= mobile_position_class %>"
-           loading="eager">
+      <picture>
+        <% 
+          # Générer les sources AVIF et WebP à partir du srcset
+          srcset_avif = image_url[:srcset].gsub(/\.webp|\.jpg/, '.avif')
+          srcset_webp = image_url[:srcset].gsub(/\.jpg/, '.webp')
+          src_avif = image_url[:src].gsub(/\.webp|\.jpg/, '.avif')
+          src_webp = image_url[:src].gsub(/\.jpg/, '.webp')
+        %>
+        <source srcset="<%= srcset_avif %>" sizes="100vw" type="image/avif">
+        <source srcset="<%= srcset_webp %>" sizes="100vw" type="image/webp">
+        <img src="<%= src_webp %>" 
+             srcset="<%= srcset_webp %>"
+             sizes="100vw"
+             alt="<%= image_alt %>" 
+             class="object-cover w-full h-full <%= mobile_position_class %>"
+             loading="eager">
+      </picture>
     <% else %>
       <img src="<%= image_url %>" alt="<%= image_alt %>" class="object-cover w-full h-full <%= mobile_position_class %>" loading="eager">
     <% end %>
