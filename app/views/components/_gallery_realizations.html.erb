@@ -26,19 +26,48 @@
             <% if image[:url]&.include?('unsplash.com') %>
               <% srcset_data = unsplash_srcset(image[:url], { mobile: 400, tablet: 800, desktop: 1920 }) %>
               <% 
-                # Générer l'URL haute résolution pour la modal
-                base_url = image[:url].split('?').first
-                params = image[:url].include?('?') ? image[:url].split('?').last.split('&').reject { |p| p.start_with?('w=') } : []
-                params_str = params.any? ? "&#{params.join('&')}" : ""
-                high_res_url = "#{base_url}?w=1920#{params_str}"
+                # Générer l'URL haute résolution pour la modal (utiliser desktop si disponible)
+                if srcset_data[:use_picture]
+                  photo_id = image[:url].match(/photo-([0-9]+-[a-z0-9]+)/)&.captures&.first
+                  unsplash_map = {
+                    "photo-1516214104703-d870798883c5" => "unsplash-1516214104703",
+                    "photo-1473448912268-2022ce9509d8" => "unsplash-1473448912268",
+                    "photo-1441974231531-c6227db76b6e" => "unsplash-1441974231531",
+                    "photo-1625246333195-78d9c38ad449" => "unsplash-1625246333195",
+                    "photo-1416879595882-3373a0480b5b" => "unsplash-1416879595882",
+                    "photo-1466692476868-aef1dfb1e735" => "unsplash-1466692476868",
+                    "photo-1500382017468-9049fed747ef" => "unsplash-1500382017468"
+                  }
+                  local_name = photo_id ? unsplash_map["photo-#{photo_id}"] : nil
+                  high_res_url = local_name ? "/images/optimized/#{local_name}-desktop.webp" : image[:url]
+                else
+                  base_url = image[:url].split('?').first
+                  params = image[:url].include?('?') ? image[:url].split('?').last.split('&').reject { |p| p.start_with?('w=') } : []
+                  params_str = params.any? ? "&#{params.join('&')}" : ""
+                  high_res_url = "#{base_url}?w=1920#{params_str}"
+                end
               %>
-              <img src="<%= srcset_data[:src] %>" 
-                   srcset="<%= srcset_data[:srcset] %>"
-                   sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1920px"
-                   alt="<%= image[:alt] %>" 
-                   class="object-cover w-full h-full transition-transform group-hover:scale-110"
-                   loading="lazy"
-                   data-full-url="<%= high_res_url %>">
+              <% if srcset_data[:use_picture] %>
+                <picture>
+                  <source srcset="<%= srcset_data[:avif_srcset] %>" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1920px" type="image/avif">
+                  <source srcset="<%= srcset_data[:webp_srcset] %>" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1920px" type="image/webp">
+                  <img src="<%= srcset_data[:src] %>" 
+                       srcset="<%= srcset_data[:webp_srcset] %>"
+                       sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1920px"
+                       alt="<%= image[:alt] %>" 
+                       class="object-cover w-full h-full transition-transform group-hover:scale-110"
+                       loading="lazy"
+                       data-full-url="<%= high_res_url %>">
+                </picture>
+              <% else %>
+                <img src="<%= srcset_data[:src] %>" 
+                     srcset="<%= srcset_data[:srcset] %>"
+                     sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1920px"
+                     alt="<%= image[:alt] %>" 
+                     class="object-cover w-full h-full transition-transform group-hover:scale-110"
+                     loading="lazy"
+                     data-full-url="<%= high_res_url %>">
+              <% end %>
             <% else %>
               <img src="<%= image[:url] %>" 
                    alt="<%= image[:alt] %>" 

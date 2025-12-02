@@ -37,12 +37,25 @@
           <div class="overflow-hidden relative h-48">
             <% if reason[:image_url]&.include?('unsplash.com') %>
               <% srcset_data = unsplash_srcset(reason[:image_url], { mobile: 400, tablet: 600, desktop: 800 }) %>
-              <img src="<%= srcset_data[:src] %>" 
-                   srcset="<%= srcset_data[:srcset] %>"
-                   sizes="<%= srcset_data[:sizes] %>"
-                   alt="<%= reason[:image_alt] %>" 
-                   class="object-cover w-full h-full"
-                   loading="lazy">
+              <% if srcset_data[:use_picture] %>
+                <picture>
+                  <source srcset="<%= srcset_data[:avif_srcset] %>" sizes="<%= srcset_data[:sizes] %>" type="image/avif">
+                  <source srcset="<%= srcset_data[:webp_srcset] %>" sizes="<%= srcset_data[:sizes] %>" type="image/webp">
+                  <img src="<%= srcset_data[:src] %>" 
+                       srcset="<%= srcset_data[:webp_srcset] %>"
+                       sizes="<%= srcset_data[:sizes] %>"
+                       alt="<%= reason[:image_alt] %>" 
+                       class="object-cover w-full h-full"
+                       loading="lazy">
+                </picture>
+              <% else %>
+                <img src="<%= srcset_data[:src] %>" 
+                     srcset="<%= srcset_data[:srcset] %>"
+                     sizes="<%= srcset_data[:sizes] %>"
+                     alt="<%= reason[:image_alt] %>" 
+                     class="object-cover w-full h-full"
+                     loading="lazy">
+              <% end %>
             <% else %>
               <img src="<%= reason[:image_url] %>" alt="<%= reason[:image_alt] %>" class="object-cover w-full h-full" loading="lazy">
             <% end %>
