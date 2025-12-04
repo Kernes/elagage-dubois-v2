@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <!-- Start cookieyes banner -->
-      <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/043c594ce6a626e2076254cc96ac2b08/script.js"></script>
-    <!-- End cookieyes banner -->
     <!-- Google Tag Manager -->
     <script>
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -131,6 +128,9 @@
 
     <!-- Tailwind Plus Elements pour el-popover -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module" async></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
   </head>
 
   <body class="antialiased">
@@ -142,5 +142,9 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <%= yield %>
+
+    <script type="module">
+      import "cookie_consent";
+    </script>
   </body>
 </html>
