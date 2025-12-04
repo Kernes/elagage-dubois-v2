@@ -2,8 +2,8 @@ module SeoHelper
   # Configuration SEO par défaut
   DEFAULT_SEO = {
     site_name: "Élagage Dubois",
-    site_description: "Expert en élagage, abattage et dessouchage. Services professionnels pour l'entretien et la gestion de vos arbres. Devis gratuit, intervention rapide.",
-    site_keywords: "élagage, abattage, dessouchage, entretien arbres, professionnel, expert, taille arbres, Île-de-France, Élagage Dubois",
+    site_description: "Expert en élagage et abattage d'arbres dans le Val d'Oise (95). Élagage sécurisé, abattage professionnel, dessouchage mécanique. Devis gratuit sous 24h, intervention rapide 7j/7.",
+    site_keywords: "élagage Val d'Oise, abattage Val d'Oise, élagage 95, abattage 95, élagage professionnel Val d'Oise, abattage sécurisé 95, dessouchage Val d'Oise, taille arbres 95, élagueur Val d'Oise, professionnel élagage 95",
     site_url: "https://elagage-dubois-v2.scalingo.io",
     contact_phone: "+33783892384",
     contact_email: "jpdubois.services@gmail.com",
@@ -20,9 +20,9 @@ module SeoHelper
   # Configuration SEO par page
   PAGE_SEO = {
     home: {
-      title: "Élagage Dubois - Expert en élagage, abattage et dessouchage | Professionnel des arbres",
-      description: "Expert en élagage, abattage et dessouchage. Services professionnels pour l'entretien et la gestion de vos arbres. Devis gratuit, intervention rapide.",
-      keywords: "élagage, abattage, dessouchage, entretien arbres, professionnel, expert, taille arbres, Île-de-France, Élagage Dubois",
+      title: "Élagage & Abattage Val d'Oise 95 | Élagage Dubois - Expert Professionnel",
+      description: "Expert en élagage et abattage d'arbres dans le Val d'Oise (95). Élagage sécurisé, abattage professionnel, dessouchage mécanique. Devis gratuit sous 24h, intervention rapide 7j/7.",
+      keywords: "élagage Val d'Oise, abattage Val d'Oise, élagage 95, abattage 95, élagage professionnel Val d'Oise, abattage sécurisé 95, dessouchage Val d'Oise, élagueur Val d'Oise, taille arbres 95, élagage Guyancourt, abattage Cergy, élagage Versailles",
       priority: 1.0,
       changefreq: "weekly"
     },
@@ -34,37 +34,37 @@ module SeoHelper
       changefreq: "monthly"
     },
     elagage: {
-      title: "Élagage et Étêtage d'Arbres - Élagage Dubois | Expert Professionnel",
-      description: "Service d'élagage et d'étêtage d'arbres professionnel en Île-de-France. Expertise, sécurité et respect de l'environnement. Devis gratuit, intervention rapide.",
-      keywords: "élagage, étêtage, taille arbres, élagage professionnel, taille formation, réduction couronne, Île-de-France, Élagage Dubois",
+      title: "Élagage d'Arbres Val d'Oise 95 | Élagage Professionnel & Sécurisé",
+      description: "Élagage d'arbres professionnel dans le Val d'Oise (95). Élagage sécurisé, taille sanitaire, taille raisonnée. Expert certifié, intervention rapide. Devis gratuit.",
+      keywords: "élagage Val d'Oise, élagage 95, élagage professionnel Val d'Oise, élagage sécurisé 95, taille arbres Val d'Oise, étêtage Val d'Oise, élagueur Val d'Oise, élagage Guyancourt, élagage Versailles, élagage Cergy, élagage Pontoise, taille formation 95",
       priority: 0.9,
       changefreq: "monthly"
     },
     abattage: {
-      title: "Abattage d'Arbres de Toutes Espèces - Élagage Dubois | Expert Professionnel",
-      description: "Service d'abattage d'arbres professionnel en Île-de-France. Abattage dirigé, sécurisé et respectueux de l'environnement. Devis gratuit, intervention rapide.",
-      keywords: "abattage arbres, abattage dirigé, abattage sécurisé, abattage professionnel, démontage contrôlé, démontage avec rétention, Île-de-France, Élagage Dubois",
+      title: "Abattage d'Arbres Val d'Oise 95 | Abattage Sécurisé & Professionnel",
+      description: "Abattage d'arbres professionnel dans le Val d'Oise (95). Abattage dirigé, démontage contrôlé, démontage avec rétention. Expert certifié, sécurité garantie. Devis gratuit. Guyancourt, Versailles, Cergy.",
+      keywords: "abattage Val d'Oise, abattage 95, abattage sécurisé Val d'Oise, abattage dirigé 95, démontage contrôlé Val d'Oise, abattage professionnel 95, abattage arbres Val d'Oise, abattage Guyancourt, abattage Versailles, abattage Cergy, démontage avec rétention 95",
       priority: 0.9,
       changefreq: "monthly"
     },
     dessouchage: {
-      title: "Dessouchage d'Arbres - Élagage Dubois | Expert Professionnel",
-      description: "Service de dessouchage d'arbres professionnel en Île-de-France. Dessouchage mécanique, rognage ou grignotage, élimination complète des souches. Devis gratuit, intervention rapide.",
-      keywords: "dessouchage, dessouchage arbre, dessouchage mécanique, rognage, grignotage, élimination souche, Île-de-France, Élagage Dubois",
+      title: "Dessouchage d'Arbres Val d'Oise 95 | Dessouchage Mécanique Professionnel",
+      description: "Dessouchage d'arbres professionnel dans le Val d'Oise (95). Dessouchage mécanique, rognage, grignotage. Élimination complète des souches. Devis gratuit. Guyancourt, Versailles, Cergy.",
+      keywords: "dessouchage Val d'Oise, dessouchage 95, dessouchage mécanique Val d'Oise, rognage Val d'Oise, grignotage 95, élimination souche Val d'Oise, dessouchage professionnel 95, dessouchage Guyancourt, dessouchage Versailles",
       priority: 0.9,
       changefreq: "monthly"
     },
     entretien: {
-      title: "Entretien de Jardin et Espaces Verts - Élagage Dubois | Services Complets",
-      description: "Services d'entretien de jardin et espaces verts en Île-de-France. Taille de haies, tonte de pelouse, débroussaillage, traitement d'arbres. Devis gratuit, intervention rapide.",
-      keywords: "entretien jardin, taille haies, tonte pelouse, débroussaillage, traitement arbres, création pelouse, entretien espaces verts, Île-de-France, Élagage Dubois",
+      title: "Entretien Jardin Val d'Oise 95 | Taille Haies, Tonte Pelouse, Débroussaillage",
+      description: "Entretien de jardin professionnel dans le Val d'Oise (95). Taille de haies, tonte de pelouse, débroussaillage, traitement d'arbres. Devis gratuit. Guyancourt, Versailles, Cergy.",
+      keywords: "entretien jardin Val d'Oise, taille haies 95, tonte pelouse Val d'Oise, débroussaillage 95, traitement arbres Val d'Oise, entretien espaces verts 95, jardinier Val d'Oise, entretien jardin Guyancourt",
       priority: 0.9,
       changefreq: "monthly"
     },
     quote: {
-      title: "Devis gratuit - Élagage Dubois | Expert en élagage, abattage et dessouchage",
-      description: "Demandez votre devis gratuit pour vos travaux d'élagage, d'abattage ou de dessouchage. Réponse rapide sous 24h. Contactez-nous !",
-      keywords: "devis gratuit, élagage, abattage, dessouchage, devis, contact, Élagage Dubois, Île-de-France",
+      title: "Devis Gratuit Élagage & Abattage Val d'Oise 95 | Élagage Dubois",
+      description: "Devis gratuit élagage et abattage dans le Val d'Oise (95). Réponse sous 24h. Expert certifié en élagage, abattage sécurisé et dessouchage. Intervention rapide 7j/7.",
+      keywords: "devis élagage Val d'Oise, devis abattage 95, devis gratuit élagage, devis abattage Val d'Oise, devis dessouchage 95, devis élagage Guyancourt",
       priority: 0.8,
       changefreq: "monthly"
     },
@@ -77,14 +77,14 @@ module SeoHelper
     },
     legal_notices: {
       title: "Mentions légales - Élagage Dubois",
-      description: "Mentions légales de Élagage Dubois - Service d'états des lieux professionnel en Île-de-France.",
+      description: "Mentions légales de Élagage Dubois - Expert en élagage, abattage et dessouchage dans le Val d'Oise (95).",
       keywords: "mentions légales, Élagage Dubois, informations légales",
       priority: 0.3,
       changefreq: "yearly"
     },
     terms_of_service: {
       title: "Conditions générales d'utilisation - Élagage Dubois",
-      description: "Conditions générales d'utilisation des services Élagage Dubois - États des lieux professionnel.",
+      description: "Conditions générales d'utilisation des services Élagage Dubois - Expert en élagage et abattage professionnel.",
       keywords: "CGU, conditions générales, utilisation, Élagage Dubois",
       priority: 0.3,
       changefreq: "yearly"
@@ -136,7 +136,7 @@ module SeoHelper
 
   def seo_og_image
     return content_for(:og_image) if content_for?(:og_image)
-    "#{DEFAULT_SEO[:site_url]}/icon.png"
+    "#{DEFAULT_SEO[:site_url]}/images/seo/Screenshot_20251203_094150_Gallery.jpg"
   end
 
   def seo_canonical_url
@@ -218,6 +218,10 @@ module SeoHelper
           "longitude": DEFAULT_SEO[:business_address][:longitude]
         },
         "geoRadius": "50000"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Val d'Oise"
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -356,15 +360,39 @@ module SeoHelper
           "postalCode": DEFAULT_SEO[:business_address][:postal_code],
           "addressCountry": DEFAULT_SEO[:business_address][:country]
         },
-        "areaServed": {
+        "areaServed": [
+          {
+            "@type": "State",
+            "name": "Val d'Oise"
+          },
+          {
+            "@type": "PostalCode",
+            "postalCode": "95"
+          },
+          {
+            "@type": "City",
+            "name": "Guyancourt"
+          },
+          {
+            "@type": "City",
+            "name": "Versailles"
+          },
+          {
+            "@type": "City",
+            "name": "Cergy"
+          }
+        ]
+      },
+      "areaServed": [
+        {
           "@type": "State",
-          "name": "Île-de-France"
+          "name": "Val d'Oise"
+        },
+        {
+          "@type": "PostalCode",
+          "postalCode": "95"
         }
-      },
-      "areaServed": {
-        "@type": "State",
-        "name": "Île-de-France"
-      },
+      ],
       "availableChannel": {
         "@type": "ServiceChannel",
         "serviceUrl": "#{DEFAULT_SEO[:site_url]}/devis",

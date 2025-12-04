@@ -617,27 +617,27 @@ module PagesHelper
     when :elagage
       {
         title: "Besoin d'un Élagage Professionnel ?",
-        description: "Contactez-nous pour un devis gratuit et personnalisé. Nous intervenons rapidement dans toute l'Île-de-France."
+        description: "Expert en élagage d'arbres dans le Val d'Oise (95). Élagage sécurisé, taille sanitaire, taille raisonnée. Devis gratuit sous 24h, intervention rapide 7j/7. Guyancourt, Versailles, Cergy."
       }
     when :abattage
       {
         title: "Besoin d'un Abattage Professionnel ?",
-        description: "Contactez-nous pour un devis gratuit et personnalisé. Nous intervenons rapidement dans toute l'Île-de-France."
+        description: "Expert en abattage d'arbres dans le Val d'Oise (95). Abattage dirigé, démontage contrôlé, démontage avec rétention. Sécurité garantie. Devis gratuit sous 24h. Guyancourt, Versailles, Cergy."
       }
     when :dessouchage
       {
         title: "Besoin d'un Dessouchage Professionnel ?",
-        description: "Contactez-nous pour un devis gratuit et personnalisé. Nous intervenons rapidement dans toute l'Île-de-France."
+        description: "Expert en dessouchage d'arbres dans le Val d'Oise (95). Dessouchage mécanique, rognage, grignotage. Élimination complète des souches. Devis gratuit sous 24h. Guyancourt, Versailles, Cergy."
       }
     when :entretien
       {
         title: "Besoin de Services d'Entretien ?",
-        description: "Contactez-nous pour un devis gratuit et personnalisé. Nous intervenons rapidement dans toute l'Île-de-France."
+        description: "Expert en entretien de jardin dans le Val d'Oise (95). Taille de haies, tonte de pelouse, débroussaillage, traitement d'arbres. Devis gratuit sous 24h. Guyancourt, Versailles, Cergy."
       }
     else
       {
         title: "Besoin de Nos Services ?",
-        description: "Contactez-nous pour un devis gratuit et personnalisé. Nous intervenons rapidement dans toute l'Île-de-France."
+        description: "Expert en élagage et abattage d'arbres dans le Val d'Oise (95). Élagage sécurisé, abattage professionnel, dessouchage mécanique. Devis gratuit sous 24h, intervention rapide 7j/7."
       }
     end
   end
