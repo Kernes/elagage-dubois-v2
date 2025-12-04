@@ -2,29 +2,26 @@
 <html lang="fr">
   <head>
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-W5QHLZ6P');</script>
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-W5QHLZ6P');
+    </script>
     <!-- End Google Tag Manager -->
 
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5QHLZ6P"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-    <!-- Google tag (gtag.js) -->
+    <!-- Global site tag (gtag.js) - Google Ads -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11134326763"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'AW-11134326763');
     </script>
 
-    <!-- Title et Meta de base -->
+    <!-- Title & Meta de base -->
+    <meta charset="utf-8">
     <title><%= meta_title(current_page_key) %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -45,56 +42,57 @@
     <meta property="og:image" content="<%= seo_og_image %>">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Élagage et Abattage d'arbres professionnel dans le Val d'Oise (95) - Élagage Dubois">
+    <meta property="og:image:alt" content="Élagage et Abattage d'arbres professionnel autour de Méry-sur-Oise (95) - Élagage Dubois">
     <meta property="og:locale" content="<%= og_locale %>">
     <meta property="og:site_name" content="<%= og_site_name %>">
 
     <!-- Twitter Card -->
-    <meta property="twitter:card" content="<%= twitter_card %>">
-    <meta property="twitter:url" content="<%= og_url %>">
-    <meta property="twitter:title" content="<%= seo_og_title(current_page_key) %>">
-    <meta property="twitter:description" content="<%= seo_og_description(current_page_key) %>">
-    <meta property="twitter:image" content="<%= seo_og_image %>">
-    <meta property="twitter:image:alt" content="Élagage et Abattage d'arbres professionnel dans le Val d'Oise (95) - Élagage Dubois">
-    <meta property="twitter:site" content="<%= twitter_site %>">
-    <meta property="twitter:creator" content="<%= twitter_creator %>">
+    <meta name="twitter:card" content="<%= twitter_card %>">
+    <meta name="twitter:url" content="<%= og_url %>">
+    <meta name="twitter:title" content="<%= seo_og_title(current_page_key) %>">
+    <meta name="twitter:description" content="<%= seo_og_description(current_page_key) %>">
+    <meta name="twitter:image" content="<%= seo_og_image %>">
+    <meta name="twitter:image:alt" content="Élagage et Abattage d'arbres professionnel autour de Méry-sur-Oise (95) - Élagage Dubois">
+    <meta name="twitter:site" content="<%= twitter_site %>">
+    <meta name="twitter:creator" content="<%= twitter_creator %>">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="<%= seo_canonical_url %>">
-    
-  <!-- Préconnexion aux domaines externes (hors chemin critique) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.tailwindcss.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-  <link rel="preconnect" href="https://images.unsplash.com">
-  <link rel="preconnect" href="https://unpkg.com">
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-  <link rel="dns-prefetch" href="https://images.unsplash.com">
-  <link rel="dns-prefetch" href="https://unpkg.com">
-  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-  
-  <!-- Google Fonts - Chargement asynchrone avec font-display: swap -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  </noscript>
-    
+
+    <!-- Préconnexion aux domaines externes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+    <!-- Google Fonts - Chargement asynchrone -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    </noscript>
+
     <!-- Structured Data - Business -->
     <script type="application/ld+json">
-    <%= raw structured_data_business.to_json %>
+      <%= raw structured_data_business.to_json %>
     </script>
 
     <!-- Structured Data - Organization -->
     <script type="application/ld+json">
-    <%= raw structured_data_organization.to_json %>
+      <%= raw structured_data_organization.to_json %>
     </script>
 
     <!-- Structured Data - Website -->
     <script type="application/ld+json">
-    <%= raw structured_data_web_site.to_json %>
+      <%= raw structured_data_web_site.to_json %>
     </script>
 
     <%= csrf_meta_tags %>
@@ -102,20 +100,15 @@
 
     <%= yield :head %>
 
-    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
-    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
-
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/icon.png" type="image/png" sizes="512x512">
     <link rel="apple-touch-icon" href="/icon.png" sizes="512x512">
 
-    <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
 
-    <!-- Style inline pour éviter le FOUC (Flash of Unstyled Content) -->
+    <!-- Anti-FOUC -->
     <style>
-      /* Masquer le contenu jusqu'à ce que Tailwind soit chargé */
       html:not(.tailwind-loaded) body {
         opacity: 0;
         transition: opacity 0.1s ease-in;
@@ -125,21 +118,26 @@
       }
     </style>
 
-    <!-- Tailwind CSS CDN - Chargement synchrone pour éviter le FOUC -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      // Marquer le document comme chargé une fois Tailwind prêt
-      // Utiliser requestAnimationFrame pour s'assurer que le DOM est prêt
       requestAnimationFrame(function() {
         document.documentElement.classList.add('tailwind-loaded');
       });
     </script>
-    
-    <!-- Tailwind Plus Elements for el-popover functionality -->
+
+    <!-- Tailwind Plus Elements pour el-popover -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module" async></script>
   </head>
 
   <body class="antialiased">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5QHLZ6P"
+              height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <%= yield %>
   </body>
 </html>

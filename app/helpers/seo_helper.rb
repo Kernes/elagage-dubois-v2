@@ -1,147 +1,166 @@
 module SeoHelper
   # Configuration SEO par défaut
   DEFAULT_SEO = {
-    site_name: "Élagage Dubois",
-    site_description: "Expert en élagage et abattage d'arbres dans le Val d'Oise (95). Élagage sécurisé, abattage professionnel, dessouchage mécanique. Devis gratuit sous 24h, intervention rapide 7j/7.",
-    site_keywords: "élagage Val d'Oise, abattage Val d'Oise, élagage 95, abattage 95, élagage professionnel Val d'Oise, abattage sécurisé 95, dessouchage Val d'Oise, taille arbres 95, élagueur Val d'Oise, professionnel élagage 95",
-    site_url: "https://elagage-dubois-v2.scalingo.io",
-    contact_phone: "+33783892384",
-    contact_email: "jpdubois.services@gmail.com",
+    site_name:        "Élagage Dubois",
+    site_description: "Expert en élagage et abattage d'arbres autour de Méry-sur-Oise (Val d'Oise - 95). Élagage sécurisé, abattage professionnel, dessouchage mécanique. Devis gratuit sous 24h, intervention rapide.",
+    site_keywords:    "élagage Méry-sur-Oise, élagueur Val d'Oise, abattage arbres 95, dessouchage Méry-sur-Oise, entretien jardin 95",
+    site_url:         "https://dubois-services-elagage.fr",
+    contact_phone:    "+33783892384",
+    contact_email:    "jpdubois.services@gmail.com",
     business_address: {
-      street: "4, rue Philibert Delorme",
-      city: "Guyancourt",
-      postal_code: "78280",
-      country: "FR",
-      latitude: "48.7734",
-      longitude: "2.0734"
+      street:      "30 Route de Pontoise",
+      city:        "Méry-sur-Oise",
+      postal_code: "95540",
+      country:     "FR",
+      latitude:    "49.059594",
+      longitude:   "2.1655372"
     }
   }.freeze
 
   # Configuration SEO par page
   PAGE_SEO = {
     home: {
-      title: "Élagage & Abattage Val d'Oise 95 | Élagage Dubois - Expert Professionnel",
-      description: "Expert en élagage et abattage d'arbres dans le Val d'Oise (95). Élagage sécurisé, abattage professionnel, dessouchage mécanique. Devis gratuit sous 24h, intervention rapide 7j/7.",
-      keywords: "élagage Val d'Oise, abattage Val d'Oise, élagage 95, abattage 95, élagage professionnel Val d'Oise, abattage sécurisé 95, dessouchage Val d'Oise, élagueur Val d'Oise, taille arbres 95, élagage Guyancourt, abattage Cergy, élagage Versailles",
-      priority: 1.0,
-      changefreq: "weekly"
+      title:       "Élagage & Abattage autour de Méry-sur-Oise (95) | Élagage Dubois",
+      description: "Élagage et abattage d'arbres autour de Méry-sur-Oise (Val d'Oise - 95). Élagage sécurisé, abattage professionnel, dessouchage mécanique et entretien de jardin. Devis gratuit sous 24h.",
+      keywords:    "élagage Méry-sur-Oise, élagueur 95, abattage arbres Val d'Oise, dessouchage 95, entretien jardin Méry-sur-Oise",
+      priority:    1.0,
+      changefreq:  "weekly"
     },
     about: {
-      title: "Qui sommes-nous ? - Élagage Dubois | Expert en élagage et abattage",
-      description: "Découvrez Élagage Dubois, votre partenaire de confiance pour l'élagage, l'abattage et le dessouchage en Île-de-France. Expertise professionnelle, sécurité et respect de l'environnement garantis.",
-      keywords: "qui sommes-nous, Élagage Dubois, équipe, expertise, élagage, professionnel, Île-de-France",
-      priority: 0.8,
-      changefreq: "monthly"
+      title:       "Qui sommes-nous ? - Élagage Dubois | Élagueur autour de Méry-sur-Oise",
+      description: "Découvrez Élagage Dubois, élagueur professionnel basé à Méry-sur-Oise (95). Interventions sécurisées en élagage, abattage et dessouchage autour du Val d'Oise et des départements voisins.",
+      keywords:    "qui sommes-nous, Élagage Dubois, élagueur Méry-sur-Oise, élagueur Val d'Oise",
+      priority:    0.8,
+      changefreq:  "monthly"
     },
     elagage: {
-      title: "Élagage d'Arbres Val d'Oise 95 | Élagage Professionnel & Sécurisé",
-      description: "Élagage d'arbres professionnel dans le Val d'Oise (95). Élagage sécurisé, taille sanitaire, taille raisonnée. Expert certifié, intervention rapide. Devis gratuit.",
-      keywords: "élagage Val d'Oise, élagage 95, élagage professionnel Val d'Oise, élagage sécurisé 95, taille arbres Val d'Oise, étêtage Val d'Oise, élagueur Val d'Oise, élagage Guyancourt, élagage Versailles, élagage Cergy, élagage Pontoise, taille formation 95",
-      priority: 0.9,
-      changefreq: "monthly"
+      title:       "Élagage d'Arbres autour de Méry-sur-Oise (95) | Élagage Professionnel",
+      description: "Élagage d'arbres professionnel autour de Méry-sur-Oise et dans le Val d'Oise (95). Taille raisonnée, taille sanitaire, élagage sécurisé. Devis gratuit.",
+      keywords:    "élagage Méry-sur-Oise, élagage Val d'Oise, élagueur 95, taille arbres 95",
+      priority:    0.9,
+      changefreq:  "monthly"
     },
     abattage: {
-      title: "Abattage d'Arbres Val d'Oise 95 | Abattage Sécurisé & Professionnel",
-      description: "Abattage d'arbres professionnel dans le Val d'Oise (95). Abattage dirigé, démontage contrôlé, démontage avec rétention. Expert certifié, sécurité garantie. Devis gratuit. Guyancourt, Versailles, Cergy.",
-      keywords: "abattage Val d'Oise, abattage 95, abattage sécurisé Val d'Oise, abattage dirigé 95, démontage contrôlé Val d'Oise, abattage professionnel 95, abattage arbres Val d'Oise, abattage Guyancourt, abattage Versailles, abattage Cergy, démontage avec rétention 95",
-      priority: 0.9,
-      changefreq: "monthly"
+      title:       "Abattage d'Arbres autour de Méry-sur-Oise (95) | Abattage Sécurisé",
+      description: "Abattage d'arbres sécurisé autour de Méry-sur-Oise (95). Abattage dirigé, démontage contrôlé, démontage avec rétention. Intervention professionnelle.",
+      keywords:    "abattage Méry-sur-Oise, abattage Val d'Oise, abattage sécurisé 95, démontage arbres",
+      priority:    0.9,
+      changefreq:  "monthly"
     },
     dessouchage: {
-      title: "Dessouchage d'Arbres Val d'Oise 95 | Dessouchage Mécanique Professionnel",
-      description: "Dessouchage d'arbres professionnel dans le Val d'Oise (95). Dessouchage mécanique, rognage, grignotage. Élimination complète des souches. Devis gratuit. Guyancourt, Versailles, Cergy.",
-      keywords: "dessouchage Val d'Oise, dessouchage 95, dessouchage mécanique Val d'Oise, rognage Val d'Oise, grignotage 95, élimination souche Val d'Oise, dessouchage professionnel 95, dessouchage Guyancourt, dessouchage Versailles",
-      priority: 0.9,
-      changefreq: "monthly"
+      title:       "Dessouchage d'Arbres autour de Méry-sur-Oise (95) | Dessouchage Mécanique",
+      description: "Dessouchage mécanique et rognage de souches autour de Méry-sur-Oise (95). Élimination complète des souches après abattage. Devis gratuit.",
+      keywords:    "dessouchage Méry-sur-Oise, dessouchage Val d'Oise, rognage souche 95",
+      priority:    0.9,
+      changefreq:  "monthly"
     },
     entretien: {
-      title: "Entretien Jardin Val d'Oise 95 | Taille Haies, Tonte Pelouse, Débroussaillage",
-      description: "Entretien de jardin professionnel dans le Val d'Oise (95). Taille de haies, tonte de pelouse, débroussaillage, traitement d'arbres. Devis gratuit. Guyancourt, Versailles, Cergy.",
-      keywords: "entretien jardin Val d'Oise, taille haies 95, tonte pelouse Val d'Oise, débroussaillage 95, traitement arbres Val d'Oise, entretien espaces verts 95, jardinier Val d'Oise, entretien jardin Guyancourt",
-      priority: 0.9,
-      changefreq: "monthly"
+      title:       "Entretien de Jardin autour de Méry-sur-Oise (95) | Taille de Haies & Tonte",
+      description: "Entretien de jardin autour de Méry-sur-Oise (95) : taille de haies, tonte de pelouse, débroussaillage, entretien d'espaces verts. Devis gratuit.",
+      keywords:    "entretien jardin Méry-sur-Oise, taille haies 95, tonte pelouse Val d'Oise",
+      priority:    0.9,
+      changefreq:  "monthly"
     },
     quote: {
-      title: "Devis Gratuit Élagage & Abattage Val d'Oise 95 | Élagage Dubois",
-      description: "Devis gratuit élagage et abattage dans le Val d'Oise (95). Réponse sous 24h. Expert certifié en élagage, abattage sécurisé et dessouchage. Intervention rapide 7j/7.",
-      keywords: "devis élagage Val d'Oise, devis abattage 95, devis gratuit élagage, devis abattage Val d'Oise, devis dessouchage 95, devis élagage Guyancourt",
-      priority: 0.8,
-      changefreq: "monthly"
-    },
-    recruitment: {
-      title: "Recrutement - Élagage Dubois | Rejoignez notre équipe",
-      description: "Rejoignez l'équipe Élagage Dubois ! Offres d'emploi pour élagueurs professionnels en Île-de-France. Formation et évolution garanties.",
-      keywords: "recrutement, emploi, élagueur, carrière, Élagage Dubois, Île-de-France",
-      priority: 0.6,
-      changefreq: "monthly"
+      title:       "Devis Gratuit Élagage & Abattage autour de Méry-sur-Oise (95) | Élagage Dubois",
+      description: "Demandez un devis gratuit pour vos travaux d'élagage, d'abattage ou de dessouchage autour de Méry-sur-Oise (95). Réponse rapide.",
+      keywords:    "devis élagage Méry-sur-Oise, devis abattage 95, devis dessouchage Val d'Oise",
+      priority:    0.8,
+      changefreq:  "monthly"
     },
     legal_notices: {
-      title: "Mentions légales - Élagage Dubois",
-      description: "Mentions légales de Élagage Dubois - Expert en élagage, abattage et dessouchage dans le Val d'Oise (95).",
-      keywords: "mentions légales, Élagage Dubois, informations légales",
-      priority: 0.3,
-      changefreq: "yearly"
+      title:       "Mentions légales - Élagage Dubois",
+      description: "Mentions légales du site Élagage Dubois, élagueur basé à Méry-sur-Oise (Val d'Oise - 95).",
+      keywords:    "mentions légales, Élagage Dubois",
+      priority:    0.3,
+      changefreq:  "yearly"
     },
     terms_of_service: {
-      title: "Conditions générales d'utilisation - Élagage Dubois",
-      description: "Conditions générales d'utilisation des services Élagage Dubois - Expert en élagage et abattage professionnel.",
-      keywords: "CGU, conditions générales, utilisation, Élagage Dubois",
-      priority: 0.3,
-      changefreq: "yearly"
+      title:       "Conditions générales d'utilisation - Élagage Dubois",
+      description: "Conditions générales d'utilisation du site Élagage Dubois, spécialiste de l'élagage et de l'abattage d'arbres.",
+      keywords:    "CGU, conditions générales, Élagage Dubois",
+      priority:    0.3,
+      changefreq:  "yearly"
     },
     privacy_policy: {
-      title: "Politique de confidentialité - Élagage Dubois",
-      description: "Politique de confidentialité Élagage Dubois - Protection des données personnelles.",
-      keywords: "politique confidentialité, protection données, RGPD, Élagage Dubois",
-      priority: 0.3,
-      changefreq: "yearly"
+      title:       "Politique de confidentialité - Élagage Dubois",
+      description: "Politique de confidentialité Élagage Dubois - gestion et protection des données personnelles.",
+      keywords:    "politique de confidentialité, données personnelles, RGPD",
+      priority:    0.3,
+      changefreq:  "yearly"
     },
     cookie_policy: {
-      title: "Politique des cookies - Élagage Dubois",
-      description: "Politique des cookies Élagage Dubois - Utilisation des cookies sur notre site.",
-      keywords: "cookies, politique cookies, Élagage Dubois",
-      priority: 0.3,
-      changefreq: "yearly"
+      title:       "Politique des cookies - Élagage Dubois",
+      description: "Politique des cookies Élagage Dubois - informations sur l'utilisation des cookies.",
+      keywords:    "politique cookies, cookies",
+      priority:    0.3,
+      changefreq:  "yearly"
     }
   }.freeze
 
-  # Méthodes pour les balises meta
-  def meta_title(page_key = nil)
-    return content_for(:title) if content_for?(:title)
-    return PAGE_SEO[page_key][:title] if page_key && PAGE_SEO[page_key]
-    DEFAULT_SEO[:site_name]
+  LEGAL_PAGES = %i[
+    legal_notices
+    terms_of_service
+    privacy_policy
+    cookie_policy
+  ].freeze
+
+  # --- Helpers communs pour meta ---
+
+  def current_page_key
+    controller_name == "pages" ? action_name.to_sym : nil
   end
 
-  def meta_description(page_key = nil)
-    return content_for(:description) if content_for?(:description)
-    return PAGE_SEO[page_key][:description] if page_key && PAGE_SEO[page_key]
-    DEFAULT_SEO[:site_description]
+  def page_seo_field(field, page_key = current_page_key)
+    return content_for(field) if content_for?(field)
+
+    if page_key && PAGE_SEO[page_key] && PAGE_SEO[page_key][field]
+      PAGE_SEO[page_key][field]
+    else
+      case field
+      when :title        then DEFAULT_SEO[:site_name]
+      when :description  then DEFAULT_SEO[:site_description]
+      when :keywords     then DEFAULT_SEO[:site_keywords]
+      end
+    end
   end
 
-  def meta_keywords(page_key = nil)
-    return content_for(:keywords) if content_for?(:keywords)
-    return PAGE_SEO[page_key][:keywords] if page_key && PAGE_SEO[page_key]
-    DEFAULT_SEO[:site_keywords]
+  # Méta classiques
+
+  def meta_title(page_key = current_page_key)
+    page_seo_field(:title, page_key)
   end
 
-  def seo_og_title(page_key = nil)
-    return content_for(:og_title) if content_for?(:og_title)
-    meta_title(page_key)
+  def meta_description(page_key = current_page_key)
+    page_seo_field(:description, page_key)
   end
 
-  def seo_og_description(page_key = nil)
-    return content_for(:og_description) if content_for?(:og_description)
-    meta_description(page_key)
+  def meta_keywords(page_key = current_page_key)
+    page_seo_field(:keywords, page_key)
+  end
+
+  def seo_og_title(page_key = current_page_key)
+    content_for?(:og_title) ? content_for(:og_title) : meta_title(page_key)
+  end
+
+  def seo_og_description(page_key = current_page_key)
+    content_for?(:og_description) ? content_for(:og_description) : meta_description(page_key)
   end
 
   def seo_og_image
     return content_for(:og_image) if content_for?(:og_image)
+
+    # Garde ton image actuelle, juste hostée sur le bon domaine
     "#{DEFAULT_SEO[:site_url]}/images/seo/Screenshot_20251203_094150_Gallery.jpg"
   end
 
   def seo_canonical_url
     return content_for(:canonical_url) if content_for?(:canonical_url)
-    request.url
+
+    uri = URI.parse(request.url)
+    uri.query   = nil
+    uri.fragment = nil
+    uri.to_s
   end
 
   def meta_author
@@ -149,20 +168,25 @@ module SeoHelper
   end
 
   def meta_robots
-    "index, follow"
+    if LEGAL_PAGES.include?(current_page_key)
+      "noindex, follow"
+    else
+      "index, follow"
+    end
   end
 
   def meta_googlebot
-    "index, follow"
+    meta_robots
   end
 
   # Open Graph
+
   def og_type
     "website"
   end
 
   def og_url
-    request.url
+    seo_canonical_url
   end
 
   def og_site_name
@@ -174,6 +198,7 @@ module SeoHelper
   end
 
   # Twitter Card
+
   def twitter_card
     "summary_large_image"
   end
@@ -186,11 +211,12 @@ module SeoHelper
     "@elagage_dubois"
   end
 
-  # Données structurées JSON-LD
+  # --- Données structurées JSON-LD ---
+
   def structured_data_business
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": ["LocalBusiness", "TreeService"],
       "name": DEFAULT_SEO[:site_name],
       "description": DEFAULT_SEO[:site_description],
       "url": DEFAULT_SEO[:site_url],
@@ -201,7 +227,8 @@ module SeoHelper
         "streetAddress": DEFAULT_SEO[:business_address][:street],
         "addressLocality": DEFAULT_SEO[:business_address][:city],
         "postalCode": DEFAULT_SEO[:business_address][:postal_code],
-        "addressCountry": DEFAULT_SEO[:business_address][:country]
+        "addressCountry": DEFAULT_SEO[:business_address][:country],
+        "addressRegion": "Île-de-France"
       },
       "geo": {
         "@type": "GeoCoordinates",
@@ -210,6 +237,7 @@ module SeoHelper
       },
       "openingHours": "Mo-Sa 08:00-18:00",
       "priceRange": "€€",
+      # Rayon autour de Méry-sur-Oise (~45 km)
       "serviceArea": {
         "@type": "GeoCircle",
         "geoMidpoint": {
@@ -217,53 +245,54 @@ module SeoHelper
           "latitude": DEFAULT_SEO[:business_address][:latitude],
           "longitude": DEFAULT_SEO[:business_address][:longitude]
         },
-        "geoRadius": "50000"
+        "geoRadius": "45000"
       },
-      "areaServed": {
-        "@type": "State",
-        "name": "Val d'Oise"
-      },
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Val-d'Oise" },
+        { "@type": "AdministrativeArea", "name": "Oise" },
+        { "@type": "AdministrativeArea", "name": "Yvelines" }
+      ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Services d'élagage et d'entretien d'arbres",
+        "name": "Services d'élagage et d'abattage autour de Méry-sur-Oise et dans le Val d'Oise (95)",
         "itemListElement": [
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Élagage",
-              "description": "Service d'élagage professionnel : élagage sécurisé, taille sanitaire, taille raisonnée"
-            }
+              "name": "Élagage d'arbres",
+              "description": "Élagage d'arbres professionnel : taille raisonnée, taille sanitaire et élagage de sécurité autour de Méry-sur-Oise et dans le Val d'Oise."
+            },
+            "areaServed": { "@type": "AdministrativeArea", "name": "Val-d'Oise" }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Abattage",
-              "description": "Service d'abattage d'arbres professionnel : démontage contrôlé, démontage avec rétention"
-            }
+              "name": "Abattage d'arbres",
+              "description": "Abattage d'arbres sécurisé : abattage dirigé, démontage contrôlé, démontage avec rétention."
+            },
+            "areaServed": { "@type": "AdministrativeArea", "name": "Val-d'Oise" }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
               "name": "Dessouchage",
-              "description": "Service de dessouchage professionnel : rognage ou grignotage, élimination complète des souches"
-            }
+              "description": "Dessouchage mécanique et rognage de souches après abattage."
+            },
+            "areaServed": { "@type": "AdministrativeArea", "name": "Val-d'Oise" }
           },
           {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Entretien de jardin",
-              "description": "Services d'entretien de jardin et espaces verts : taille de haies, tonte de pelouse, débroussaillage"
-            }
+            "@type": "Service",
+            "name": "Entretien de jardin",
+            "description": "Entretien de jardin : taille de haies, tonte de pelouse, débroussaillage autour de Méry-sur-Oise."
           }
         ]
       },
       "sameAs": [
-        "https://www.linkedin.com/company/elagage-dubois",
-        "https://www.facebook.com/elagage.dubois"
+        "https://www.facebook.com/elagage.dubois",
+        "https://www.linkedin.com/company/elagage-dubois"
       ]
     }
   end
@@ -298,15 +327,8 @@ module SeoHelper
       "@type": "WebSite",
       "name": DEFAULT_SEO[:site_name],
       "url": DEFAULT_SEO[:site_url],
-      "description": DEFAULT_SEO[:site_description],
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "#{DEFAULT_SEO[:site_url]}/devis?q={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
+      "description": DEFAULT_SEO[:site_description]
+      # Pas de SearchAction car pas de vraie recherche interne
     }
   end
 
@@ -361,37 +383,15 @@ module SeoHelper
           "addressCountry": DEFAULT_SEO[:business_address][:country]
         },
         "areaServed": [
-          {
-            "@type": "State",
-            "name": "Val d'Oise"
-          },
-          {
-            "@type": "PostalCode",
-            "postalCode": "95"
-          },
-          {
-            "@type": "City",
-            "name": "Guyancourt"
-          },
-          {
-            "@type": "City",
-            "name": "Versailles"
-          },
-          {
-            "@type": "City",
-            "name": "Cergy"
-          }
+          { "@type": "AdministrativeArea", "name": "Val-d'Oise" },
+          { "@type": "AdministrativeArea", "name": "Oise" },
+          { "@type": "AdministrativeArea", "name": "Yvelines" }
         ]
       },
       "areaServed": [
-        {
-          "@type": "State",
-          "name": "Val d'Oise"
-        },
-        {
-          "@type": "PostalCode",
-          "postalCode": "95"
-        }
+        { "@type": "AdministrativeArea", "name": "Val-d'Oise" },
+        { "@type": "AdministrativeArea", "name": "Oise" },
+        { "@type": "AdministrativeArea", "name": "Yvelines" }
       ],
       "availableChannel": {
         "@type": "ServiceChannel",
@@ -399,10 +399,5 @@ module SeoHelper
         "servicePhone": DEFAULT_SEO[:contact_phone]
       }
     }
-  end
-
-  # Méthodes utilitaires
-  def current_page_key
-    controller_name == 'pages' ? action_name.to_sym : nil
   end
 end
