@@ -7,86 +7,62 @@
     </div>
     
     <div class="grid gap-4 mt-16 sm:grid-cols-2 lg:grid-cols-3">
-      <!-- Slider 1 - Élagage -->
-      <div class="overflow-hidden relative rounded-lg group aspect-square slider-container">
-        <div class="slider-wrapper" data-slider="1">
-          <div class="flex transition-transform duration-500 ease-in-out slider-track">
-            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Élagage professionnel" class="object-cover flex-shrink-0 w-full h-full" data-clone="last">
-            <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Élagage professionnel" class="object-cover flex-shrink-0 w-full h-full">
-            <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Élagage professionnel" class="object-cover flex-shrink-0 w-full h-full">
-            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Élagage professionnel" class="object-cover flex-shrink-0 w-full h-full">
-            <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Élagage professionnel" class="object-cover flex-shrink-0 w-full h-full" data-clone="first">
-          </div>
-        </div>
-        <button class="absolute left-2 top-1/2 p-2 text-white rounded-full opacity-100 transition-opacity -translate-y-1/2 slider-prev bg-black/50 md:opacity-0 md:group-hover:opacity-100 hover:bg-black/70" data-slider="1" data-direction="prev" aria-label="Image précédente - Élagage">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <button class="absolute right-2 top-1/2 p-2 text-white rounded-full opacity-100 transition-opacity -translate-y-1/2 slider-next bg-black/50 md:opacity-0 md:group-hover:opacity-100 hover:bg-black/70" data-slider="1" data-direction="next" aria-label="Image suivante - Élagage">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
+      <!-- Image 1 - Élagage -->
+      <div class="overflow-hidden relative rounded-lg group aspect-square">
+        <% galerie_img1 = local_image_srcset("/images/homepage/5_1 Nos réalisation-élagage sanitaire d'un cèdre bleu", { mobile: 400, tablet: 600, desktop: 800 }) %>
+        <picture>
+          <source srcset="<%= galerie_img1[:avif_srcset] %>" sizes="<%= galerie_img1[:sizes] %>" type="image/avif">
+          <source srcset="<%= galerie_img1[:webp_srcset] %>" sizes="<%= galerie_img1[:sizes] %>" type="image/webp">
+          <img src="<%= galerie_img1[:src] %>" 
+               srcset="<%= galerie_img1[:webp_srcset] %>"
+               sizes="<%= galerie_img1[:sizes] %>"
+               alt="Élagage sanitaire d'un cèdre bleu" 
+               class="object-cover w-full h-full"
+               loading="lazy">
+        </picture>
         <div class="absolute inset-0 bg-gradient-to-t to-transparent opacity-0 transition-opacity pointer-events-none from-black/60 group-hover:opacity-100">
           <div class="absolute right-4 bottom-4 left-4">
-            <p class="font-semibold text-white">Élagage d'un chêne centenaire</p>
+            <p class="font-semibold text-white">Élagage sanitaire d'un cèdre bleu</p>
           </div>
         </div>
       </div>
       
-      <!-- Slider 2 - Abattage -->
-      <div class="overflow-hidden relative rounded-lg group aspect-square slider-container">
-        <div class="slider-wrapper" data-slider="2">
-          <div class="flex transition-transform duration-500 ease-in-out slider-track">
-            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Abattage sécurisé" class="object-cover flex-shrink-0 w-full h-full" data-clone="last">
-            <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Abattage sécurisé" class="object-cover flex-shrink-0 w-full h-full">
-            <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Abattage sécurisé" class="object-cover flex-shrink-0 w-full h-full">
-            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Abattage sécurisé" class="object-cover flex-shrink-0 w-full h-full">
-            <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Abattage sécurisé" class="object-cover flex-shrink-0 w-full h-full" data-clone="first">
-          </div>
-        </div>
-        <button class="absolute left-2 top-1/2 p-2 text-white rounded-full opacity-100 transition-opacity -translate-y-1/2 slider-prev bg-black/50 md:opacity-0 md:group-hover:opacity-100 hover:bg-black/70" data-slider="2" data-direction="prev" aria-label="Image précédente - Abattage">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <button class="absolute right-2 top-1/2 p-2 text-white rounded-full opacity-100 transition-opacity -translate-y-1/2 slider-next bg-black/50 md:opacity-0 md:group-hover:opacity-100 hover:bg-black/70" data-slider="2" data-direction="next" aria-label="Image suivante - Abattage">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
+      <!-- Image 2 - Abattage -->
+      <div class="overflow-hidden relative rounded-lg group aspect-square">
+        <% galerie_img2 = local_image_srcset("/images/homepage/5_2 Nos réalisation-abattage d'un sapin", { mobile: 400, tablet: 600, desktop: 800 }) %>
+        <picture>
+          <source srcset="<%= galerie_img2[:avif_srcset] %>" sizes="<%= galerie_img2[:sizes] %>" type="image/avif">
+          <source srcset="<%= galerie_img2[:webp_srcset] %>" sizes="<%= galerie_img2[:sizes] %>" type="image/webp">
+          <img src="<%= galerie_img2[:src] %>" 
+               srcset="<%= galerie_img2[:webp_srcset] %>"
+               sizes="<%= galerie_img2[:sizes] %>"
+               alt="Abattage d'un sapin" 
+               class="object-cover w-full h-full"
+               loading="lazy">
+        </picture>
         <div class="absolute inset-0 bg-gradient-to-t to-transparent opacity-0 transition-opacity pointer-events-none from-black/60 group-hover:opacity-100">
           <div class="absolute right-4 bottom-4 left-4">
-            <p class="font-semibold text-white">Abattage dirigé sécurisé</p>
+            <p class="font-semibold text-white">Abattage d'un sapin</p>
           </div>
         </div>
       </div>
       
-      <!-- Slider 3 - Dessouchage -->
-      <div class="overflow-hidden relative rounded-lg group aspect-square slider-container">
-        <div class="slider-wrapper" data-slider="3">
-          <div class="flex transition-transform duration-500 ease-in-out slider-track">
-            <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dessouchage" class="object-cover flex-shrink-0 w-full h-full" data-clone="last">
-            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dessouchage" class="object-cover flex-shrink-0 w-full h-full">
-            <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dessouchage" class="object-cover flex-shrink-0 w-full h-full">
-            <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dessouchage" class="object-cover flex-shrink-0 w-full h-full">
-            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dessouchage" class="object-cover flex-shrink-0 w-full h-full" data-clone="first">
-          </div>
-        </div>
-        <button class="absolute left-2 top-1/2 p-2 text-white rounded-full opacity-100 transition-opacity -translate-y-1/2 slider-prev bg-black/50 md:opacity-0 md:group-hover:opacity-100 hover:bg-black/70" data-slider="3" data-direction="prev" aria-label="Image précédente - Dessouchage">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <button class="absolute right-2 top-1/2 p-2 text-white rounded-full opacity-100 transition-opacity -translate-y-1/2 slider-next bg-black/50 md:opacity-0 md:group-hover:opacity-100 hover:bg-black/70" data-slider="3" data-direction="next" aria-label="Image suivante - Dessouchage">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
+      <!-- Image 3 - Dessouchage -->
+      <div class="overflow-hidden relative rounded-lg group aspect-square">
+        <% galerie_img3 = local_image_srcset("/images/homepage/5_3 Nos realisation-dessouchage a la mini pelle", { mobile: 400, tablet: 600, desktop: 800 }) %>
+        <picture>
+          <source srcset="<%= galerie_img3[:avif_srcset] %>" sizes="<%= galerie_img3[:sizes] %>" type="image/avif">
+          <source srcset="<%= galerie_img3[:webp_srcset] %>" sizes="<%= galerie_img3[:sizes] %>" type="image/webp">
+          <img src="<%= galerie_img3[:src] %>" 
+               srcset="<%= galerie_img3[:webp_srcset] %>"
+               sizes="<%= galerie_img3[:sizes] %>"
+               alt="Dessouchage à la mini pelle" 
+               class="object-cover w-full h-full"
+               loading="lazy">
+        </picture>
         <div class="absolute inset-0 bg-gradient-to-t to-transparent opacity-0 transition-opacity pointer-events-none from-black/60 group-hover:opacity-100">
           <div class="absolute right-4 bottom-4 left-4">
-            <p class="font-semibold text-white">Dessouchage mécanique</p>
+            <p class="font-semibold text-white">Dessouchage à la mini pelle</p>
           </div>
         </div>
       </div>
@@ -94,231 +70,4 @@
   </div>
 </section>
 
-<style>
-  .slider-container {
-    position: relative;
-  }
-  
-  .slider-wrapper {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-  
-  .slider-track {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .slider-track img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-</style>
-
-<script>
-  function initSliders() {
-    const sliders = {};
-    
-    // Fonction pour mettre à jour la position du slider
-    function updateSliderPosition(sliderId, index, instant = false) {
-      const slider = sliders[sliderId];
-      if (!slider) return;
-      
-      if (instant) {
-        slider.track.style.transition = 'none';
-      } else {
-        slider.track.style.transition = 'transform 0.5s ease-in-out';
-      }
-      
-      slider.currentIndex = index;
-      const translateX = -slider.currentIndex * (100 / slider.totalImages);
-      slider.track.style.transform = `translateX(${translateX}%)`;
-      
-      // Réactiver la transition après un court délai si c'était instantané
-      if (instant) {
-        setTimeout(() => {
-          slider.track.style.transition = 'transform 0.5s ease-in-out';
-        }, 50);
-      }
-    }
-    
-    // Fonction pour naviguer
-    function navigateSlider(sliderId, direction) {
-      const slider = sliders[sliderId];
-      if (!slider) return;
-      
-      const realImages = slider.totalImages - 2; // Exclure les clones
-      
-      if (direction === 'next') {
-        let newIndex = slider.currentIndex + 1;
-        
-        // Si on arrive au clone de la première image (dernière position)
-        if (newIndex >= slider.totalImages - 1) {
-          // Continuer la transition vers le clone
-          updateSliderPosition(sliderId, newIndex);
-          // Après la transition, sauter instantanément à la vraie première image
-          slider.track.addEventListener('transitionend', function handleTransition() {
-            slider.track.removeEventListener('transitionend', handleTransition);
-            updateSliderPosition(sliderId, 1, true);
-          }, { once: true });
-        } else {
-          updateSliderPosition(sliderId, newIndex);
-        }
-      } else {
-        let newIndex = slider.currentIndex - 1;
-        
-        // Si on arrive au clone de la dernière image (première position)
-        if (newIndex <= 0) {
-          // Continuer la transition vers le clone
-          updateSliderPosition(sliderId, newIndex);
-          // Après la transition, sauter instantanément à la vraie dernière image
-          slider.track.addEventListener('transitionend', function handleTransition() {
-            slider.track.removeEventListener('transitionend', handleTransition);
-            updateSliderPosition(sliderId, slider.totalImages - 2, true);
-          }, { once: true });
-        } else {
-          updateSliderPosition(sliderId, newIndex);
-        }
-      }
-    }
-    
-    // Initialiser chaque slider
-    document.querySelectorAll('.slider-wrapper').forEach(wrapper => {
-      const sliderId = wrapper.dataset.slider;
-      const track = wrapper.querySelector('.slider-track');
-      const images = track.querySelectorAll('img');
-      const totalImages = images.length;
-      const realImages = totalImages - 2; // Exclure les clones
-      
-      sliders[sliderId] = {
-        currentIndex: 1, // Commencer à la première vraie image (après le clone)
-        totalImages: totalImages,
-        realImages: realImages,
-        track: track,
-        startX: 0,
-        currentX: 0,
-        isDragging: false
-      };
-      
-      // Définir la largeur du track
-      track.style.width = `${totalImages * 100}%`;
-      images.forEach(img => {
-        img.style.width = `${100 / totalImages}%`;
-      });
-      
-      // Positionner initialement à la première vraie image
-      updateSliderPosition(sliderId, 1, true);
-      
-      // Support tactile pour mobile
-      let touchStartX = 0;
-      let touchEndX = 0;
-      
-      wrapper.addEventListener('touchstart', function(e) {
-        touchStartX = e.changedTouches[0].screenX;
-        sliders[sliderId].isDragging = true;
-      }, { passive: true });
-      
-      wrapper.addEventListener('touchend', function(e) {
-        touchEndX = e.changedTouches[0].screenX;
-        sliders[sliderId].isDragging = false;
-        
-        const diff = touchStartX - touchEndX;
-        const threshold = 50; // Minimum distance pour déclencher le swipe
-        
-        if (Math.abs(diff) > threshold) {
-          if (diff > 0) {
-            // Swipe gauche - suivant
-            navigateSlider(sliderId, 'next');
-          } else {
-            // Swipe droite - précédent
-            navigateSlider(sliderId, 'prev');
-          }
-        }
-      }, { passive: true });
-      
-      // Support souris pour desktop (drag)
-      let mouseStartX = 0;
-      let isMouseDown = false;
-      
-      wrapper.addEventListener('mousedown', function(e) {
-        isMouseDown = true;
-        mouseStartX = e.clientX;
-        sliders[sliderId].isDragging = true;
-        e.preventDefault();
-      });
-      
-      wrapper.addEventListener('mousemove', function(e) {
-        if (!isMouseDown) return;
-        const diff = mouseStartX - e.clientX;
-        const slider = sliders[sliderId];
-        
-        // Afficher le déplacement en temps réel
-        const baseTranslateX = -slider.currentIndex * (100 / slider.totalImages);
-        const dragTranslateX = (diff / wrapper.offsetWidth) * 100;
-        slider.track.style.transform = `translateX(${baseTranslateX + dragTranslateX}%)`;
-      });
-      
-      wrapper.addEventListener('mouseup', function(e) {
-        if (!isMouseDown) return;
-        isMouseDown = false;
-        sliders[sliderId].isDragging = false;
-        
-        const diff = mouseStartX - e.clientX;
-        const threshold = 50;
-        
-        if (Math.abs(diff) > threshold) {
-          if (diff > 0) {
-            navigateSlider(sliderId, 'next');
-          } else {
-            navigateSlider(sliderId, 'prev');
-          }
-        } else {
-          // Remettre à la position actuelle si le drag n'est pas suffisant
-          updateSliderPosition(sliderId, sliders[sliderId].currentIndex);
-        }
-      });
-      
-      wrapper.addEventListener('mouseleave', function() {
-        if (isMouseDown) {
-          isMouseDown = false;
-          sliders[sliderId].isDragging = false;
-          updateSliderPosition(sliderId, sliders[sliderId].currentIndex);
-        }
-      });
-    });
-    
-    // Gérer les clics sur les boutons
-    document.querySelectorAll('.slider-prev, .slider-next').forEach(button => {
-      button.addEventListener('click', function(e) {
-        e.stopPropagation();
-        const sliderId = this.dataset.slider;
-        const direction = this.dataset.direction;
-        navigateSlider(sliderId, direction);
-      });
-    });
-    
-    // Rendre les boutons visibles sur mobile aussi
-    document.querySelectorAll('.slider-container').forEach(container => {
-      container.addEventListener('touchstart', function() {
-        const prev = this.querySelector('.slider-prev');
-        const next = this.querySelector('.slider-next');
-        if (prev) prev.classList.add('opacity-100');
-        if (next) next.classList.add('opacity-100');
-      });
-    });
-  }
-  
-  // Initialiser au chargement de la page
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initSliders);
-  } else {
-    initSliders();
-  }
-  
-  // Réinitialiser lors de la navigation Turbo
-  document.addEventListener('turbo:load', initSliders);
-  document.addEventListener('turbo:frame-load', initSliders);
-</script>
 

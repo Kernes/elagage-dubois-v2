@@ -192,7 +192,7 @@ module PagesHelper
           "L'élagage, c'est un art que nous pratiquons avec passion. Chaque arbre est unique, chaque intervention est réfléchie, chaque coupe est mûrement pensée. Nous respectons la biologie de chaque arbre pour préserver sa santé, son esthétique et votre sécurité.",
           "Depuis plus de 10 ans, nous mettons notre expertise au service de vos projets. Que ce soit pour un élagage sécurisé, une taille sanitaire ou une taille raisonnée, nous intervenons avec professionnalisme et respect de l'environnement."
         ],
-        image_url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        image_url: "/images/elagage/1 section élagage carré 10 ans d'exp",
         image_alt: "Élagage professionnel",
         badge: {
           value: "10+",
@@ -207,7 +207,7 @@ module PagesHelper
           "L'abattage demande une expertise technique que nous avons acquise au fil des années. Chaque intervention est planifiée avec soin, chaque geste est calculé pour garantir la sécurité de tous. C'est un travail que nous prenons très au sérieux.",
           "Que ce soit pour un arbre dangereux, un arbre malade ou un projet d'aménagement, nous intervenons avec professionnalisme et respect de l'environnement. Nous maîtrisons toutes les techniques d'abattage, de l'abattage dirigé à l'abattage par démontage."
         ],
-        image_url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        image_url: "/images/abattage/1_L'Abattage, Une Expertise Technique carré 100% securisé",
         image_alt: "Abattage professionnel",
         badge: {
           value: "100%",
@@ -222,7 +222,7 @@ module PagesHelper
           "Le dessouchage, c'est la finition parfaite d'un travail bien fait. Après l'abattage d'un arbre, la souche reste souvent en place, encombrant votre terrain et empêchant vos projets d'aménagement.",
           "Nous utilisons les techniques les plus adaptées pour éliminer complètement la souche, qu'elle soit petite ou imposante. Dessouchage mécanique pour les grandes souches, dessouchage manuel pour les plus petites, nous adaptons notre méthode à chaque situation."
         ],
-        image_url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        image_url: "/images/dessouchage/1_1 le dessouchage la finition parfaite 100% elimination complete",
         image_alt: "Dessouchage professionnel",
         badge: {
           value: "100%",
@@ -237,7 +237,7 @@ module PagesHelper
           "Nous sommes spécialistes des arbres, mais pas que ! Au-delà de nos services principaux d'élagage, d'abattage et de dessouchage, nous proposons également une gamme complète de services d'entretien pour prendre soin de vos espaces verts tout au long de l'année.",
           "Que ce soit pour l'entretien régulier de votre jardin, la taille de vos haies, la tonte de votre pelouse, le débroussaillage ou le traitement de vos arbres, nous avons les compétences et l'expérience nécessaires pour répondre à tous vos besoins."
         ],
-        image_url: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        image_url: "/images/entretien/1_Des services complets.. service d'entretien",
         image_alt: "Entretien jardin",
         show_service_logo: true,
         badge: {
@@ -262,7 +262,7 @@ module PagesHelper
           {
             title: "Élagage Sécurisé",
             description: "L'élagage sécurisé est notre priorité. Nous intervenons avec toutes les précautions nécessaires pour garantir la sécurité des personnes et des biens, tout en préservant la santé de l'arbre.",
-            image_url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            image_url: "/images/elagage/1-1 Nos technique d'élagage (carré élagage sécurisé)",
             image_alt: "Élagage sécurisé",
             icon_color: "green-700",
             features: [
@@ -274,7 +274,7 @@ module PagesHelper
           {
             title: "Taille Sanitaire",
             description: "La taille sanitaire permet d'éliminer les branches mortes, malades ou dangereuses pour préserver la santé de l'arbre. Cette intervention est essentielle pour maintenir vos arbres en bon état.",
-            image_url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            image_url: "/images/elagage/1-2 Nos technique d'élagage (carré taille sanitaire)",
             image_alt: "Taille sanitaire",
             icon_color: "green-700",
             features: [
@@ -286,7 +286,7 @@ module PagesHelper
           {
             title: "Taille Raisonnée",
             description: "La taille raisonnée respecte la biologie et la forme naturelle de l'arbre. Nous intervenons avec précaution pour préserver l'esthétique et la santé de vos arbres tout en répondant à vos besoins.",
-            image_url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            image_url: "/images/elagage/1-3 Nos technique d'élagage (carré taille raisonnée)",
             image_alt: "Taille raisonnée",
             icon_color: "amber-700",
             features: [
@@ -296,10 +296,10 @@ module PagesHelper
             ]
           },
           {
-            title: "Étêtage",
-            description: "L'étêtage consiste à couper la cime de l'arbre pour réduire significativement sa hauteur. Cette intervention doit être réalisée avec précaution car elle peut affecter la santé de l'arbre. Nous pratiquons l'étêtage uniquement lorsque c'est nécessaire et avec les techniques appropriées.",
-            image_url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-            image_alt: "Étêtage",
+            title: "Taille en Tête de Chat",
+            description: "La taille en tête de chat consiste à couper la cime de l'arbre pour réduire significativement sa hauteur. Cette intervention doit être réalisée avec précaution car elle peut affecter la santé de l'arbre. Nous pratiquons cette taille uniquement lorsque c'est nécessaire et avec les techniques appropriées.",
+            image_url: "/images/elagage/1-4 Nos technique d'élagage (carré taille en tete de chat)",
+            image_alt: "Taille en tête de chat",
             icon_color: "amber-800",
             features: [
               "Réduction de hauteur importante",
@@ -317,7 +317,7 @@ module PagesHelper
           {
             title: "Abattage Dirigé",
             description: "L'abattage dirigé est la technique la plus courante pour les arbres qui ont suffisamment d'espace autour d'eux. Nous calculons précisément la direction de chute pour éviter tout dommage aux biens environnants.",
-            image_url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            image_url: "/images/abattage/2_1 Nos technique d'abattage carré 1 abattage dirigé",
             image_alt: "Abattage dirigé",
             icon_color: "green-700",
             features: [
@@ -329,7 +329,7 @@ module PagesHelper
           {
             title: "Abattage par Démontage",
             description: "Lorsque l'espace est limité ou que l'arbre est dangereux, nous procédons par démontage. Cette technique consiste à couper l'arbre morceau par morceau, en commençant par le haut, pour garantir la sécurité de tous.",
-            image_url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            image_url: "/images/abattage/2_2 Nos technique d'abattage carré2 abattage par démontage",
             image_alt: "Abattage par démontage",
             icon_color: "green-700",
             features: [
@@ -341,7 +341,7 @@ module PagesHelper
           {
             title: "Démontage Contrôlé",
             description: "Le démontage contrôlé permet d'abattre un arbre en toute sécurité, même dans des espaces restreints. Nous procédons morceau par morceau pour garantir la sécurité de tous.",
-            image_url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            image_url: "/images/abattage/2_3 Nos technique d'abattage carré3 démontage controlé",
             image_alt: "Démontage contrôlé",
             icon_color: "green-700",
             features: [
@@ -353,7 +353,7 @@ module PagesHelper
           {
             title: "Démontage avec Rétention",
             description: "Le démontage avec rétention est utilisé lorsque l'arbre doit être abattu avec un contrôle maximal. Nous utilisons des techniques de rétention pour guider chaque section de l'arbre.",
-            image_url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            image_url: "/images/abattage/2_4 Nos technique d'abattage carré4 démontage avec retention",
             image_alt: "Démontage avec rétention",
             icon_color: "green-700",
             features: [
@@ -372,7 +372,7 @@ module PagesHelper
           {
             title: "Dessouchage Mécanique",
             description: "Pour les grandes souches, nous utilisons des engins mécaniques spécialisés. Cette technique permet d'éliminer rapidement et efficacement les souches les plus imposantes, même celles de plusieurs mètres de diamètre.",
-            image_url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            image_url: "/images/dessouchage/Nos technique de dessouchage 2_1",
             image_alt: "Dessouchage mécanique",
             icon_color: "green-700",
             features: [
@@ -384,7 +384,7 @@ module PagesHelper
           {
             title: "Rognage ou Grignotage",
             description: "Pour les souches plus petites ou dans les espaces restreints, nous procédons par rognage ou grignotage. Cette technique permet un travail précis et respectueux de votre terrain.",
-            image_url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            image_url: "/images/dessouchage/Nos technique de dessouchage 2_2 rognage ou grignotage",
             image_alt: "Rognage ou grignotage",
             icon_color: "green-700",
             features: [
@@ -396,7 +396,7 @@ module PagesHelper
           {
             title: "Nettoyage et Remise en État",
             description: "Après le dessouchage, nous nettoyons complètement le terrain et le remettons en état. Vous pouvez ainsi reprendre vos projets d'aménagement immédiatement.",
-            image_url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            image_url: "/images/dessouchage/Nos technique de dessouchage 2_3 terrain propre",
             image_alt: "Nettoyage",
             icon_color: "green-700",
             features: [
@@ -415,7 +415,7 @@ module PagesHelper
           {
             title: "Taille de Haies",
             description: "Des haies bien taillées, c'est l'élégance de votre jardin. Nous intervenons régulièrement pour maintenir vos haies en parfait état, qu'elles soient basses ou hautes, droites ou arrondies.",
-            image_url: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            image_url: "/images/entretien/2_1 Nos services dentretien-Taille de haie",
             image_alt: "Taille de haies",
             icon_color: "green-700",
             features: [
@@ -427,7 +427,7 @@ module PagesHelper
           {
             title: "Tonte de Pelouse",
             description: "Une pelouse bien entretenue, c'est la base d'un jardin soigné. Nous proposons des services de tonte réguliers pour maintenir votre pelouse en parfait état tout au long de la saison.",
-            image_url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            image_url: "/images/entretien/2_2 Nos services dentretien- tonte de pelouse",
             image_alt: "Tonte de pelouse",
             icon_color: "green-700",
             features: [
@@ -439,7 +439,7 @@ module PagesHelper
           {
             title: "Débroussaillage",
             description: "Le débroussaillage permet de nettoyer vos espaces verts en éliminant les broussailles, les ronces et les végétaux indésirables. Nous intervenons pour maintenir vos terrains propres et accessibles.",
-            image_url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            image_url: "/images/entretien/2_3 nos services dentretien-debroussaillage",
             image_alt: "Débroussaillage",
             icon_color: "green-700",
             features: [
@@ -451,7 +451,7 @@ module PagesHelper
           {
             title: "Traitement d'Arbres",
             description: "Nous proposons également des services de traitement pour préserver la santé de vos arbres. Que ce soit pour lutter contre les maladies ou les parasites, nous intervenons avec les produits adaptés.",
-            image_url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            image_url: "/images/entretien/2_4 nos service dentretien- traitement darbre",
             image_alt: "Traitement d'arbres",
             icon_color: "green-700",
             features: [
@@ -478,7 +478,7 @@ module PagesHelper
           {
             title: "Sécurité Avant Tout",
             description: "Chaque intervention est planifiée avec soin pour garantir la sécurité de tous. Nous respectons les normes de sécurité les plus strictes et utilisons les équipements de protection individuelle adaptés.",
-            image_url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            image_url: "/images/elagage/3-1 les derniers carrés sécurité avant tout",
             image_alt: "Sécurité",
             icon_color: "green-700",
             bg_color: "green-50",
@@ -487,7 +487,7 @@ module PagesHelper
           {
             title: "Respect de la Biologie",
             description: "Nous respectons la biologie de chaque arbre. Chaque coupe est réfléchie pour préserver la santé et l'esthétique naturelle de l'arbre, tout en répondant à vos besoins.",
-            image_url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            image_url: "/images/elagage/3-2 les derniers carré respect de la biologie",
             image_alt: "Respect de la biologie",
             icon_color: "amber-700",
             bg_color: "amber-50",
@@ -496,7 +496,7 @@ module PagesHelper
           {
             title: "10+ Ans d'Expérience",
             description: "Notre passion pour les arbres nous pousse à nous former continuellement. Nous maîtrisons les dernières techniques et normes professionnelles pour vous garantir un travail de qualité.",
-            image_url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            image_url: "/images/elagage/3-3 les derniers carrés '10 ans d'experience",
             image_alt: "Expérience",
             icon_color: "green-700",
             bg_color: "green-50",
@@ -512,7 +512,7 @@ module PagesHelper
           {
             title: "Sécurité Maximale",
             description: "L'abattage est une opération dangereuse qui nécessite une expertise technique. Nous respectons toutes les normes de sécurité et utilisons les équipements de protection adaptés pour garantir la sécurité de tous.",
-            image_url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            image_url: "/images/abattage/4_1 choisir notre service d'abattage_ securité maximale",
             image_alt: "Sécurité",
             icon_color: "green-700",
             bg_color: "green-50",
@@ -521,7 +521,7 @@ module PagesHelper
           {
             title: "Techniques Adaptées",
             description: "Nous maîtrisons toutes les techniques d'abattage, de l'abattage dirigé à l'abattage par démontage. Nous adaptons notre méthode à chaque situation pour garantir un travail de qualité.",
-            image_url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            image_url: "/images/abattage/4_2pourquoi choisir notre service d'abattage technqiue adapté",
             image_alt: "Techniques",
             icon_color: "amber-700",
             bg_color: "amber-50",
@@ -530,7 +530,7 @@ module PagesHelper
           {
             title: "Démontage avec Rétention",
             description: "Le démontage avec rétention permet d'abattre un arbre avec un contrôle maximal. Nous utilisons des techniques de rétention pour guider chaque section de l'arbre en toute sécurité.",
-            image_url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            image_url: "/images/abattage/4_3 pourquoi choisir notre service d'abattage 3_Démontage avec retention",
             image_alt: "Démontage avec rétention",
             icon_color: "green-700",
             bg_color: "green-50",
@@ -546,7 +546,7 @@ module PagesHelper
           {
             title: "Élimination Complète",
             description: "Nous garantissons l'élimination complète de la souche, qu'elle soit petite ou imposante. Nous utilisons les techniques les plus adaptées pour chaque situation.",
-            image_url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            image_url: "/images/dessouchage/pourquoi choisir notre service de dessouchage 5_1 élimination complete",
             image_alt: "Élimination",
             icon_color: "green-700",
             bg_color: "green-50",
@@ -555,7 +555,7 @@ module PagesHelper
           {
             title: "Techniques Adaptées",
             description: "Dessouchage mécanique pour les grandes souches, rognage ou grignotage pour les plus petites, nous adaptons notre méthode à chaque situation pour garantir un travail de qualité.",
-            image_url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            image_url: "/images/dessouchage/pourquoi choisir notre service de dessouchage 5_2 technque adapté",
             image_alt: "Techniques",
             icon_color: "amber-700",
             bg_color: "amber-50",
@@ -564,7 +564,7 @@ module PagesHelper
           {
             title: "Terrain Propre",
             description: "Après le dessouchage, nous nettoyons complètement le terrain et le remettons en état. Vous pouvez ainsi reprendre vos projets d'aménagement immédiatement.",
-            image_url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            image_url: "/images/dessouchage/pourquoi choisir notre service de dessouchage 5_3 terrain propre",
             image_alt: "Terrain propre",
             icon_color: "green-700",
             bg_color: "green-50",
@@ -580,7 +580,7 @@ module PagesHelper
           {
             title: "Gamme Complète",
             description: "Nous proposons une gamme complète de services d'entretien pour prendre soin de tous vos espaces verts. De la taille de haies à la tonte de pelouse, nous avons les compétences nécessaires.",
-            image_url: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            image_url: "/images/entretien/4_1 pourquoi choisir nos service dentretien-gamme complete",
             image_alt: "Gamme complète",
             icon_color: "green-700",
             bg_color: "green-50",
@@ -589,7 +589,7 @@ module PagesHelper
           {
             title: "Entretien Régulier",
             description: "Nous proposons des services d'entretien réguliers pour maintenir vos espaces verts en parfait état tout au long de l'année. Un jardin bien entretenu, c'est un jardin qui respire la santé.",
-            image_url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            image_url: "/images/entretien/4_2 pourquoi choisir nos services dentretien-entretien regulier",
             image_alt: "Entretien régulier",
             icon_color: "amber-700",
             bg_color: "amber-50",
@@ -598,7 +598,7 @@ module PagesHelper
           {
             title: "Expertise Arboricole",
             description: "Notre expertise en arboriculture nous permet de prendre soin de vos arbres avec les techniques les plus appropriées. Nous respectons la biologie de chaque arbre pour préserver sa santé.",
-            image_url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            image_url: "/images/entretien/4_3 pourquoi choisir nos services dentretien-expertise arboricole",
             image_alt: "Expertise",
             icon_color: "green-700",
             bg_color: "green-50",

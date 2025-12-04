@@ -13,10 +13,16 @@
       </div>
       <div class="relative">
         <div class="overflow-hidden rounded-2xl shadow-2xl">
+          <% engagement_img = local_image_srcset("/images/homepage/4 une passion un métier 10 ans d'exp", { mobile: 400, tablet: 800, desktop: 1200 }) %>
           <picture>
-            <source srcset="/images/optimized/unsplash-1516214104703-desktop.avif" type="image/avif">
-            <source srcset="/images/optimized/unsplash-1516214104703-desktop.webp" type="image/webp">
-            <img src="/images/optimized/unsplash-1516214104703-desktop.webp" alt="Équipe Élagage Dubois" class="object-cover w-full h-full" loading="lazy">
+            <source srcset="<%= engagement_img[:avif_srcset] %>" sizes="<%= engagement_img[:sizes] %>" type="image/avif">
+            <source srcset="<%= engagement_img[:webp_srcset] %>" sizes="<%= engagement_img[:sizes] %>" type="image/webp">
+            <img src="<%= engagement_img[:src] %>" 
+                 srcset="<%= engagement_img[:webp_srcset] %>"
+                 sizes="<%= engagement_img[:sizes] %>"
+                 alt="Équipe Élagage Dubois" 
+                 class="object-cover w-full h-full" 
+                 loading="lazy">
           </picture>
         </div>
         <div class="absolute -right-6 -bottom-6 p-6 bg-white rounded-xl border border-green-100 shadow-xl">

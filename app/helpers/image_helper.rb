@@ -163,4 +163,37 @@ module ImageHelper
       }.merge(extra_attrs))
     end
   end
+
+  # Génère un srcset pour une image locale (AVIF/WebP/JPG)
+  # Retourne un hash avec :src, :srcset, :sizes, :avif_srcset, :webp_srcset, :use_picture
+  def local_image_srcset(image_path, sizes_config = { mobile: 400, tablet: 800, desktop: 1200 })
+    # Enlever l'extension si présente
+    base_path = image_path.gsub(/\.(jpg|jpeg|png|webp|avif)$/i, '')
+    
+    # Générer les srcset pour AVIF, WebP et JPG
+    mobile_width = sizes_config[:mobile] || 400
+    tablet_width = sizes_config[:tablet] || 800
+    desktop_width = sizes_config[:desktop] || 1200
+    
+    avif_srcset = "#{base_path}.avif #{desktop_width}w"
+    webp_srcset = "#{base_path}.webp #{desktop_width}w"
+    jpg_srcset = "#{base_path}.jpg #{desktop_width}w"
+    
+    # Générer l'attribut sizes
+    sizes_attr = if sizes_config[:mobile] && sizes_config[:tablet] && sizes_config[:desktop]
+      "(max-width: 640px) #{sizes_config[:mobile]}px, (max-width: 1024px) #{sizes_config[:tablet]}px, #{sizes_config[:desktop]}px"
+    else
+      sizes_config.values.join(", ")
+    end
+    
+    {
+      src: "#{base_path}.webp",
+      srcset: webp_srcset,
+      sizes: sizes_attr,
+      avif_srcset: avif_srcset,
+      webp_srcset: webp_srcset,
+      jpg_srcset: jpg_srcset,
+      use_picture: true
+    }
+  end
 end

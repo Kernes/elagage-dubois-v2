@@ -53,6 +53,18 @@
                    class="object-cover w-full h-full"
                    loading="lazy">
             <% end %>
+          <% elsif introduction[:image_url]&.start_with?('/images/') %>
+            <% srcset_data = local_image_srcset(introduction[:image_url], { mobile: 400, tablet: 800, desktop: 1200 }) %>
+            <picture>
+              <source srcset="<%= srcset_data[:avif_srcset] %>" sizes="<%= srcset_data[:sizes] %>" type="image/avif">
+              <source srcset="<%= srcset_data[:webp_srcset] %>" sizes="<%= srcset_data[:sizes] %>" type="image/webp">
+              <img src="<%= srcset_data[:src] %>" 
+                   srcset="<%= srcset_data[:webp_srcset] %>"
+                   sizes="<%= srcset_data[:sizes] %>"
+                   alt="<%= introduction[:image_alt] %>" 
+                   class="object-cover w-full h-full"
+                   loading="lazy">
+            </picture>
           <% else %>
             <img src="<%= introduction[:image_url] %>" alt="<%= introduction[:image_alt] %>" class="object-cover w-full h-full" loading="lazy">
           <% end %>

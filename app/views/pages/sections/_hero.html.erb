@@ -84,26 +84,17 @@
         <div class="relative transform rotate-[-5deg] transition-transform hover:rotate-0 hover:scale-105 hover:z-10" style="transform-origin: center;">
           <div class="bg-white p-1 shadow-[0_10px_30px_rgba(0,0,0,0.3)]">
             <div class="overflow-hidden relative aspect-[4/5]">
-              <% hero_img1 = unsplash_srcset("https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&q=80", { mobile: 300, tablet: 400, desktop: 500 }) %>
-              <% if hero_img1[:use_picture] %>
-                <picture>
-                  <source srcset="<%= hero_img1[:avif_srcset] %>" sizes="<%= hero_img1[:sizes] %>" type="image/avif">
-                  <source srcset="<%= hero_img1[:webp_srcset] %>" sizes="<%= hero_img1[:sizes] %>" type="image/webp">
-                  <img src="<%= hero_img1[:src] %>" 
-                       srcset="<%= hero_img1[:webp_srcset] %>"
-                       sizes="<%= hero_img1[:sizes] %>"
-                       alt="Élagage professionnel" 
-                       class="object-cover w-full h-full"
-                       loading="lazy">
-                </picture>
-              <% else %>
+              <% hero_img1 = local_image_srcset("/images/homepage/1_1 carré bandeau élagage", { mobile: 300, tablet: 400, desktop: 500 }) %>
+              <picture>
+                <source srcset="<%= hero_img1[:avif_srcset] %>" sizes="<%= hero_img1[:sizes] %>" type="image/avif">
+                <source srcset="<%= hero_img1[:webp_srcset] %>" sizes="<%= hero_img1[:sizes] %>" type="image/webp">
                 <img src="<%= hero_img1[:src] %>" 
-                     srcset="<%= hero_img1[:srcset] %>"
+                     srcset="<%= hero_img1[:webp_srcset] %>"
                      sizes="<%= hero_img1[:sizes] %>"
                      alt="Élagage professionnel" 
                      class="object-cover w-full h-full"
                      loading="lazy">
-              <% end %>
+              </picture>
               <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/60"></div>
               <div class="absolute right-4 bottom-4 left-4">
                 <p class="text-lg font-bold text-white">Élagage</p>
@@ -117,26 +108,17 @@
         <div class="relative transform rotate-[8deg] mt-8 transition-transform hover:rotate-0 hover:scale-105 hover:z-10" style="transform-origin: center;">
           <div class="bg-white p-1 shadow-[0_10px_30px_rgba(0,0,0,0.3)]">
             <div class="overflow-hidden relative aspect-[4/5]">
-              <% hero_img2 = unsplash_srcset("https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&q=80", { mobile: 300, tablet: 400, desktop: 500 }) %>
-              <% if hero_img2[:use_picture] %>
-                <picture>
-                  <source srcset="<%= hero_img2[:avif_srcset] %>" sizes="<%= hero_img2[:sizes] %>" type="image/avif">
-                  <source srcset="<%= hero_img2[:webp_srcset] %>" sizes="<%= hero_img2[:sizes] %>" type="image/webp">
-                  <img src="<%= hero_img2[:src] %>" 
-                       srcset="<%= hero_img2[:webp_srcset] %>"
-                       sizes="<%= hero_img2[:sizes] %>"
-                       alt="Abattage sécurisé" 
-                       class="object-cover w-full h-full"
-                       loading="lazy">
-                </picture>
-              <% else %>
+              <% hero_img2 = local_image_srcset("/images/homepage/1_2 carré bandeau abattage", { mobile: 300, tablet: 400, desktop: 500 }) %>
+              <picture>
+                <source srcset="<%= hero_img2[:avif_srcset] %>" sizes="<%= hero_img2[:sizes] %>" type="image/avif">
+                <source srcset="<%= hero_img2[:webp_srcset] %>" sizes="<%= hero_img2[:sizes] %>" type="image/webp">
                 <img src="<%= hero_img2[:src] %>" 
-                     srcset="<%= hero_img2[:srcset] %>"
+                     srcset="<%= hero_img2[:webp_srcset] %>"
                      sizes="<%= hero_img2[:sizes] %>"
                      alt="Abattage sécurisé" 
                      class="object-cover w-full h-full"
                      loading="lazy">
-              <% end %>
+              </picture>
               <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/60"></div>
               <div class="absolute right-4 bottom-4 left-4">
                 <p class="text-lg font-bold text-white">Abattage</p>
@@ -150,26 +132,17 @@
         <div class="relative transform rotate-[6deg] -mt-8 transition-transform hover:rotate-0 hover:scale-105 hover:z-10" style="transform-origin: center;">
           <div class="bg-white p-1 shadow-[0_10px_30px_rgba(0,0,0,0.3)]">
             <div class="overflow-hidden relative aspect-[4/5]">
-              <% hero_img3 = unsplash_srcset("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&q=80", { mobile: 300, tablet: 400, desktop: 500 }) %>
-              <% if hero_img3[:use_picture] %>
-                <picture>
-                  <source srcset="<%= hero_img3[:avif_srcset] %>" sizes="<%= hero_img3[:sizes] %>" type="image/avif">
-                  <source srcset="<%= hero_img3[:webp_srcset] %>" sizes="<%= hero_img3[:sizes] %>" type="image/webp">
-                  <img src="<%= hero_img3[:src] %>" 
-                       srcset="<%= hero_img3[:webp_srcset] %>"
-                       sizes="<%= hero_img3[:sizes] %>"
-                       alt="Dessouchage" 
-                       class="object-cover w-full h-full"
-                       loading="lazy">
-                </picture>
-              <% else %>
+              <% hero_img3 = local_image_srcset("/images/homepage/1_3 carré bandeau déssouchage", { mobile: 300, tablet: 400, desktop: 500 }) %>
+              <picture>
+                <source srcset="<%= hero_img3[:avif_srcset] %>" sizes="<%= hero_img3[:sizes] %>" type="image/avif">
+                <source srcset="<%= hero_img3[:webp_srcset] %>" sizes="<%= hero_img3[:sizes] %>" type="image/webp">
                 <img src="<%= hero_img3[:src] %>" 
-                     srcset="<%= hero_img3[:srcset] %>"
+                     srcset="<%= hero_img3[:webp_srcset] %>"
                      sizes="<%= hero_img3[:sizes] %>"
                      alt="Dessouchage" 
                      class="object-cover w-full h-full"
                      loading="lazy">
-              <% end %>
+              </picture>
               <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/60"></div>
               <div class="absolute right-4 bottom-4 left-4">
                 <p class="text-lg font-bold text-white">Dessouchage</p>
@@ -183,26 +156,17 @@
         <div class="relative transform rotate-[-7deg] transition-transform hover:rotate-0 hover:scale-105 hover:z-10" style="transform-origin: center;">
           <div class="bg-white p-1 shadow-[0_10px_30px_rgba(0,0,0,0.3)]">
             <div class="overflow-hidden relative aspect-[4/5]">
-              <% hero_img4 = unsplash_srcset("https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&q=80", { mobile: 300, tablet: 400, desktop: 500 }) %>
-              <% if hero_img4[:use_picture] %>
-                <picture>
-                  <source srcset="<%= hero_img4[:avif_srcset] %>" sizes="<%= hero_img4[:sizes] %>" type="image/avif">
-                  <source srcset="<%= hero_img4[:webp_srcset] %>" sizes="<%= hero_img4[:sizes] %>" type="image/webp">
-                  <img src="<%= hero_img4[:src] %>" 
-                       srcset="<%= hero_img4[:webp_srcset] %>"
-                       sizes="<%= hero_img4[:sizes] %>"
-                       alt="Entretien paysager" 
-                       class="object-cover w-full h-full"
-                       loading="lazy">
-                </picture>
-              <% else %>
+              <% hero_img4 = local_image_srcset("/images/homepage/1_4 carré bandeau entretien", { mobile: 300, tablet: 400, desktop: 500 }) %>
+              <picture>
+                <source srcset="<%= hero_img4[:avif_srcset] %>" sizes="<%= hero_img4[:sizes] %>" type="image/avif">
+                <source srcset="<%= hero_img4[:webp_srcset] %>" sizes="<%= hero_img4[:sizes] %>" type="image/webp">
                 <img src="<%= hero_img4[:src] %>" 
-                     srcset="<%= hero_img4[:srcset] %>"
+                     srcset="<%= hero_img4[:webp_srcset] %>"
                      sizes="<%= hero_img4[:sizes] %>"
                      alt="Entretien paysager" 
                      class="object-cover w-full h-full"
                      loading="lazy">
-              <% end %>
+              </picture>
               <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/60"></div>
               <div class="absolute right-4 bottom-4 left-4">
                 <p class="text-lg font-bold text-white">Entretien</p>
