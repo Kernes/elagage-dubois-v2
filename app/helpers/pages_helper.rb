@@ -617,27 +617,27 @@ module PagesHelper
     when :elagage
       {
         title: "Besoin d'un Élagage Professionnel ?",
-        description: "Expert en élagage d'arbres dans le Val d'Oise (95). Élagage sécurisé, taille sanitaire, taille raisonnée. Devis gratuit sous 24h, intervention rapide 7j/7. Guyancourt, Versailles, Cergy."
+        description: "Contactez-nous pour un devis gratuit et personnalisé. Nous intervenons rapidement dans toute l'Île-de-France."
       }
     when :abattage
       {
         title: "Besoin d'un Abattage Professionnel ?",
-        description: "Expert en abattage d'arbres dans le Val d'Oise (95). Abattage dirigé, démontage contrôlé, démontage avec rétention. Sécurité garantie. Devis gratuit sous 24h. Guyancourt, Versailles, Cergy."
+        description: "Contactez-nous pour un devis gratuit et personnalisé. Nous intervenons rapidement dans toute l'Île-de-France."
       }
     when :dessouchage
       {
         title: "Besoin d'un Dessouchage Professionnel ?",
-        description: "Expert en dessouchage d'arbres dans le Val d'Oise (95). Dessouchage mécanique, rognage, grignotage. Élimination complète des souches. Devis gratuit sous 24h. Guyancourt, Versailles, Cergy."
+        description: "Contactez-nous pour un devis gratuit et personnalisé. Nous intervenons rapidement dans toute l'Île-de-France."
       }
     when :entretien
       {
         title: "Besoin de Services d'Entretien ?",
-        description: "Expert en entretien de jardin dans le Val d'Oise (95). Taille de haies, tonte de pelouse, débroussaillage, traitement d'arbres. Devis gratuit sous 24h. Guyancourt, Versailles, Cergy."
+        description: "Contactez-nous pour un devis gratuit et personnalisé. Nous intervenons rapidement dans toute l'Île-de-France."
       }
     else
       {
         title: "Besoin de Nos Services ?",
-        description: "Expert en élagage et abattage d'arbres dans le Val d'Oise (95). Élagage sécurisé, abattage professionnel, dessouchage mécanique. Devis gratuit sous 24h, intervention rapide 7j/7."
+        description: "Contactez-nous pour un devis gratuit et personnalisé. Nous intervenons rapidement dans toute l'Île-de-France."
       }
     end
   end
