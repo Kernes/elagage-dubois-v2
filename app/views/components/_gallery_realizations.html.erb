@@ -52,7 +52,7 @@
                   <source srcset="<%= srcset_data[:avif_srcset] %>" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1920px" type="image/avif">
                   <source srcset="<%= srcset_data[:webp_srcset] %>" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1920px" type="image/webp">
                   <img src="<%= srcset_data[:src] %>" 
-                       srcset="<%= srcset_data[:webp_srcset] %>"
+                       srcset="<%= srcset_data[:avif_srcset] %>"
                        sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1920px"
                        alt="<%= image[:alt] %>" 
                        class="object-cover w-full h-full transition-transform group-hover:scale-110"
@@ -70,12 +70,12 @@
               <% end %>
             <% elsif image[:url]&.start_with?('/images/') %>
               <% srcset_data = local_image_srcset(image[:url], { mobile: 400, tablet: 800, desktop: 1920 }) %>
-              <% high_res_url = "#{image[:url]}.webp" %>
+              <% high_res_url = "#{image[:url]}.avif" %>
               <picture>
                 <source srcset="<%= srcset_data[:avif_srcset] %>" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1920px" type="image/avif">
                 <source srcset="<%= srcset_data[:webp_srcset] %>" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1920px" type="image/webp">
-                <img src="<%= srcset_data[:src] %>" 
-                     srcset="<%= srcset_data[:webp_srcset] %>"
+                <img src="<%= image[:url] %>.avif" 
+                     srcset="<%= srcset_data[:avif_srcset] %>"
                      sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1920px"
                      alt="<%= image[:alt] %>" 
                      class="object-cover w-full h-full transition-transform group-hover:scale-110"
