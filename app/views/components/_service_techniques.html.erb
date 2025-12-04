@@ -53,7 +53,7 @@
                      loading="lazy">
               <% end %>
             <% elsif technique[:image_url]&.start_with?('/images/') %>
-              <% srcset_data = local_image_srcset(technique[:image_url], { mobile: 400, tablet: 600, desktop: 800 }) %>
+              <% srcset_data = local_image_srcset(technique[:image_url], { mobile: 400, tablet: 500, desktop: 600 }) %>
               <picture>
                 <source srcset="<%= srcset_data[:avif_srcset] %>" sizes="<%= srcset_data[:sizes] %>" type="image/avif">
                 <source srcset="<%= srcset_data[:webp_srcset] %>" sizes="<%= srcset_data[:sizes] %>" type="image/webp">

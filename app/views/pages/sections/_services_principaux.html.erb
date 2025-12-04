@@ -10,7 +10,7 @@
       <!-- Élagage -->
       <a href="<%= elagage_path %>" data-turbo-preload="false" class="block overflow-hidden relative bg-white rounded-2xl border-2 border-green-200 shadow-xl transition-all group hover:shadow-2xl lg:hover:scale-[1.02] hover:border-green-400">
         <div class="overflow-hidden relative w-full h-56">
-          <% srcset_data = local_image_srcset("/images/homepage/2_1 Notre art, votre satisfaction carré élagage", { mobile: 400, tablet: 600, desktop: 800 }) %>
+          <% srcset_data = local_image_srcset("/images/homepage/2_1 Notre art, votre satisfaction carré élagage", { mobile: 400, tablet: 400, desktop: 400 }) %>
           <picture>
             <source srcset="<%= srcset_data[:avif_srcset] %>" sizes="<%= srcset_data[:sizes] %>" type="image/avif">
             <source srcset="<%= srcset_data[:webp_srcset] %>" sizes="<%= srcset_data[:sizes] %>" type="image/webp">
@@ -53,7 +53,7 @@
       <!-- Abattage -->
       <a href="<%= abattage_path %>" data-turbo-preload="false" class="block overflow-hidden relative bg-white rounded-2xl border-2 border-amber-200 shadow-xl transition-all group hover:shadow-2xl lg:hover:scale-[1.02] hover:border-amber-400">
         <div class="overflow-hidden relative w-full h-56">
-          <% srcset_data = local_image_srcset("/images/homepage/2_2 notre art votre satisfaction carré abattage", { mobile: 400, tablet: 600, desktop: 800 }) %>
+          <% srcset_data = local_image_srcset("/images/homepage/2_2 notre art votre satisfaction carré abattage", { mobile: 400, tablet: 400, desktop: 400 }) %>
           <picture>
             <source srcset="<%= srcset_data[:avif_srcset] %>" sizes="<%= srcset_data[:sizes] %>" type="image/avif">
             <source srcset="<%= srcset_data[:webp_srcset] %>" sizes="<%= srcset_data[:sizes] %>" type="image/webp">
@@ -96,7 +96,7 @@
       <!-- Dessouchage -->
       <a href="<%= dessouchage_path %>" data-turbo-preload="false" class="block overflow-hidden relative bg-white rounded-2xl border-2 border-amber-200 shadow-xl transition-all group hover:shadow-2xl lg:hover:scale-[1.02] hover:border-amber-400">
         <div class="overflow-hidden relative w-full h-56">
-          <% srcset_data = local_image_srcset("/images/homepage/2_3 Notre art votre satisfaction carré dessouchage", { mobile: 400, tablet: 600, desktop: 800 }) %>
+          <% srcset_data = local_image_srcset("/images/homepage/2_3 Notre art votre satisfaction carré dessouchage", { mobile: 400, tablet: 400, desktop: 400 }) %>
           <picture>
             <source srcset="<%= srcset_data[:avif_srcset] %>" sizes="<%= srcset_data[:sizes] %>" type="image/avif">
             <source srcset="<%= srcset_data[:webp_srcset] %>" sizes="<%= srcset_data[:sizes] %>" type="image/webp">

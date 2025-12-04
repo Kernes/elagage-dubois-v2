@@ -175,15 +175,16 @@ module ImageHelper
     tablet_width = sizes_config[:tablet] || 800
     desktop_width = sizes_config[:desktop] || 1200
     
-    avif_srcset = "#{base_path}.avif #{desktop_width}w"
-    webp_srcset = "#{base_path}.webp #{desktop_width}w"
-    jpg_srcset = "#{base_path}.jpg #{desktop_width}w"
-    
-    # Générer l'attribut sizes
-    sizes_attr = if sizes_config[:mobile] && sizes_config[:tablet] && sizes_config[:desktop]
-      "(max-width: 640px) #{sizes_config[:mobile]}px, (max-width: 1024px) #{sizes_config[:tablet]}px, #{sizes_config[:desktop]}px"
+    # Si toutes les tailles sont identiques, utiliser une seule taille
+    if mobile_width == tablet_width && tablet_width == desktop_width
+      avif_srcset = "#{base_path}.avif #{desktop_width}w"
+      webp_srcset = "#{base_path}.webp #{desktop_width}w"
+      sizes_attr = "#{desktop_width}px"
     else
-      sizes_config.values.join(", ")
+      # Générer un srcset avec plusieurs tailles
+      avif_srcset = "#{base_path}.avif #{mobile_width}w, #{base_path}.avif #{tablet_width}w, #{base_path}.avif #{desktop_width}w"
+      webp_srcset = "#{base_path}.webp #{mobile_width}w, #{base_path}.webp #{tablet_width}w, #{base_path}.webp #{desktop_width}w"
+      sizes_attr = "(max-width: 640px) #{mobile_width}px, (max-width: 1024px) #{tablet_width}px, #{desktop_width}px"
     end
     
     {
@@ -192,7 +193,6 @@ module ImageHelper
       sizes: sizes_attr,
       avif_srcset: avif_srcset,
       webp_srcset: webp_srcset,
-      jpg_srcset: jpg_srcset,
       use_picture: true
     }
   end

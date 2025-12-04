@@ -48,117 +48,89 @@ module PagesHelper
     when :abattage
       [
         {
-          category: "Abattage d'un arbre géant",
+          category: "Abattage par démontage d'un sapin proche d'une maison",
           images: [
-            { url: "https://cdn.kelcy.fr/website-images/abattage-1.webp", alt: "Abattage d'un arbre géant" },
-            { url: "https://cdn.kelcy.fr/website-images/abattage-2.webp", alt: "Abattage d'un arbre géant" },
-            { url: "https://cdn.kelcy.fr/website-images/abattage-3.webp", alt: "Abattage d'un arbre géant" },
-            { url: "https://cdn.kelcy.fr/website-images/abattage-4.webp", alt: "Abattage d'un arbre géant" }
+            { url: "/images/abattage/Nos réalisation1_abattage par démontage d'un sapin proche d'une maison/1", alt: "Abattage par démontage d'un sapin" },
+            { url: "/images/abattage/Nos réalisation1_abattage par démontage d'un sapin proche d'une maison/2", alt: "Abattage par démontage d'un sapin" },
+            { url: "/images/abattage/Nos réalisation1_abattage par démontage d'un sapin proche d'une maison/3", alt: "Abattage par démontage d'un sapin" }
           ]
         },
         {
-          category: "Abattage par démontage",
+          category: "Abattage par démontage d'un Pin avec rétention dans un espace clos",
           images: [
-            { url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Abattage par démontage" },
-            { url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Abattage par démontage" }
+            { url: "/images/abattage/Nos réalisation 2_abattage par démontage d'un Pin avec rétention dans un espace clos/1", alt: "Abattage par démontage d'un Pin" },
+            { url: "/images/abattage/Nos réalisation 2_abattage par démontage d'un Pin avec rétention dans un espace clos/2", alt: "Abattage par démontage d'un Pin" },
+            { url: "/images/abattage/Nos réalisation 2_abattage par démontage d'un Pin avec rétention dans un espace clos/3", alt: "Abattage par démontage d'un Pin" },
+            { url: "/images/abattage/Nos réalisation 2_abattage par démontage d'un Pin avec rétention dans un espace clos/4", alt: "Abattage par démontage d'un Pin" },
+            { url: "/images/abattage/Nos réalisation 2_abattage par démontage d'un Pin avec rétention dans un espace clos/5", alt: "Abattage par démontage d'un Pin" },
+            { url: "/images/abattage/Nos réalisation 2_abattage par démontage d'un Pin avec rétention dans un espace clos/6", alt: "Abattage par démontage d'un Pin" },
+            { url: "/images/abattage/Nos réalisation 2_abattage par démontage d'un Pin avec rétention dans un espace clos/IMG_20251204_145000", alt: "Abattage par démontage d'un Pin" }
           ]
         },
         {
-          category: "Démontage contrôlé",
+          category: "Abattage par démontage d'un hêtre pourpre malade avec rétention",
           images: [
-            { url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Démontage contrôlé" }
-          ]
-        },
-        {
-          category: "Démontage avec rétention",
-          images: [
-            { url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Évacuation" }
-          ]
-        },
-        {
-          category: "Intervention professionnelle",
-          images: [
-            { url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Intervention professionnelle" }
-          ]
-        },
-        {
-          category: "Nettoyage complet",
-          images: [
-            { url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Nettoyage chantier" }
+            { url: "/images/abattage/Nos réalisation 3_ abattage par démontage d'un hêtre pourpre malade avec rétention/1", alt: "Abattage par démontage d'un hêtre" },
+            { url: "/images/abattage/Nos réalisation 3_ abattage par démontage d'un hêtre pourpre malade avec rétention/2", alt: "Abattage par démontage d'un hêtre" },
+            { url: "/images/abattage/Nos réalisation 3_ abattage par démontage d'un hêtre pourpre malade avec rétention/3", alt: "Abattage par démontage d'un hêtre" },
+            { url: "/images/abattage/Nos réalisation 3_ abattage par démontage d'un hêtre pourpre malade avec rétention/4", alt: "Abattage par démontage d'un hêtre" },
+            { url: "/images/abattage/Nos réalisation 3_ abattage par démontage d'un hêtre pourpre malade avec rétention/5", alt: "Abattage par démontage d'un hêtre" }
           ]
         }
       ]
     when :dessouchage
       [
         {
-          category: "Dessouchage mécanique",
+          category: "Nos réalisation 4_1",
           images: [
-            { url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Dessouchage mécanique" },
-            { url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Dessouchage mécanique" }
+            { url: "/images/dessouchage/Nos realisation 4_1/1", alt: "Dessouchage réalisation 4_1" },
+            { url: "/images/dessouchage/Nos realisation 4_1/2", alt: "Dessouchage réalisation 4_1" }
           ]
         },
         {
-          category: "Rognage ou grignotage",
+          category: "Nos réalisation 4_2",
           images: [
-            { url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Rognage ou grignotage" }
+            { url: "/images/dessouchage/Nos realisation 4_2/20231211_095647", alt: "Dessouchage réalisation 4_2" },
+            { url: "/images/dessouchage/Nos realisation 4_2/20231211_095819", alt: "Dessouchage réalisation 4_2" },
+            { url: "/images/dessouchage/Nos realisation 4_2/20231211_101005", alt: "Dessouchage réalisation 4_2" }
           ]
         },
         {
-          category: "Nivellement du terrain",
+          category: "Nos réalisation 4_3",
           images: [
-            { url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Nivellement" }
-          ]
-        },
-        {
-          category: "Terrain propre et prêt",
-          images: [
-            { url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Terrain propre" }
-          ]
-        },
-        {
-          category: "Intervention professionnelle",
-          images: [
-            { url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Intervention professionnelle" }
-          ]
-        },
-        {
-          category: "Démontage avec rétention",
-          images: [
-            { url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Démontage avec rétention" }
+            { url: "/images/dessouchage/Nos realisation 4_3/1", alt: "Dessouchage réalisation 4_3" },
+            { url: "/images/dessouchage/Nos realisation 4_3/2", alt: "Dessouchage réalisation 4_3" }
           ]
         }
       ]
     when :entretien
       [
         {
-          category: "Taille de haies professionnelle",
+          category: "Pose de gazon en rouleau",
           images: [
-            { url: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Taille de haies" },
-            { url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Taille de haies" }
+            { url: "/images/entretien/3_1 nos réalisation- titre; pose de gazon en rouleau/1", alt: "Pose de gazon en rouleau" },
+            { url: "/images/entretien/3_1 nos réalisation- titre; pose de gazon en rouleau/2", alt: "Pose de gazon en rouleau" },
+            { url: "/images/entretien/3_1 nos réalisation- titre; pose de gazon en rouleau/3", alt: "Pose de gazon en rouleau" }
           ]
         },
         {
-          category: "Tonte de pelouse régulière",
+          category: "Création d'un gazon en semis",
           images: [
-            { url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Tonte de pelouse" }
+            { url: "/images/entretien/3_2 nos realisation creation d'un gazon en semis/1", alt: "Création d'un gazon en semis" },
+            { url: "/images/entretien/3_2 nos realisation creation d'un gazon en semis/2", alt: "Création d'un gazon en semis" },
+            { url: "/images/entretien/3_2 nos realisation creation d'un gazon en semis/3", alt: "Création d'un gazon en semis" },
+            { url: "/images/entretien/3_2 nos realisation creation d'un gazon en semis/4", alt: "Création d'un gazon en semis" },
+            { url: "/images/entretien/3_2 nos realisation creation d'un gazon en semis/8", alt: "Création d'un gazon en semis" },
+            { url: "/images/entretien/3_2 nos realisation creation d'un gazon en semis/9", alt: "Création d'un gazon en semis" }
           ]
         },
         {
-          category: "Débroussaillage complet",
+          category: "Taille de haie et d'arbuste dans une résidence",
           images: [
-            { url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Débroussaillage" }
-          ]
-        },
-        {
-          category: "Traitement d'arbres",
-          images: [
-            { url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Traitement d'arbres" }
-          ]
-        },
-        {
-          category: "Entretien jardin complet",
-          images: [
-            { url: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Entretien jardin" }
+            { url: "/images/entretien/3_3 nos réalisation  taille de haie et d'arbuste dans une residence/1", alt: "Taille de haie et d'arbuste" },
+            { url: "/images/entretien/3_3 nos réalisation  taille de haie et d'arbuste dans une residence/2", alt: "Taille de haie et d'arbuste" },
+            { url: "/images/entretien/3_3 nos réalisation  taille de haie et d'arbuste dans une residence/3", alt: "Taille de haie et d'arbuste" },
+            { url: "/images/entretien/3_3 nos réalisation  taille de haie et d'arbuste dans une residence/4", alt: "Taille de haie et d'arbuste" }
           ]
         }
       ]
@@ -207,7 +179,7 @@ module PagesHelper
           "L'abattage demande une expertise technique que nous avons acquise au fil des années. Chaque intervention est planifiée avec soin, chaque geste est calculé pour garantir la sécurité de tous. C'est un travail que nous prenons très au sérieux.",
           "Que ce soit pour un arbre dangereux, un arbre malade ou un projet d'aménagement, nous intervenons avec professionnalisme et respect de l'environnement. Nous maîtrisons toutes les techniques d'abattage, de l'abattage dirigé à l'abattage par démontage."
         ],
-        image_url: "/images/abattage/1_L'Abattage, Une Expertise Technique carré 100% securisé",
+        image_url: "/images/abattage/1_L'Abattage Une Expertise Technique carré 100 securisé",
         image_alt: "Abattage professionnel",
         badge: {
           value: "100%",
@@ -222,7 +194,7 @@ module PagesHelper
           "Le dessouchage, c'est la finition parfaite d'un travail bien fait. Après l'abattage d'un arbre, la souche reste souvent en place, encombrant votre terrain et empêchant vos projets d'aménagement.",
           "Nous utilisons les techniques les plus adaptées pour éliminer complètement la souche, qu'elle soit petite ou imposante. Dessouchage mécanique pour les grandes souches, dessouchage manuel pour les plus petites, nous adaptons notre méthode à chaque situation."
         ],
-        image_url: "/images/dessouchage/1_1 le dessouchage la finition parfaite 100% elimination complete",
+        image_url: "/images/dessouchage/1_1 le dessouchage la finition parfaite 100 elimination complete",
         image_alt: "Dessouchage professionnel",
         badge: {
           value: "100%",
