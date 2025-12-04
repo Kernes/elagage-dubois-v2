@@ -50,31 +50,31 @@ module PagesHelper
         {
           category: "Abattage par démontage d'un sapin proche d'une maison",
           images: [
-            { url: "/images/abattage/Nos réalisation1_abattage par démontage d'un sapin proche d'une maison/1", alt: "Abattage par démontage d'un sapin" },
-            { url: "/images/abattage/Nos réalisation1_abattage par démontage d'un sapin proche d'une maison/2", alt: "Abattage par démontage d'un sapin" },
-            { url: "/images/abattage/Nos réalisation1_abattage par démontage d'un sapin proche d'une maison/3", alt: "Abattage par démontage d'un sapin" }
+            { url: "/images/abattage/nos_realisation_1_abattage_par_demontage_sapin_proche_maison/1", alt: "Abattage par démontage d'un sapin" },
+            { url: "/images/abattage/nos_realisation_1_abattage_par_demontage_sapin_proche_maison/2", alt: "Abattage par démontage d'un sapin" },
+            { url: "/images/abattage/nos_realisation_1_abattage_par_demontage_sapin_proche_maison/3", alt: "Abattage par démontage d'un sapin" }
           ]
         },
         {
           category: "Abattage par démontage d'un Pin avec rétention dans un espace clos",
           images: [
-            { url: "/images/abattage/Nos réalisation 2_abattage par démontage d'un Pin avec rétention dans un espace clos/1", alt: "Abattage par démontage d'un Pin" },
-            { url: "/images/abattage/Nos réalisation 2_abattage par démontage d'un Pin avec rétention dans un espace clos/2", alt: "Abattage par démontage d'un Pin" },
-            { url: "/images/abattage/Nos réalisation 2_abattage par démontage d'un Pin avec rétention dans un espace clos/3", alt: "Abattage par démontage d'un Pin" },
-            { url: "/images/abattage/Nos réalisation 2_abattage par démontage d'un Pin avec rétention dans un espace clos/4", alt: "Abattage par démontage d'un Pin" },
-            { url: "/images/abattage/Nos réalisation 2_abattage par démontage d'un Pin avec rétention dans un espace clos/5", alt: "Abattage par démontage d'un Pin" },
-            { url: "/images/abattage/Nos réalisation 2_abattage par démontage d'un Pin avec rétention dans un espace clos/6", alt: "Abattage par démontage d'un Pin" },
-            { url: "/images/abattage/Nos réalisation 2_abattage par démontage d'un Pin avec rétention dans un espace clos/IMG_20251204_145000", alt: "Abattage par démontage d'un Pin" }
+            { url: "/images/abattage/nos_realisation_2_abattage_par_demontage_pin_avec_retention_espace_clos/1", alt: "Abattage par démontage d'un Pin" },
+            { url: "/images/abattage/nos_realisation_2_abattage_par_demontage_pin_avec_retention_espace_clos/2", alt: "Abattage par démontage d'un Pin" },
+            { url: "/images/abattage/nos_realisation_2_abattage_par_demontage_pin_avec_retention_espace_clos/3", alt: "Abattage par démontage d'un Pin" },
+            { url: "/images/abattage/nos_realisation_2_abattage_par_demontage_pin_avec_retention_espace_clos/4", alt: "Abattage par démontage d'un Pin" },
+            { url: "/images/abattage/nos_realisation_2_abattage_par_demontage_pin_avec_retention_espace_clos/5", alt: "Abattage par démontage d'un Pin" },
+            { url: "/images/abattage/nos_realisation_2_abattage_par_demontage_pin_avec_retention_espace_clos/6", alt: "Abattage par démontage d'un Pin" },
+            { url: "/images/abattage/nos_realisation_2_abattage_par_demontage_pin_avec_retention_espace_clos/IMG_20251204_145000", alt: "Abattage par démontage d'un Pin" }
           ]
         },
         {
           category: "Abattage par démontage d'un hêtre pourpre malade avec rétention",
           images: [
-            { url: "/images/abattage/Nos réalisation 3_ abattage par démontage d'un hêtre pourpre malade avec rétention/1", alt: "Abattage par démontage d'un hêtre" },
-            { url: "/images/abattage/Nos réalisation 3_ abattage par démontage d'un hêtre pourpre malade avec rétention/2", alt: "Abattage par démontage d'un hêtre" },
-            { url: "/images/abattage/Nos réalisation 3_ abattage par démontage d'un hêtre pourpre malade avec rétention/3", alt: "Abattage par démontage d'un hêtre" },
-            { url: "/images/abattage/Nos réalisation 3_ abattage par démontage d'un hêtre pourpre malade avec rétention/4", alt: "Abattage par démontage d'un hêtre" },
-            { url: "/images/abattage/Nos réalisation 3_ abattage par démontage d'un hêtre pourpre malade avec rétention/5", alt: "Abattage par démontage d'un hêtre" }
+            { url: "/images/abattage/nos_realisation_3_abattage_par_demontage_hetre_pourpre_malade_avec_retention/1", alt: "Abattage par démontage d'un hêtre" },
+            { url: "/images/abattage/nos_realisation_3_abattage_par_demontage_hetre_pourpre_malade_avec_retention/2", alt: "Abattage par démontage d'un hêtre" },
+            { url: "/images/abattage/nos_realisation_3_abattage_par_demontage_hetre_pourpre_malade_avec_retention/3", alt: "Abattage par démontage d'un hêtre" },
+            { url: "/images/abattage/nos_realisation_3_abattage_par_demontage_hetre_pourpre_malade_avec_retention/4", alt: "Abattage par démontage d'un hêtre" },
+            { url: "/images/abattage/nos_realisation_3_abattage_par_demontage_hetre_pourpre_malade_avec_retention/5", alt: "Abattage par démontage d'un hêtre" }
           ]
         }
       ]
@@ -83,23 +83,23 @@ module PagesHelper
         {
           category: "Nos réalisation 4_1",
           images: [
-            { url: "/images/dessouchage/Nos realisation 4_1/1", alt: "Dessouchage réalisation 4_1" },
-            { url: "/images/dessouchage/Nos realisation 4_1/2", alt: "Dessouchage réalisation 4_1" }
+            { url: "/images/dessouchage/nos_realisation_4_1/1", alt: "Dessouchage réalisation 4_1" },
+            { url: "/images/dessouchage/nos_realisation_4_1/2", alt: "Dessouchage réalisation 4_1" }
           ]
         },
         {
           category: "Nos réalisation 4_2",
           images: [
-            { url: "/images/dessouchage/Nos realisation 4_2/20231211_095647", alt: "Dessouchage réalisation 4_2" },
-            { url: "/images/dessouchage/Nos realisation 4_2/20231211_095819", alt: "Dessouchage réalisation 4_2" },
-            { url: "/images/dessouchage/Nos realisation 4_2/20231211_101005", alt: "Dessouchage réalisation 4_2" }
+            { url: "/images/dessouchage/nos_realisation_4_2/20231211_095647", alt: "Dessouchage réalisation 4_2" },
+            { url: "/images/dessouchage/nos_realisation_4_2/20231211_095819", alt: "Dessouchage réalisation 4_2" },
+            { url: "/images/dessouchage/nos_realisation_4_2/20231211_101005", alt: "Dessouchage réalisation 4_2" }
           ]
         },
         {
           category: "Nos réalisation 4_3",
           images: [
-            { url: "/images/dessouchage/Nos realisation 4_3/1", alt: "Dessouchage réalisation 4_3" },
-            { url: "/images/dessouchage/Nos realisation 4_3/2", alt: "Dessouchage réalisation 4_3" }
+            { url: "/images/dessouchage/nos_realisation_4_3/1", alt: "Dessouchage réalisation 4_3" },
+            { url: "/images/dessouchage/nos_realisation_4_3/2", alt: "Dessouchage réalisation 4_3" }
           ]
         }
       ]
@@ -108,29 +108,29 @@ module PagesHelper
         {
           category: "Pose de gazon en rouleau",
           images: [
-            { url: "/images/entretien/3_1 nos réalisation- titre; pose de gazon en rouleau/1", alt: "Pose de gazon en rouleau" },
-            { url: "/images/entretien/3_1 nos réalisation- titre; pose de gazon en rouleau/2", alt: "Pose de gazon en rouleau" },
-            { url: "/images/entretien/3_1 nos réalisation- titre; pose de gazon en rouleau/3", alt: "Pose de gazon en rouleau" }
+            { url: "/images/entretien/3_1_pose_gazon_rouleau/1", alt: "Pose de gazon en rouleau" },
+            { url: "/images/entretien/3_1_pose_gazon_rouleau/2", alt: "Pose de gazon en rouleau" },
+            { url: "/images/entretien/3_1_pose_gazon_rouleau/3", alt: "Pose de gazon en rouleau" }
           ]
         },
         {
           category: "Création d'un gazon en semis",
           images: [
-            { url: "/images/entretien/3_2 nos realisation creation d'un gazon en semis/1", alt: "Création d'un gazon en semis" },
-            { url: "/images/entretien/3_2 nos realisation creation d'un gazon en semis/2", alt: "Création d'un gazon en semis" },
-            { url: "/images/entretien/3_2 nos realisation creation d'un gazon en semis/3", alt: "Création d'un gazon en semis" },
-            { url: "/images/entretien/3_2 nos realisation creation d'un gazon en semis/4", alt: "Création d'un gazon en semis" },
-            { url: "/images/entretien/3_2 nos realisation creation d'un gazon en semis/8", alt: "Création d'un gazon en semis" },
-            { url: "/images/entretien/3_2 nos realisation creation d'un gazon en semis/9", alt: "Création d'un gazon en semis" }
+            { url: "/images/entretien/3_2_creation_gazon_semis/1", alt: "Création d'un gazon en semis" },
+            { url: "/images/entretien/3_2_creation_gazon_semis/2", alt: "Création d'un gazon en semis" },
+            { url: "/images/entretien/3_2_creation_gazon_semis/3", alt: "Création d'un gazon en semis" },
+            { url: "/images/entretien/3_2_creation_gazon_semis/4", alt: "Création d'un gazon en semis" },
+            { url: "/images/entretien/3_2_creation_gazon_semis/8", alt: "Création d'un gazon en semis" },
+            { url: "/images/entretien/3_2_creation_gazon_semis/9", alt: "Création d'un gazon en semis" }
           ]
         },
         {
           category: "Taille de haie et d'arbuste dans une résidence",
           images: [
-            { url: "/images/entretien/3_3 nos réalisation  taille de haie et d'arbuste dans une residence/1", alt: "Taille de haie et d'arbuste" },
-            { url: "/images/entretien/3_3 nos réalisation  taille de haie et d'arbuste dans une residence/2", alt: "Taille de haie et d'arbuste" },
-            { url: "/images/entretien/3_3 nos réalisation  taille de haie et d'arbuste dans une residence/3", alt: "Taille de haie et d'arbuste" },
-            { url: "/images/entretien/3_3 nos réalisation  taille de haie et d'arbuste dans une residence/4", alt: "Taille de haie et d'arbuste" }
+            { url: "/images/entretien/3_3_taille_haie_arbuste_residence/1", alt: "Taille de haie et d'arbuste" },
+            { url: "/images/entretien/3_3_taille_haie_arbuste_residence/2", alt: "Taille de haie et d'arbuste" },
+            { url: "/images/entretien/3_3_taille_haie_arbuste_residence/3", alt: "Taille de haie et d'arbuste" },
+            { url: "/images/entretien/3_3_taille_haie_arbuste_residence/4", alt: "Taille de haie et d'arbuste" }
           ]
         }
       ]
