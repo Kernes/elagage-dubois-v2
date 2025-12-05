@@ -4,44 +4,21 @@ module PagesHelper
     when :elagage
       [
         {
-          category: "Élagage d'un chêne centenaire",
+          category: "Taille d'un noyer en tête de chat",
           images: [
-            { url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Élagage professionnel" },
-            { url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Élagage chêne centenaire" },
-            { url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Élagage chêne centenaire" }
+            { url: "/images/elagage/2-1 Nos réalisations en images_1 taille d'un noyer en tete de chat", alt: "Taille d'un noyer en tête de chat" }
           ]
         },
         {
-          category: "Élagage sécurisé",
+          category: "Taille de réduction d'un peuplier",
           images: [
-            { url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Taille professionnelle" },
-            { url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Taille de formation" }
+            { url: "/images/elagage/2-2 Nos réalisations en images_2 Taille de réduction d'un peuplier", alt: "Taille de réduction d'un peuplier" }
           ]
         },
         {
-          category: "Taille sanitaire",
+          category: "Élagage d'un marronnier",
           images: [
-            { url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Réduction de couronne" },
-            { url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Réduction de couronne" }
-          ]
-        },
-        {
-          category: "Étêtage sécurisé",
-          images: [
-            { url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Étêtage sécurisé" },
-            { url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Étêtage sécurisé" }
-          ]
-        },
-        {
-          category: "Taille d'entretien régulier",
-          images: [
-            { url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Taille d'entretien" }
-          ]
-        },
-        {
-          category: "Intervention professionnelle",
-          images: [
-            { url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", alt: "Intervention professionnelle" }
+            { url: "/images/elagage/2-3 Nos réalisations en images_ 3 élagage d'un marronniers", alt: "Élagage d'un marronnier" }
           ]
         }
       ]
