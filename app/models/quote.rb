@@ -8,6 +8,7 @@ class Quote
   attribute :nom, :string
   attribute :email, :string
   attribute :telephone, :string
+  attribute :adresse, :string
   attribute :service_souhaite, :string
   attribute :commentaires, :string
   attribute :rgpd_accepted, :boolean

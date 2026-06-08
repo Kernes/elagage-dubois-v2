@@ -3,51 +3,49 @@
 <% content_for :keywords, "mentions légales, Élagage Dubois, informations légales" %>
 <% content_for :og_title, "Mentions légales - Élagage Dubois" %>
 <% content_for :og_description, "Mentions légales de Élagage Dubois - Service d'élagage, abattage et dessouchage professionnel." %>
-<% content_for :og_image, "https://elagage-dubois-v2.scalingo.io/icon.png" %>
-
 <%= render "components/header" %>
 
 <div class="min-h-screen bg-white py-24 pt-32">
   <div class="mx-auto max-w-4xl px-6 lg:px-8">
     <div class="text-center mb-16">
       <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Mentions légales</h1>
-      <p class="mt-6 text-lg leading-8 text-gray-600">Informations légales concernant Dubois Services</p>
+      <p class="mt-6 text-lg leading-8 text-gray-600">Informations légales concernant <%= company_legal_name %></p>
     </div>
 
     <div class="prose prose-lg max-w-none">
-      <h2>1. Informations sur l'entreprise</h2>
-      <p><strong>Dénomination sociale :</strong> Dubois Services</p>
-      <p><strong>Adresse :</strong> 30 Rte de Pontoise, 95540 Méry-sur-Oise, France</p>
-      <p><strong>Téléphone :</strong> <a href="tel:<%= company_phone_formatted %>" class="text-green-700 hover:text-green-800"><%= company_phone %></a></p>
-      <p><strong>Email :</strong> <a href="mailto:jpdubois.services@gmail.com" class="text-green-700 hover:text-green-800">jpdubois.services@gmail.com</a></p>
+      <h2>1. Informations sur l'éditeur du site</h2>
+      <%= render "components/company_legal_identity", detailed: true %>
 
-      <h2>2. Hébergement du site</h2>
+      <h2>2. Directeur de la publication</h2>
+      <p><%= company_president %>, en qualité de Président de la <%= company_legal_name %>.</p>
+
+      <h2>3. Hébergement du site</h2>
       <p>Le site web est hébergé par Scalingo, prestataire professionnel conformément aux standards de sécurité en vigueur.</p>
 
-      <h2>3. Propriété intellectuelle</h2>
-      <p>L'ensemble du contenu du site (textes, images, vidéos, logos, etc.) est protégé par le droit d'auteur et appartient à Dubois Services ou à ses partenaires. Toute reproduction, distribution, modification, adaptation, retransmission ou publication de ces éléments est strictement interdite sans l'accord exprès par écrit de Dubois Services.</p>
+      <h2>4. Propriété intellectuelle</h2>
+      <p>L'ensemble du contenu du site (textes, images, vidéos, logos, etc.) est protégé par le droit d'auteur et appartient à <%= company_legal_name %> ou à ses partenaires. Toute reproduction, distribution, modification, adaptation, retransmission ou publication de ces éléments est strictement interdite sans l'accord exprès par écrit de <%= company_legal_name %>.</p>
 
-      <h2>4. Responsabilité</h2>
-      <p>Dubois Services s'efforce de fournir sur le site des informations aussi précises que possible. Toutefois, il ne pourra être tenu responsable des omissions, des inexactitudes et des carences dans la mise à jour, qu'elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations.</p>
+      <h2>5. Responsabilité</h2>
+      <p><%= company_legal_name %> s'efforce de fournir sur le site des informations aussi précises que possible. Toutefois, elle ne pourra être tenue responsable des omissions, des inexactitudes et des carences dans la mise à jour, qu'elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations.</p>
 
-      <h2>5. Liens hypertextes</h2>
-      <p>Le site peut contenir des liens vers d'autres sites web. Dubois Services n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu.</p>
+      <h2>6. Liens hypertextes</h2>
+      <p>Le site peut contenir des liens vers d'autres sites web. <%= company_legal_name %> n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu.</p>
 
-      <h2>6. Collecte et traitement des données personnelles</h2>
+      <h2>7. Collecte et traitement des données personnelles</h2>
       <p>Les données personnelles collectées sur ce site sont traitées conformément à notre <a href="/politique-confidentialite" class="text-green-700 hover:text-green-800">Politique de confidentialité</a>.</p>
 
-      <h2>7. Cookies</h2>
+      <h2>8. Cookies</h2>
       <p>Ce site utilise des cookies conformément à notre <a href="/cookies" class="text-green-700 hover:text-green-800">Politique des cookies</a>.</p>
 
-      <h2>8. Droit applicable</h2>
+      <h2>9. Droit applicable</h2>
       <p>Le présent site est soumis au droit français. En cas de litige, les tribunaux français seront seuls compétents.</p>
 
-      <h2>9. Contact</h2>
+      <h2>10. Contact</h2>
       <p>Pour toute question concernant ces mentions légales, vous pouvez nous contacter :</p>
       <ul>
         <li>Par téléphone : <a href="tel:<%= company_phone_formatted %>" class="text-green-700 hover:text-green-800"><%= company_phone %></a></li>
-        <li>Par email : <a href="mailto:jpdubois.services@gmail.com" class="text-green-700 hover:text-green-800">jpdubois.services@gmail.com</a></li>
-        <li>Par courrier : Dubois Services, 30 Rte de Pontoise, 95540 Méry-sur-Oise, France</li>
+        <li>Par email : <a href="mailto:<%= company_email %>" class="text-green-700 hover:text-green-800"><%= company_email %></a></li>
+        <li>Par courrier : <%= company_mail_address %></li>
       </ul>
     </div>
   </div>

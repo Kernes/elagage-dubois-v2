@@ -9,7 +9,7 @@
     <priority><%= page[:priority] %></priority>
     <image:image>
       <image:loc><%= request.base_url %>/icon.png</image:loc>
-      <image:title>Élagage Dubois - Expert en élagage, abattage et dessouchage</image:title>
+      <image:title><%= ApplicationHelper::COMPANY_LEGAL[:brand_name] %> (<%= ApplicationHelper::COMPANY_LEGAL[:trade_name] %>) - Expert en élagage, abattage et dessouchage</image:title>
       <image:caption>Service professionnel d'élagage, d'abattage et de dessouchage en Île-de-France</image:caption>
     </image:image>
   </url>

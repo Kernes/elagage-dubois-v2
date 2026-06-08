@@ -3,7 +3,7 @@
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <!-- Colonne 1 : Logo -->
       <div class="flex justify-center items-start">
-        <img src="/images/cropped-Logo-Dubois-Service-white-footer.png" alt="Dubois Services" class="w-auto h-32" />
+        <img src="/images/cropped-Logo-Dubois-Service-white-footer.png" alt="Dubois Elagage" class="w-auto h-32" />
       </div>
       
       <!-- Colonne 2 : Informations de contact -->
@@ -15,7 +15,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
-            <p>30 Rte de Pontoise,<br>95540, Méry-sur-Oise, France</p>
+            <p><%= company_full_address %></p>
           </div>
           <div class="flex items-center">
             <svg class="flex-shrink-0 mr-3 w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -27,7 +27,7 @@
             <svg class="flex-shrink-0 mr-3 w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
-            <a href="mailto:jpdubois.services@gmail.com" class="transition-colors hover:text-green-400">jpdubois.services@gmail.com</a>
+            <a href="mailto:<%= company_email %>" class="transition-colors hover:text-green-400"><%= company_email %></a>
           </div>
         </div>
       </div>
@@ -63,9 +63,12 @@
     </div>
     
     <div class="pt-8 mt-12 border-t border-gray-800">
-      <div class="flex flex-col justify-between items-center sm:flex-row">
-        <p class="text-sm text-gray-400">&copy; 2025 Élagage Dubois. Tous droits réservés.</p>
-        <div class="flex mt-4 space-x-6 text-sm text-gray-400 sm:mt-0">
+      <div class="flex flex-col gap-4 justify-between items-center sm:flex-row">
+        <div class="text-center sm:text-left">
+          <p class="text-sm text-gray-400">&copy; <%= Date.current.year %> <%= company_legal_name %>. Tous droits réservés.</p>
+          <p class="mt-1 text-xs text-gray-500">SASU au capital de <%= company_capital %> · SIREN <%= company_siren %> · <%= company_rcs %></p>
+        </div>
+        <div class="flex space-x-6 text-sm text-gray-400">
           <a href="/mentions-legales" class="transition-colors hover:text-green-400">Mentions légales</a>
           <a href="/cgu" class="transition-colors hover:text-green-400">CGU</a>
           <a href="/politique-confidentialite" class="transition-colors hover:text-green-400">Confidentialité</a>

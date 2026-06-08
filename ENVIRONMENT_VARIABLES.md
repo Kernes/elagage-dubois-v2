@@ -2,8 +2,8 @@
 
 ## Configuration des emails
 
-- `MAILER_FROM_EMAIL` : Email d'expéditeur (défaut: jpdubois.services@gmail.com)
-- `ADMIN_EMAIL` : Email qui reçoit les demandes de devis (défaut: jpdubois.services@gmail.com)
+- `MAILER_FROM_EMAIL` : Email d'expéditeur (défaut: contact@dubois-services-elagage.fr)
+- `ADMIN_EMAIL` : Email qui reçoit les demandes de devis (défaut: contact@dubois-services-elagage.fr)
 
 ## Configuration SMTP (optionnel)
 
@@ -17,7 +17,7 @@
 
 ## Configuration de l'application
 
-- `APP_HOST` : Host de l'application (défaut: elagage-dubois-v2.osc-fr1.scalingo.io)
+- `APP_HOST` : Host de l'application (défaut: dubois-services-elagage.fr)
 - `RAILS_LOG_LEVEL` : Niveau de log (défaut: info)
 
 ## Configuration sur Scalingo
@@ -26,10 +26,10 @@ Pour configurer ces variables sur Scalingo :
 
 ```bash
 # Email de destination des devis
-scalingo env-set ADMIN_EMAIL="votre-email@example.com"
+scalingo env-set ADMIN_EMAIL="contact@dubois-services-elagage.fr"
 
 # Email d'expéditeur
-scalingo env-set MAILER_FROM_EMAIL="jpdubois.services@gmail.com"
+scalingo env-set MAILER_FROM_EMAIL="contact@dubois-services-elagage.fr"
 
 # Configuration SMTP (si nécessaire)
 scalingo env-set SMTP_ADDRESS="smtp.gmail.com"

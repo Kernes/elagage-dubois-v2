@@ -17,7 +17,7 @@
     <div class="container">
       <div class="header">
         <h1>Nouvelle demande de devis</h1>
-        <p>Dubois Services</p>
+        <p><%= company_trade_name %></p>
       </div>
       
       <div class="content">
@@ -37,6 +37,13 @@
           <div class="label">Téléphone :</div>
           <div class="value"><%= @quote.telephone %></div>
         </div>
+
+        <% if @quote.adresse.present? %>
+        <div class="field">
+          <div class="label">Adresse du chantier :</div>
+          <div class="value"><%= @quote.adresse %></div>
+        </div>
+        <% end %>
         
         <h2>Détails de la demande</h2>
         
@@ -57,8 +64,8 @@
       </div>
       
       <div class="footer">
-        <p>Cette demande a été envoyée depuis le site web Dubois Services</p>
-        <p>07 83 89 23 84 | jpdubois.services@gmail.com</p>
+        <p>Cette demande a été envoyée depuis le site web <%= company_trade_name %></p>
+        <p>07 83 89 23 84 | <%= company_email %></p>
       </div>
     </div>
   </body>

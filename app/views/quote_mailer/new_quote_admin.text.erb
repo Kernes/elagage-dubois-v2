@@ -1,10 +1,13 @@
-Nouvelle demande de devis - Dubois Services
+Nouvelle demande de devis - <%= company_trade_name %>
 =====================================
 
 Informations du client :
 - Nom complet : <%= @quote.full_name %>
 - Email : <%= @quote.email %>
 - Téléphone : <%= @quote.telephone %>
+<% if @quote.adresse.present? %>
+- Adresse du chantier : <%= @quote.adresse %>
+<% end %>
 
 Détails de la demande :
 - Service souhaité : <%= @quote.service_souhaite_human %>
@@ -13,5 +16,5 @@ Détails de la demande :
 Date de la demande : <%= @quote.created_at.strftime("%d/%m/%Y à %H:%M") %>
 
 ---
-Cette demande a été envoyée depuis le site web Dubois Services
-07 83 89 23 84 | jpdubois.services@gmail.com
+Cette demande a été envoyée depuis le site web <%= company_trade_name %>
+07 83 89 23 84 | <%= company_email %>

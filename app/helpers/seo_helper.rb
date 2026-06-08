@@ -3,10 +3,10 @@ module SeoHelper
   DEFAULT_SEO = {
     site_name:        "Élagage Dubois",
     site_description: "Expert en élagage et abattage d'arbres autour de Méry-sur-Oise (Val d'Oise - 95). Élagage sécurisé, abattage professionnel, dessouchage mécanique. Devis gratuit sous 24h, intervention rapide.",
-    site_keywords:    "élagage Méry-sur-Oise, élagueur Val d'Oise, abattage arbres 95, dessouchage Méry-sur-Oise, entretien jardin 95",
+    site_keywords:    "élagage Méry-sur-Oise, élagueur Val d'Oise, abattage arbres 95, dessouchage Méry-sur-Oise, entretien jardin 95, Dubois Elagage, Élagage Dubois",
     site_url:         "https://dubois-services-elagage.fr",
     contact_phone:    "+33783892384",
-    contact_email:    "jpdubois.services@gmail.com",
+    contact_email:    ApplicationHelper::COMPANY_CONTACT[:email],
     business_address: {
       street:      "30 Route de Pontoise",
       city:        "Méry-sur-Oise",
@@ -150,8 +150,18 @@ module SeoHelper
   def seo_og_image
     return content_for(:og_image) if content_for?(:og_image)
 
-    # Garde ton image actuelle, juste hostée sur le bon domaine
-    "#{DEFAULT_SEO[:site_url]}/images/seo/Screenshot_20251203_094150_Gallery.jpg"
+    "#{seo_site_url}/images/seo/Screenshot_20251203_094150_Gallery.jpg"
+  end
+
+  def seo_site_url
+    DEFAULT_SEO[:site_url]
+  end
+
+  def seo_alternate_names
+    [
+      ApplicationHelper::COMPANY_LEGAL[:trade_name],
+      ApplicationHelper::COMPANY_LEGAL[:name]
+    ].uniq
   end
 
   def seo_canonical_url
@@ -218,6 +228,9 @@ module SeoHelper
       "@context": "https://schema.org",
       "@type": ["LocalBusiness", "TreeService"],
       "name": DEFAULT_SEO[:site_name],
+      "alternateName": seo_alternate_names,
+      "legalName": ApplicationHelper::COMPANY_LEGAL[:name],
+      "taxID": ApplicationHelper::COMPANY_LEGAL[:vat_number],
       "description": DEFAULT_SEO[:site_description],
       "url": DEFAULT_SEO[:site_url],
       "telephone": DEFAULT_SEO[:contact_phone],
@@ -302,6 +315,8 @@ module SeoHelper
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": DEFAULT_SEO[:site_name],
+      "alternateName": seo_alternate_names,
+      "legalName": ApplicationHelper::COMPANY_LEGAL[:name],
       "url": DEFAULT_SEO[:site_url],
       "logo": "#{DEFAULT_SEO[:site_url]}/icon.png",
       "contactPoint": {
@@ -373,6 +388,8 @@ module SeoHelper
       "provider": {
         "@type": "LocalBusiness",
         "name": DEFAULT_SEO[:site_name],
+        "alternateName": seo_alternate_names,
+        "legalName": ApplicationHelper::COMPANY_LEGAL[:name],
         "telephone": DEFAULT_SEO[:contact_phone],
         "email": DEFAULT_SEO[:contact_email],
         "address": {

@@ -18,18 +18,18 @@
   ];
 
   const BUSINESS = {
-    name: "DUBOIS SERVICES",
+    name: "DUBOIS ELAGAGE",
     address: "30 Rte de Pontoise, 95540 Méry-sur-Oise",
     // ✅ Coordonnées GPS fixes (provenant du lien Google Maps)
     latlng: [49.059594, 2.1655372],
     mapsPlaceUrl:
       "https://www.google.com/maps/search/?api=1&query=" +
-      encodeURIComponent("DUBOIS SERVICES 30 Rte de Pontoise, 95540 Méry-sur-Oise"),
+      encodeURIComponent("DUBOIS ELAGAGE 30 Rte de Pontoise, 95540 Méry-sur-Oise"),
     mapsDirUrl:
       "https://www.google.com/maps/dir/?api=1&destination=" +
-      encodeURIComponent("DUBOIS SERVICES 30 Rte de Pontoise, 95540 Méry-sur-Oise"),
+      encodeURIComponent("DUBOIS ELAGAGE 30 Rte de Pontoise, 95540 Méry-sur-Oise"),
     // Lien vers les avis Google (cliquable dans la popup)
-    reviewsUrl: "https://www.google.com/search?sca_esv=e5fbcc06bbcda539&rlz=1C5CHFA_enFR980FR980&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E1F1MzApZtvA_0bqFLM5wOvxn3ttgxDbt27C6N5Z5Vpd13tsC_arYDbZA5l0FA66y6a_EAmoMgyJq4r9dQjpPG-QUbKA&q=DUBOIS+SERVICES+Avis&sa=X&ved=2ahUKEwj35Y_VxOiQAxVkY6QEHWWkCJ0Q0bkNegQIQhAE&biw=1186&bih=1048&dpr=0.8"
+    reviewsUrl: "https://www.google.com/search?sca_esv=e5fbcc06bbcda539&rlz=1C5CHFA_enFR980FR980&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E1F1MzApZtvA_0bqFLM5wOvxn3ttgxDbt27C6N5Z5Vpd13tsC_arYDbZA5l0FA66y6a_EAmoMgyJq4r9dQjpPG-QUbKA&q=DUBOIS+ELAGAGE+Avis&sa=X&ved=2ahUKEwj35Y_VxOiQAxVkY6QEHWWkCJ0Q0bkNegQIQhAE&biw=1186&bih=1048&dpr=0.8"
   };
 
   let mapInstance = null;

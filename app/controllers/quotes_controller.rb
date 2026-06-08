@@ -25,7 +25,7 @@ class QuotesController < ApplicationController
 
   def quote_params
     params.require(:quote).permit(
-      :prenom, :nom, :email, :telephone, :service_souhaite, :commentaires, :rgpd_accepted
+      :prenom, :nom, :email, :telephone, :adresse, :service_souhaite, :commentaires, :rgpd_accepted
     )
   end
 end

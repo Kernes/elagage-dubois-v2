@@ -1,4 +1,4 @@
-Merci pour votre demande de devis - Dubois Services
+Merci pour votre demande de devis - <%= company_trade_name %>
 ==========================================
 
 Bonjour <%= @quote.prenom %>,
@@ -8,6 +8,9 @@ Nous avons bien reçu votre demande de devis pour un <%= @quote.service_souhaite
 RÉCAPITULATIF DE VOTRE DEMANDE :
 - Service : <%= @quote.service_souhaite_human %>
 - Votre téléphone : <%= @quote.telephone %>
+<% if @quote.adresse.present? %>
+- Adresse du chantier : <%= @quote.adresse %>
+<% end %>
 - Détail de votre demande :
 <%= @quote.commentaires %>
 
@@ -17,14 +20,14 @@ Notre équipe va étudier votre demande et vous enverra votre devis personnalis�
 BESOIN D'INFORMATIONS ?
 N'hésitez pas à nous contacter :
 - Téléphone : 07 83 89 23 84
-- Email : jpdubois.services@gmail.com
+- Email : <%= company_email %>
 - Disponibilité : Du lundi au samedi
 
 Merci de votre confiance !
 
 Cordialement,
-L'équipe Dubois Services
+L'équipe <%= company_trade_name %>
 
 ---
-Dubois Services - Expert en élagage, abattage et dessouchage
-07 83 89 23 84 | ✉️ jpdubois.services@gmail.com
+<%= company_trade_name %> - Expert en élagage, abattage et dessouchage
+07 83 89 23 84 | ✉️ <%= company_email %>

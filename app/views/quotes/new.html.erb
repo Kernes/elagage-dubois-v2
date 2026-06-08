@@ -3,8 +3,6 @@
 <% content_for :keywords, "devis gratuit, élagage, abattage, dessouchage, devis, contact, Élagage Dubois, Île-de-France" %>
 <% content_for :og_title, "Devis gratuit - Élagage Dubois" %>
 <% content_for :og_description, "Demandez votre devis gratuit pour vos travaux d'élagage, d'abattage ou de dessouchage. Réponse rapide sous 24h." %>
-<% content_for :og_image, "https://elagage-dubois-v2.scalingo.io/icon.png" %>
-
 <%= render "components/header" %>
 
 <!-- Section principale avec formulaire -->
@@ -127,7 +125,7 @@
                 </svg>
               </dt>
               <dd>
-                <a href="mailto:jpdubois.services@gmail.com" class="font-semibold text-gray-900 hover:text-green-700">jpdubois.services@gmail.com</a><br />
+                <a href="mailto:<%= company_email %>" class="font-semibold text-gray-900 hover:text-green-700"><%= company_email %></a><br />
                 <span class="text-sm text-gray-500">Réponse sous 24h</span>
               </dd>
             </div>
@@ -216,6 +214,14 @@
             <% if @quote.errors[:telephone].any? %>
               <p class="mt-1 text-sm text-red-600"><%= @quote.errors[:telephone].first %></p>
             <% end %>
+          </div>
+
+          <!-- Adresse -->
+          <div>
+            <%= form.label :adresse, "Adresse du chantier", class: "block mb-2 text-sm font-semibold text-gray-900" %>
+            <%= form.text_field :adresse,
+                class: "block px-3 py-2 w-full rounded-md border border-gray-300 shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500",
+                placeholder: "Ex. : 12 rue des Lilas, 75000 Paris" %>
           </div>
 
           <!-- Service souhaité -->

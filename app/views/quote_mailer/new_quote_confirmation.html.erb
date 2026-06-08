@@ -16,7 +16,7 @@
     <div class="container">
       <div class="header">
         <h1>Merci pour votre demande !</h1>
-        <p>Dubois Services</p>
+        <p><%= company_trade_name %></p>
       </div>
       
       <div class="content">
@@ -29,6 +29,9 @@
           <ul>
             <li><strong>Service :</strong> <%= @quote.service_souhaite_human %></li>
             <li><strong>Votre téléphone :</strong> <%= @quote.telephone %></li>
+            <% if @quote.adresse.present? %>
+            <li><strong>Adresse du chantier :</strong> <%= @quote.adresse %></li>
+            <% end %>
             <li><strong>Détail de votre demande :</strong></li>
           </ul>
          <%= simple_format(@quote.commentaires) %>
@@ -41,19 +44,19 @@
           <h3>📞 Besoin d'informations ?</h3>
           <p>N'hésitez pas à nous contacter :</p>
           <p><strong>Téléphone :</strong> <a href="tel:+33783892384">07 83 89 23 84</a></p>
-          <p><strong>Email :</strong> <a href="mailto:jpdubois.services@gmail.com">jpdubois.services@gmail.com</a></p>
+          <p><strong>Email :</strong> <a href="mailto:<%= company_email %>"><%= company_email %></a></p>
           <p><strong>Disponibilité :</strong> Du lundi au samedi</p>
         </div>
         
         <p>Merci de votre confiance !</p>
         
         <p>Cordialement,<br>
-        <strong>L'équipe Dubois Services</strong></p>
+        <strong>L'équipe <%= company_trade_name %></strong></p>
       </div>
       
       <div class="footer">
-        <p><strong>Dubois Services</strong> - Expert en élagage, abattage et dessouchage</p>
-        <p>07 83 89 23 84 | ✉️ jpdubois.services@gmail.com</p>
+        <p><strong><%= company_trade_name %></strong> - Expert en élagage, abattage et dessouchage</p>
+        <p>07 83 89 23 84 | ✉️ <%= company_email %></p>
       </div>
     </div>
   </body>

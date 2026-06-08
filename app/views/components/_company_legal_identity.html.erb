@@ -1,0 +1,15 @@
+<p><strong>Dénomination sociale :</strong> <%= company_legal_name %></p>
+<p><strong>Nom commercial :</strong> <%= company_trade_name %></p>
+<% if local_assigns.fetch(:detailed, false) %>
+  <p><strong>Forme juridique :</strong> <%= company_legal_form %></p>
+  <p><strong>Capital social :</strong> <%= company_capital %></p>
+  <p><strong>SIREN :</strong> <%= company_siren %></p>
+  <p><strong>SIRET (siège) :</strong> <%= company_siret %></p>
+  <p><strong>N° TVA intracommunautaire :</strong> <%= company_vat_number %></p>
+  <p><strong>RCS :</strong> <%= company_rcs %></p>
+  <p><strong>Activité (NAF) :</strong> <%= company_naf %></p>
+  <p><strong>Président :</strong> <%= company_president %></p>
+<% end %>
+<p><strong>Adresse du siège social :</strong> <%= company_full_address %></p>
+<p><strong>Téléphone :</strong> <a href="tel:<%= company_phone_formatted %>" class="text-green-700 hover:text-green-800"><%= company_phone %></a></p>
+<p><strong>Email :</strong> <a href="mailto:<%= company_email %>" class="text-green-700 hover:text-green-800"><%= company_email %></a></p>

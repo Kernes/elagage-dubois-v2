@@ -59,7 +59,7 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
 
   # Set host to be used by links generated in mailer templates.
-  config.action_mailer.default_url_options = { host: ENV['APP_HOST'] || 'elagage-dubois-v2.osc-fr1.scalingo.io' }
+  config.action_mailer.default_url_options = { host: ENV['APP_HOST'] || 'dubois-services-elagage.fr', protocol: 'https' }
 
   # Specify outgoing SMTP server using environment variables.
   config.action_mailer.smtp_settings = {

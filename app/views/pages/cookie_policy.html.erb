@@ -3,8 +3,6 @@
 <% content_for :keywords, "cookies, politique cookies, Élagage Dubois" %>
 <% content_for :og_title, "Politique des cookies - Élagage Dubois" %>
 <% content_for :og_description, "Politique des cookies Élagage Dubois - Utilisation des cookies sur notre site." %>
-<% content_for :og_image, "https://elagage-dubois-v2.scalingo.io/icon.png" %>
-
 <%= render "components/header" %>
 
 <div class="min-h-screen bg-white py-24 pt-32">
@@ -91,9 +89,9 @@
       <h2>8. Contact</h2>
       <p>Pour toute question concernant les cookies :</p>
       <ul>
-        <li>Email : <a href="mailto:jpdubois.services@gmail.com" class="text-green-700 hover:text-green-800">jpdubois.services@gmail.com</a></li>
+        <li>Email : <a href="mailto:<%= company_email %>" class="text-green-700 hover:text-green-800"><%= company_email %></a></li>
         <li>Téléphone : <a href="tel:<%= company_phone_formatted %>" class="text-green-700 hover:text-green-800"><%= company_phone %></a></li>
-        <li>Adresse : Dubois Services, 30 Rte de Pontoise, 95540 Méry-sur-Oise, France</li>
+        <li>Adresse : <%= company_mail_address %></li>
       </ul>
 
       <h2>9. Liens utiles</h2>
