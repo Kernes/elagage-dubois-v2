@@ -158,7 +158,7 @@
           </div>
         <% end %>
 
-        <% if flash[:error] %>
+        <% if flash[:error] || flash[:mail_delivery_failed] %>
           <div class="p-4 mb-6 bg-red-50 rounded-lg border border-red-200">
             <div class="flex">
               <div class="flex-shrink-0">
@@ -167,7 +167,18 @@
                 </svg>
               </div>
               <div class="ml-3">
-                <p class="text-sm font-medium text-red-800"><%= flash[:error] %></p>
+                <% if flash[:mail_delivery_failed] %>
+                  <p class="text-sm font-medium text-red-800">Votre demande n'a pas pu être envoyée pour le moment.</p>
+                  <p class="mt-2 text-sm text-red-700">
+                    Merci de nous contacter directement par téléphone au
+                    <a href="tel:<%= company_phone_formatted %>" class="font-semibold underline hover:text-red-900"><%= company_phone %></a>
+                    ou par email à
+                    <a href="mailto:<%= company_email %>" class="font-semibold underline hover:text-red-900"><%= company_email %></a>.
+                    Nous vous répondrons sous 24&nbsp;h.
+                  </p>
+                <% else %>
+                  <p class="text-sm font-medium text-red-800"><%= flash[:error] %></p>
+                <% end %>
               </div>
             </div>
           </div>
