@@ -314,6 +314,7 @@ module SeoHelper
     {
       "@context": "https://schema.org",
       "@type": "Organization",
+      "@id": "#{DEFAULT_SEO[:site_url]}/#organization",
       "name": DEFAULT_SEO[:site_name],
       "alternateName": seo_alternate_names,
       "legalName": ApplicationHelper::COMPANY_LEGAL[:name],
@@ -340,9 +341,14 @@ module SeoHelper
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
+      "@id": "#{DEFAULT_SEO[:site_url]}/#website",
       "name": DEFAULT_SEO[:site_name],
+      "alternateName": seo_alternate_names,
       "url": DEFAULT_SEO[:site_url],
-      "description": DEFAULT_SEO[:site_description]
+      "description": DEFAULT_SEO[:site_description],
+      "publisher": {
+        "@id": "#{DEFAULT_SEO[:site_url]}/#organization"
+      }
       # Pas de SearchAction car pas de vraie recherche interne
     }
   end

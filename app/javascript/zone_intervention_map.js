@@ -103,14 +103,15 @@
 
     // Récupérer les valeurs depuis les data attributes
     const rating = mapEl.dataset.rating ? parseFloat(mapEl.dataset.rating) : 5;
-    const reviews = mapEl.dataset.reviews ? parseInt(mapEl.dataset.reviews) : 53;
+    const reviews = mapEl.dataset.reviews ? parseInt(mapEl.dataset.reviews) : 60;
+    const reviewsLabel = mapEl.dataset.reviewsLabel || ("plus de " + reviews + " avis");
     const reviewsUrl = mapEl.dataset.reviewsUrl || BUSINESS.reviewsUrl;
     
     // Mettre à jour BUSINESS avec les valeurs dynamiques
     BUSINESS.rating = rating;
     BUSINESS.reviews = reviews;
     BUSINESS.reviewsUrl = reviewsUrl;
-    BUSINESS.ratingText = rating.toFixed(1).replace('.', ',') + " · <a href=\"" + reviewsUrl + "\" target=\"_blank\" rel=\"noopener\" style=\"color:#2563eb;text-decoration:underline;\">" + reviews + " avis</a>";
+    BUSINESS.ratingText = rating.toFixed(1).replace('.', ',') + " · <a href=\"" + reviewsUrl + "\" target=\"_blank\" rel=\"noopener\" style=\"color:#2563eb;text-decoration:underline;\">" + reviewsLabel + "</a>";
 
     // Supprimer l'instance existante si elle existe
     if (mapInstance) {

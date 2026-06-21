@@ -5,7 +5,7 @@ module ApplicationHelper
     satisfied_clients: 500,
     interventions: 1000,
     average_rating: 5,
-    number_of_reviews: 53
+    number_of_reviews: 60
   }.freeze
 
   COMPANY_CONTACT = {
@@ -60,6 +60,10 @@ module ApplicationHelper
 
   def company_number_of_reviews
     COMPANY_STATS[:number_of_reviews]
+  end
+
+  def company_reviews_label
+    "plus de #{company_number_of_reviews} avis"
   end
 
   def company_reviews_url

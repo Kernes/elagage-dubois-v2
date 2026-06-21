@@ -184,7 +184,7 @@ module PagesHelper
         title: "Des Services Complets pour Vos Espaces Verts",
         paragraphs: [
           "Nous sommes spécialistes des arbres, mais pas que ! Au-delà de nos services principaux d'élagage, d'abattage et de dessouchage, nous proposons également une gamme complète de services d'entretien pour prendre soin de vos espaces verts tout au long de l'année.",
-          "Que ce soit pour l'entretien régulier de votre jardin, la taille de vos haies, la tonte de votre pelouse, le débroussaillage ou le traitement de vos arbres, nous avons les compétences et l'expérience nécessaires pour répondre à tous vos besoins."
+          "Que ce soit pour l'entretien régulier de votre jardin, la taille de vos haies, la tonte de votre pelouse, le débroussaillage ou la pose de pièges contre la chenille processionnaire, nous avons les compétences et l'expérience nécessaires pour répondre à tous vos besoins."
         ],
         image_url: "/images/entretien/1_Des services complets.. service d'entretien",
         image_alt: "Entretien jardin",
@@ -398,15 +398,15 @@ module PagesHelper
             ]
           },
           {
-            title: "Traitement d'Arbres",
-            description: "Nous proposons également des services de traitement pour préserver la santé de vos arbres. Que ce soit pour lutter contre les maladies ou les parasites, nous intervenons avec les produits adaptés.",
-            image_url: "/images/entretien/2_4 nos service dentretien- traitement darbre",
-            image_alt: "Traitement d'arbres",
+            title: "Pose de Piège pour Chenille Processionnaire",
+            description: "La chenille processionnaire du pin représente un risque sanitaire pour les personnes et les animaux. Nous installons des pièges à phéromones pour capturer les papillons femelles et limiter la prolifération de ce nuisible.",
+            image_url: "/images/entretien/2_4 nos services dentretien- pose piege chenille processionnaire",
+            image_alt: "Pose de piège pour chenille processionnaire",
             icon_color: "green-700",
             features: [
-              "Traitement préventif",
-              "Lutte contre les maladies",
-              "Protection des arbres"
+              "Installation de pièges à phéromones",
+              "Lutte contre la processionnaire",
+              "Protection de votre environnement"
             ]
           },
         ]
