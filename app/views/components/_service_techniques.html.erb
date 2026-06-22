@@ -29,8 +29,16 @@
              when "amber-800" then "text-amber-800"
              else "text-green-700"
            end %>
+        <% image_class = [
+             "w-full h-full object-cover transition-transform md:group-hover:scale-110",
+             technique[:image_class]
+           ].compact.join(" ") %>
+        <% image_wrapper_class = [
+             "overflow-hidden relative h-64",
+             ("technique-card-image--mobile-contain" if technique[:mobile_image_contain])
+           ].compact.join(" ") %>
         <div class="overflow-hidden relative bg-white rounded-2xl shadow-lg transition-shadow group hover:shadow-xl">
-          <div class="overflow-hidden relative h-64">
+          <div class="<%= image_wrapper_class %>">
             <% if technique[:image_url]&.include?('unsplash.com') %>
               <% srcset_data = unsplash_srcset(technique[:image_url], { mobile: 400, tablet: 600, desktop: 800 }) %>
               <% if srcset_data[:use_picture] %>
@@ -41,7 +49,7 @@
                        srcset="<%= srcset_data[:webp_srcset] %>"
                        sizes="<%= srcset_data[:sizes] %>"
                        alt="<%= technique[:image_alt] %>" 
-                       class="object-cover w-full h-full transition-transform group-hover:scale-110"
+                       class="<%= image_class %>"
                        loading="lazy">
                 </picture>
               <% else %>
@@ -49,7 +57,7 @@
                      srcset="<%= srcset_data[:srcset] %>"
                      sizes="<%= srcset_data[:sizes] %>"
                      alt="<%= technique[:image_alt] %>" 
-                     class="object-cover w-full h-full transition-transform group-hover:scale-110"
+                     class="<%= image_class %>"
                      loading="lazy">
               <% end %>
             <% elsif technique[:image_url]&.start_with?('/images/') %>
@@ -61,11 +69,11 @@
                      srcset="<%= srcset_data[:webp_srcset] %>"
                      sizes="<%= srcset_data[:sizes] %>"
                      alt="<%= technique[:image_alt] %>" 
-                     class="object-cover w-full h-full transition-transform group-hover:scale-110"
+                     class="<%= image_class %>"
                      loading="lazy">
               </picture>
             <% else %>
-              <img src="<%= technique[:image_url] %>" alt="<%= technique[:image_alt] %>" class="object-cover w-full h-full transition-transform group-hover:scale-110" loading="lazy">
+              <img src="<%= technique[:image_url] %>" alt="<%= technique[:image_alt] %>" class="<%= image_class %>" loading="lazy">
             <% end %>
             <div class="absolute inset-0 bg-gradient-to-t to-transparent from-black/40"></div>
           </div>

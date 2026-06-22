@@ -184,7 +184,7 @@ module PagesHelper
         title: "Des Services Complets pour Vos Espaces Verts",
         paragraphs: [
           "Nous sommes spécialistes des arbres, mais pas que ! Au-delà de nos services principaux d'élagage, d'abattage et de dessouchage, nous proposons également une gamme complète de services d'entretien pour prendre soin de vos espaces verts tout au long de l'année.",
-          "Que ce soit pour l'entretien régulier de votre jardin, la taille de vos haies, la tonte de votre pelouse, le débroussaillage ou la pose de pièges contre la chenille processionnaire, nous avons les compétences et l'expérience nécessaires pour répondre à tous vos besoins."
+          "Que ce soit pour l'entretien régulier de votre jardin, la taille de vos haies, la tonte de votre pelouse, le débroussaillage ou la pose de pièges (à phéromones et à collier) contre la chenille processionnaire, nous avons les compétences et l'expérience nécessaires pour répondre à tous vos besoins."
         ],
         image_url: "/images/entretien/1_Des services complets.. service d'entretien",
         image_alt: "Entretien jardin",
@@ -211,8 +211,9 @@ module PagesHelper
           {
             title: "Élagage Sécurisé",
             description: "L'élagage sécurisé est notre priorité. Nous intervenons avec toutes les précautions nécessaires pour garantir la sécurité des personnes et des biens, tout en préservant la santé de l'arbre.",
-            image_url: "/images/elagage/1-1 Nos technique d'élagage (carré élagage sécurisé)",
-            image_alt: "Élagage sécurisé",
+            image_url: "/images/elagage/securite_max",
+            image_alt: "Élagueur équipé pour un élagage sécurisé",
+            image_class: "object-cover object-[center_78%]",
             icon_color: "green-700",
             features: [
               "Sécurité maximale",
@@ -398,15 +399,15 @@ module PagesHelper
             ]
           },
           {
-            title: "Pose de Piège pour Chenille Processionnaire",
-            description: "La chenille processionnaire du pin représente un risque sanitaire pour les personnes et les animaux. Nous installons des pièges à phéromones pour capturer les papillons femelles et limiter la prolifération de ce nuisible.",
+            title: "Pose de Pièges pour Chenille Processionnaire",
+            description: "La chenille processionnaire du pin représente un risque sanitaire pour les personnes et les animaux. Nous installons des pièges à phéromones et des pièges à collier sur les troncs pour capturer les papillons femelles et limiter la prolifération de ce nuisible.",
             image_url: "/images/entretien/2_4 nos services dentretien- pose piege chenille processionnaire",
-            image_alt: "Pose de piège pour chenille processionnaire",
+            image_alt: "Pose de pièges pour chenille processionnaire",
             icon_color: "green-700",
             features: [
-              "Installation de pièges à phéromones",
-              "Lutte contre la processionnaire",
-              "Protection de votre environnement"
+              "Pièges à phéromones",
+              "Pièges à collier",
+              "Lutte contre la processionnaire"
             ]
           },
         ]
