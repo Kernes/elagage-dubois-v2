@@ -5,7 +5,7 @@ module SeoHelper
     site_description: "Expert en élagage et abattage d'arbres autour de Méry-sur-Oise (Val d'Oise - 95). Élagage sécurisé, abattage professionnel, dessouchage mécanique. Devis gratuit sous 24h, intervention rapide.",
     site_keywords:    "élagage Méry-sur-Oise, élagueur Val d'Oise, abattage arbres 95, dessouchage Méry-sur-Oise, entretien jardin 95, Dubois Elagage, Élagage Dubois",
     site_url:         "https://dubois-services-elagage.fr",
-    contact_phone:    "+33783892384",
+    contact_phone:    "+33187660533",
     contact_email:    ApplicationHelper::COMPANY_CONTACT[:email],
     business_address: {
       street:      "30 Route de Pontoise",

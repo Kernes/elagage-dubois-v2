@@ -33,8 +33,8 @@ Bouton pour appeler directement
 **Options :**
 - `variant` : "primary" (transparent, défaut) ou "secondary" (vert)
 - `size` : "lg" (défaut) ou "base"
-- `phone` : Numéro affiché (défaut: "07 83 89 23 84")
-- `phone_link` : Lien tel: (défaut: "tel:+33783892384")
+- `phone` : Numéro affiché (défaut: "01 87 66 05 33")
+- `phone_link` : Lien tel: (défaut: "tel:+33187660533")
 
 ---
 

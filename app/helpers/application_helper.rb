@@ -9,8 +9,8 @@ module ApplicationHelper
   }.freeze
 
   COMPANY_CONTACT = {
-    phone: "07 83 89 23 84",
-    phone_formatted: "+33783892384",
+    phone: "01 87 66 05 33",
+    phone_formatted: "+33187660533",
     email: "contact@dubois-services-elagage.fr",
     reviews_url: "https://www.google.com/search?sca_esv=e5fbcc06bbcda539&rlz=1C5CHFA_enFR980FR980&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E1F1MzApZtvA_0bqFLM5wOvxn3ttgxDbt27C6N5Z5Vpd13tsC_arYDbZA5l0FA66y6a_EAmoMgyJq4r9dQjpPG-QUbKA&q=DUBOIS+ELAGAGE+Avis&sa=X&ved=2ahUKEwj35Y_VxOiQAxVkY6QEHWWkCJ0Q0bkNegQIQhAE&biw=1186&bih=1048&dpr=0.8"
   }.freeze
